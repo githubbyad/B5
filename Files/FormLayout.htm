@@ -28,7 +28,7 @@ else if (evt.type == "blur")
 .form-floating > .form-control:focus ~ label {color: #0d6efd !important;}
 .form-control:not(:disabled):not([readonly])::file-selector-button {position: absolute;right: 0;border-radius: 5px !important;}
 .input-file-preview {display: none;}
-.input-file-preview img {max-width: 20%;max-height: 200px;border: 1px solid #ced4da;border-radius: 5px;padding: 5px;box-sizing: border-box;cursor: zoom-in;}
+.input-file-preview img {max-width: 30%;max-height: 200px;border: 1px solid #ced4da;border-radius: 5px;padding: 5px;box-sizing: border-box;cursor: zoom-in;}
 .w-96 {width: 96% !important;}
 .p-valid {color: green;}
 .p-valid:before {position: relative;left: -10px;content: "&#10004;";}
@@ -64,7 +64,7 @@ else if (evt.type == "blur")
 <div class="input w-100 form-floating">
 <INPUT NAME="{{FieldName}}" VALUE="{{FieldValue}}" id="{{FieldName}}" placeholder="" type="{{FieldType}}" readonly class="formfieldinput formfieldinput_custom form-control formfieldinput_ReadOnly" {{FieldRequiredBrowser}} >
 <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
-<span style="font-size:0.875rem" class="text-muted cus-form-help"></span>
+<span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span>
 </div>
 </section>
 
@@ -73,7 +73,7 @@ else if (evt.type == "blur")
 <div class="input w-100 form-floating">
 <INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" placeholder="" type="{{FieldType}}" readonly class="formfieldinput formfieldinput_custom form-control formfieldinput_ReadOnly" {{FieldRequiredBrowser}} >
 <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
-<span style="font-size:0.875rem" class="text-muted cus-form-help"></span>
+<span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span>
 </div>
 </section>
 
@@ -95,7 +95,7 @@ else if (evt.type == "blur")
 <div class="input w-100 form-floating">
 <{{TextArea}} class="formfieldinput formfieldinput_custom form-control" style="height: 100px" id="{{FieldName}}" placeholder="" rows="4" cols="50" name="{{FieldName}}" onfocus="ChangeInputFocus(this, event, 'formfieldinputfocus'), LimitCharacters(this, '{{FieldName}}-memo4', '{{FieldName}}-memo42','{{FieldLengthW}}')" onblur="ChangeInputFocus(this, event, 'formfieldinput')" id="{{FieldName}}-memo"  onkeyup="LimitCharacters(this, '{{FieldName}}-memo4', '{{FieldName}}-memo42','{{FieldLengthW}}');" maxlength="{{FieldLength}}" NAME="{{FieldName}}" {{FieldRequiredBrowser}}></{{TextArea}}>
 <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
-<span style="font-size:0.875rem" class="text-muted cus-form-help"></span>
+<span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span>
 </div>
 <div class="formfieldname text-start">
 <!-- <label class="textarea text-muted" style="font-size:0.875rem">{{TextAreaCount}}</label> -->
@@ -108,14 +108,13 @@ else if (evt.type == "blur")
 
 <section class="w-96 mb-3" style="margin-left:2%">
 <div class="input input-file w-100 form-floating">
-<!-- <div class="button"><input type="file" id="{{FieldName}}" name="{{FieldName}}" onchange="this.parentNode.nextSibling.value = this.value.replace(/.*[\/\\]/, '');" accept="image/*">Browse</div>
-<input type="text" placeholder="Upload file" READONLY="" ID="{{FieldName}}-Browse" VALUE="" {{FieldRequiredBrowser}}>
-<label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label> -->
 <input type="file" id="{{FieldName}}" class="form-control" name="{{FieldName}}" accept="image/*" {{FieldRequiredBrowser}}>
 <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} Upload {{FieldCaption}}</label>
+<span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span>
 <div id="{{FieldName}}-prv-div" class="input-file-preview mt-2 w-100">
 <img id="{{FieldName}}_prvx" src="#" alt="" onclick="window.open(this.src, '_blank');" />
 <span id="{{FieldName}}_sizex" class="text-muted" style="font-size: 0.875rem; !important"></span>
+</div>
 </div>
 <script>
 {{FieldName}}.onchange = evt => {
@@ -131,8 +130,6 @@ document.getElementById('{{FieldName}}_sizex').innerHTML = "[File Size: "+ size 
 }
 }
 </script>
-</div>
-<span style="font-size:0.875rem" class="text-muted cus-form-help"></span>
 </section>
 
 {{ElseIf FieldType=Password}}
@@ -141,7 +138,7 @@ document.getElementById('{{FieldName}}_sizex').innerHTML = "[File Size: "+ size 
 <div class="input w-100 form-floating">
 <INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="{{FieldType}}"  class="formfieldinput formfieldinput_custom form-control"  placeholder="" {{FieldRequiredBrowser}} value="" pattern="(?=.*\d)(?=.*[!#$%@])(?=.*[a-z])(?=.*[A-Z]).{8,}" >
 <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
-<span style="font-size:0.875rem" class="text-muted cus-form-help"></span>
+<span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span>
 <div id="{{FieldName}}_show_p" class="open-eye text-dark"><i aria-hidden="true" class="fa fa-eye fs-5"></i></div>
 <div id="{{FieldName}}_hide_p" class="close-eye text-dark" style="display:none;"><i class="fa fa-eye-slash fs-5 text-danger" aria-hidden="true"></i></div>
 </div>
@@ -258,7 +255,7 @@ length.classList.add("p-invalid");
 <div class="input w-100 form-floating">
 <INPUT NAME="{{FieldName}}" class="form-control" VALUE="{{FieldDefaultValue}}" placeholder="" id="{{FieldName}}" style="cursor: default;" type="{{FieldType}}" {{FieldRequiredBrowser}} value="">
 <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
-<span style="font-size:0.875rem" class="text-muted cus-form-help"></span>
+<span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span>
 </div>
 </section>
 
@@ -271,7 +268,7 @@ length.classList.add("p-invalid");
 </select>
 <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
 </div>
-<span style="font-size:0.875rem" class="text-muted cus-form-help"></span>
+<span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span>
 </section>
 
 {{ElseIf FieldType=Hidden}} 
@@ -284,7 +281,7 @@ length.classList.add("p-invalid");
 <div class="input w-100 form-floating">
 <INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="{{FieldType}}"  onkeypress="return keyRestrict(event,this.value,'Decimal')" class="formfieldinput formfieldinput_custom form-control" onfocus="ChangeInputFocus(this, event, 'formfieldinputfocus')" onblur="ChangeInputFocus(this, event, 'formfieldinput formfieldinput_custom')" maxlength="{{FieldLength}}" placeholder="" value="" {{FieldRequiredBrowser}}>
 <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
-<span style="font-size:0.875rem" class="text-muted cus-form-help"></span>
+<span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span>
 </div>
 </section>
 
@@ -294,7 +291,7 @@ length.classList.add("p-invalid");
 <div class="input w-100 form-floating">
 <INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="{{FieldType}}"  onkeypress="return keyRestrict(event,this.value,'Decimal')" class="formfieldinput formfieldinput_custom form-control" onfocus="ChangeInputFocus(this, event, 'formfieldinputfocus')" onblur="ChangeInputFocus(this, event, 'formfieldinput formfieldinput_custom')" maxlength="{{FieldLength}}" placeholder="" {{FieldRequiredBrowser}}>
 <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
-<span style="font-size:0.875rem" class="text-muted cus-form-help"></span>
+<span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span>
 </div>
 </section>
 
@@ -320,7 +317,7 @@ length.classList.add("p-invalid");
 <div class="input w-100 form-floating">
 <INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}"  maxlength="{{FieldLength}}" placeholder="" type="{{FieldType}}"  class="formfieldinput formfieldinput_custom form-control" {{FieldRequiredBrowser}}>
 <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
-<span style="font-size:0.875rem" class="text-muted cus-form-help"></span>
+<span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span>
 </div>
 </section>
 {{EndIf}} 
