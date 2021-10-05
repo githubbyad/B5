@@ -1,0 +1,623 @@
+{{LayoutMenus1Begin}}
+{{File:Menus-Horizontal1.js}}
+{{Where:MenuTypeInclude:'Horizontal'}}
+function GetHorizontalMenu1(){document.write({{PutHtmlChar39}}
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm bg-black px-3 py-2">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav flex-wrap">
+            {{RepeatBegin1}}
+	            <li class="nav-item dropdown pe-4">
+	                <a id="navbarDropdown" class="nav-link fs-5 dropdown-toggle fw-bold text-uppercase text-white" style="{{MenuStyle}} font-family: pt sans,sans-serif;" href="{{MenuLink}}" role="button"  data-bs-toggle="dropdown" aria-expanded="false">{{Menu}}</a>
+	                    <ul class="dropdown-menu fade-up" aria-labelledby="navbarDropdown">
+		                    {{RepeatBegin2}}
+		                        <li style="{{CSSDisplay}}">
+                                    <a class="dropdown-item fs-5 fw-bold text-dark border-bottom border-gray nx-2" style="font-family: pt sans,sans-serif;" href="{{SubMenuLink}}">{{SubMenu}}</a>
+                                </li>
+		                    {{RepeatEnd2}}
+	                    </ul>
+	            </li>
+	        {{RepeatEnd1}}
+        </ul>
+	</div>
+</nav>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
+.no-submenu .dropdown-toggle::after {display: none;}
+@media all and (min-width: 992px) {
+.navbar-nav li:hover>ul.dropdown-menu {display: block;margin-top: 0px;}
+.navbar .dropdown-menu-end{ right:0; left: auto;  }
+.navbar .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  }
+.navbar .nav-item:hover .nav-link{ color: #fff;  }
+.navbar .dropdown-menu.fade-down{ top:80%; transform: rotateX(-75deg); transform-origin: 0% 0%; }
+.navbar .dropdown-menu.fade-up{ top:180%;  }
+.navbar .nav-item:hover .dropdown-menu{ transition: .3s; opacity:1; visibility:visible; top:100%; transform: rotateX(0deg); }
+.dropdown-menu.fade-up:before {
+content: "";  position: absolute;  top: -14px;  color: white;  left: 30px;  border-color: transparent transparent white transparent; border-style: solid;border-width: 7px;}
+.nav-item.dropdown:hover #navbarDropdown::after {transform: rotate(180deg);transition: 300ms linear;transition-property:transform;}
+.fixed-top {top: -40px;  transform: translateY(40px);  transition: transform .3s;opacity: 0.9;}
+.fixed-top:hover{opacity:1;}
+.fixed-top #navbarSupportedContent {padding-left: 1rem;padding-right: 1rem;}
+}	
+</style>
+<script>
+/*HideSubMenu*/
+var nav_dm = document.getElementsByClassName("dropdown-menu");
+var nav_dml = nav_dm.length;
+for (i = 0; i < nav_dml; i++) {
+var nav_dms = nav_dm[i].children.length;
+for (j = 0; j < nav_dms; j++) {
+if (nav_dm[i].children[j].style.display == "none") {
+nav_dm[i].children[j].remove();
+}
+}
+if (nav_dm[i].children.length == 0) {
+nav_dm[i].parentNode.classList.add("no-submenu");
+nav_dm[i].style.display = "none";
+}
+}
+/*MenuLink*/
+var ns = document.getElementsByClassName("no-submenu").length;
+var nss = document.getElementsByClassName("no-submenu");
+for (k = 0; k < ns; k++) {
+var nshref = nss[k].children[0].getAttribute("href");
+var nsso = "location.href = \'" + nshref + "\';";
+nss[k].children[0].setAttribute("onclick", nsso);
+}
+/*SubMenuHTML*/
+$(document).ready(function(){
+$(".dropdown-item").each(function() {
+if ($(this).text() == "" && $(this).siblings("a").length) {
+$(this).siblings("a").attr("class", $(this).attr("class"));
+$(this).siblings("a").attr("style", $(this).attr("style"));
+$(this).css("display", "none");
+}
+});
+});
+/* Menu Sticky*/
+document.addEventListener("DOMContentLoaded", function(){
+if (window.location.href.indexOf("=target_form2.") == -1) {
+if(window.screen.width > 992) {
+var mo = document.getElementsByClassName("navbar")[0].offsetTop;
+window.addEventListener("scroll", function() {
+if (window.scrollY > mo) {
+document.getElementsByClassName("navbar")[0].classList.add("fixed-top");
+navbar_height = document.querySelector(".navbar").offsetHeight;
+document.getElementsByClassName("mainbody")[0].style.paddingTop = navbar_height + "px";
+} else {
+document.getElementsByClassName("navbar")[0].classList.remove("fixed-top");
+document.getElementsByClassName("mainbody")[0].style.paddingTop = "0";
+} 
+});
+}
+}
+});
+<\/script>
+{{PutHtmlChar39}});}
+{{LayoutMenus1End}}
+
+
+{{LayoutH1Begin}}
+{{LayoutH1Limit7}}
+{{SortBy:Issue,Updated}}
+{{RemoveHTMLBody}}
+{{RemoveMore:Yes}}
+{{BlankValue-TotalArticles}}
+function GetHighlights1(){document.write('
+<style>@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");</style>
+<div class="container bl-blocks-3-133">
+    <div class="row">
+        <div class="col-12 hpe-custom-text-1 text-uppercase fw-bold px-0 mb-2 text-gray bl-blocks-3-133-label bl-133-label" style="font-family: pt sans,sans-serif;">
+            <span><script type="text/javascript">Section1();<\/script></span>
+        </div>
+    </div>
+    <div class="row hp-parent">
+        <div class="container col-12">
+            {{RepeatBegin}}
+                <div class="row mb-3 p-2 rounded shadow-2" style="background-color:#f3f3f3">
+                    <div class="H1-heading col-12 px-0 mb-1">
+                        <a class="d-inline-block text-decoration-none fs-4 text-black fw-bold lh-sm fst-italic" style="font-family: pt serif,serif;" href="{{HeadingLink}}">{{Heading}}</a>
+                    </div>
+                    <div class="H1-date col-12 px-0 d-inline-block fs-6  mb-1">
+                        <i class="fa fa-calendar" aria-hidden="true"></i> {{IssueDate}}
+                    </div>
+                    <div class="H1-body col-12 px-0 line-5 text-dark fs-6  mb-1 lh-base">
+                        {{Body}}
+                    </div>
+                    <div class="H1-more col-12 px-0">
+                        <a class="d-inline-block text-decoration-none fs-6 text-dark lh-1 fst-italic" style="font-family: pt serif,serif;" href="{{HeadingLink}}">{{more}}</a>
+                    </div>
+                </div>
+            {{RepeatEnd}}
+        </div>
+    </div>
+</div>
+<style>
+.bl-133-label {border-bottom: 4px solid #bdcde3;}
+.bl-133-label > span{position: relative;}
+.bl-133-label > span:before {background: #0d6efd;position: absolute;display: inline-block;content: "";width: 100%;height: 4px;bottom: -6px;}
+</style>
+');}
+{{LayoutH1End}}
+
+
+
+{{LayoutH2Begin}}
+{{LayoutH2Limit7}}
+{{SortBy:Issue,Updated}}
+{{BlankValue-TotalArticles}}
+function GetHighlights2(){document.write('
+<style>@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");</style>
+<div class="container">
+    <div class="row">
+        <div class="col-12 hpe-custom-text-1 text-uppercase fw-bold px-0 mb-2 text-gray bl-blocks-4-133-label bl-133-label" style="font-family: pt sans,sans-serif;">
+            <span><script type="text/javascript">Section3();<\/script></span>
+        </div>
+    </div>
+    <div class="row hp-parent">
+        {{RepeatBegin}}
+            <div class="col-12 hpe-in-hl2 position-relative overflow-hidden cus-zoom" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+                <div class="row mb-2">
+                    <div class="col-6 ps-0">
+                        <a href="{{HeadingLink}}">
+                            <div class="ratio-3-2 cus-zoom">
+                                <div class="img-content">
+                                    <img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="img-fluid" />
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-12 px-0 mb-2">
+                                <a class="d-inline-block text-decoration-none fs-6 text-black lh-base line-4" style="font-family: pt serif,serif !important;" href="{{HeadingLink}}">{{Heading}}</a>
+                            </div>
+                            <div class="col-12 d-inline-block text-decoration-none fs-6 text-muted lh-1 px-0">
+                                <i class="fa fa-calendar" aria-hidden="true"></i> {{IssueDate}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{RepeatEnd}}
+    </div>
+</div>
+<style>
+.bl-133-label {border-bottom: 4px solid #bdcde3;}
+.bl-133-label > span{position: relative;}
+.bl-133-label > span:before {background: #0d6efd;position: absolute;display: inline-block;content: "";width: 100%;height: 4px;bottom: -6px;}
+</style>
+');}
+{{LayoutH2End}}
+
+
+{{LayoutH4Begin}}
+{{LayoutH4Limit40}}
+{{SortBy:Issue, Updated}}
+{{RemoveHTMLBody}}
+{{RemoveMore:Yes}}
+function GetHighlights4(){document.write('
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
+    @import url("https://fonts.googleapis.com/css?family=PT+Serif&display=swap");
+</style> 
+<div class="container ps-3" id="bl-blocks-2-133" style="display:none;">
+    <div class="row mx-0">
+        <div class="col-12 hpe-custom-text-1 text-uppercase fw-bold mb-2 text-gray bl-blocks-2-133-label bl-133-label px-0" style="font-family: pt sans,sans-serif;">
+            <span><script type="text/javascript">Section2();<\/script></span>
+        </div>
+    </div>
+    <div class="row hp-parent gy-4 mb-4">
+        {{RepeatBegin}}
+            {{If Counter < 2}}
+                <div class="col-12 bl-blocks-2-133-uncommentbig hp-parent-div1 hpe-in-hl4 position-relative cus-zoom" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="{{HeadingLink}}">
+                                <div class="ratio-3-2 cus-zoom">
+                                    <div class="img-content">
+                                        <img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="img-fluid" />
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row my-2">
+                        <div class="col-12">
+                            <a class="d-inline-block text-decoration-none fs-2 text-dark fw-bold lh-1" style="font-family: pt serif,serif !important;" href="{{HeadingLink}}">{{Heading}}</a>
+                        </div>
+                    </div>
+                    <div class="row position-absolute z-index-2 top-0 start-3 mw-50 text-truncate lh-base">
+                        <div class="col-12">
+                            <a class="badge bg-primary text-white text-decoration-none mx-2 px-2" href="{{SubMenuLink}}">{{SubMenu}}</a>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 d-inline-block text-decoration-none fs-5 text-muted lh-1" style="font-family:pt serif,serif">
+                            <i class="fa fa-calendar" aria-hidden="true"></i> {{IssueDate}}
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 line-3 fs-5 text-dark lh-base">
+                            {{Body}}
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12">
+                            <a class="d-inline-block text-decoration-none fs-5 text-dark lh-1 fst-italic" href="{{HeadingLink}}">{{more}}</a>
+                        </div>
+                    </div>
+                </div>
+                {{ElseIf Counter < 6}}
+                <div class="col-lg-6 bl-blocks-2-133-uncomment1 hpe-in-hl4 position-relative overflow-hidden px-0 d-block" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 px-0">
+                                <a href="{{HeadingLink}}">
+                                    <div class="ratio-3-2 cus-zoom">
+                                        <div class="img-content">
+                                            <img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="img-fluid" />
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row position-absolute z-index-2 top-0 start-3 mw-50 text-truncate lh-base">
+                            <div class="col-12">
+                                <a class="badge bg-primary text-white text-decoration-none mx-2 px-2" href="{{SubMenuLink}}">{{SubMenu}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="container position-absolute z-index-2 overflow-hidden start-0 bottom-0" style="background-color: rgba(0, 0, 0, 0.4);">
+                        <div class="row bl-blocks-2-133-big-scroll">
+                            <div class="container col-12">
+                                <div class="row my-2">
+                                    <div class="col-12">
+                                        <a class="d-inline-block text-decoration-none fs-5 text-white fw-bold text-shadow-2 line-2 lh-base" href="{{HeadingLink}}">{{Heading}}</a>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-12 d-inline-block text-decoration-none fs-6 text-white lh-1 text-shadow-1">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i> {{IssueDate}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+                {{ElseIf Counter < 12}}
+                <div class="col-lg-6 bl-blocks-2-133-uncomment2 hpe-in-hl4 position-relative overflow-hidden px-0 d-none" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+                    <!--<div class="container">
+                        <div class="row">
+                            <div class="col-12 px-0">
+                                <a href="{{HeadingLink}}">
+                                    <div class="ratio-3-2 cus-zoom">
+                                        <div class="img-content">
+                                            <img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="img-fluid" />
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row position-absolute z-index-2 top-0 start-3 mw-50 text-truncate lh-base">
+                            <div class="col-12">
+                                <a class="badge bg-primary text-white text-decoration-none mx-2 px-2" href="{{SubMenuLink}}">{{SubMenu}}</a>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>                     
+            {{ElseIf Counter < 18}}
+            <div class="col-lg-6 bl-blocks-2-133-uncomment3 hpe-in-hl4 position-relative overflow-hidden px-0 d-none  cus-zoom" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+                    <!--<div class="container">
+                        <div class="row">
+                            <div class="col-12 px-0">
+                                <a href="{{HeadingLink}}">
+                                    <div class="ratio-3-2 cus-zoom">
+                                        <div class="img-content">
+                                            <img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="img-fluid" />
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row position-absolute z-index-2 top-0 start-3 mw-50 text-truncate lh-base">
+                            <div class="col-12">
+                                <a class="badge bg-primary text-white text-decoration-none mx-2 px-2" href="{{SubMenuLink}}">{{SubMenu}}</a>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            {{ElseIf Counter < 24}}
+            <div class="col-lg-6 bl-blocks-2-133-uncomment4 hpe-in-hl4 position-relative overflow-hidden px-0 d-none  cus-zoom" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+                    <!--<div class="container">
+                        <div class="row">
+                            <div class="col-12 px-0">
+                                <a href="{{HeadingLink}}">
+                                    <div class="ratio-3-2 cus-zoom">
+                                        <div class="img-content">
+                                            <img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="img-fluid" />
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row position-absolute z-index-2 top-0 start-3 mw-50 text-truncate lh-base">
+                            <div class="col-12">
+                                <a class="badge bg-primary text-white text-decoration-none mx-2 px-2" href="{{SubMenuLink}}">{{SubMenu}}</a>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            {{ElseIf Counter < 30}}
+            <div class="col-lg-6 bl-blocks-2-133-uncomment5 hpe-in-hl4 position-relative overflow-hidden px-0 d-none  cus-zoom" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+                    <!--<div class="container">
+                        <div class="row">
+                            <div class="col-12 px-0">
+                                <a href="{{HeadingLink}}">
+                                    <div class="ratio-3-2 cus-zoom">
+                                        <div class="img-content">
+                                            <img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="img-fluid" />
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row position-absolute z-index-2 top-0 start-3 mw-50 text-truncate lh-base">
+                            <div class="col-12">
+                                <a class="badge bg-primary text-white text-decoration-none mx-2 px-2" href="{{SubMenuLink}}">{{SubMenu}}</a>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            {{Else}}
+            <div class="col-lg-6 bl-blocks-2-133-uncomment6 hpe-in-hl4 position-relative overflow-hidden px-0 d-none  cus-zoom" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+                    <!--<div class="container">
+                        <div class="row">
+                            <div class="col-12 px-0">
+                                <a href="{{HeadingLink}}">
+                                    <div class="ratio-3-2 cus-zoom">
+                                        <div class="img-content">
+                                            <img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="img-fluid" />
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row position-absolute z-index-2 top-0 start-3 mw-50 text-truncate lh-base">
+                            <div class="col-12">
+                                <a class="badge bg-primary text-white text-decoration-none mx-2 px-2" href="{{SubMenuLink}}">{{SubMenu}}</a>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            {{EndIf}}
+        {{RepeatEnd}}
+    </div>
+        <div class="row mb-2 d-flex justify-content-center border-bottom">
+            <p class="bl-blocks-2-133-load-more w-25 fs-6 lh-base text-center rounded btn btn-lg bl-btn-black fw-bold text-uppercase" role="button">
+                <more class="hpe-custom-text-8 pe-2"><script type="text/javascript">Section8();<\/script></more><i class="fa fa-angle-down fw-bold" aria-hidden="true"></i>
+            </p>
+        </div>
+    </div>
+<script>
+$(document).ready(function() {
+    $.fn.uncomment = function(recurse) {
+        $(this).contents().each(function() {
+            if (recurse && this.hasChildNodes()) {
+                $(this).uncomment(recurse);
+            } else if (this.nodeType == 8) {
+                var e = $("<span>" + this.nodeValue + "</span>");
+                $(this).replaceWith(e.contents());
+            }
+        });
+    };
+    $(".bl-blocks-2-133-load-more").click(function() {
+        if ($(".bl-blocks-2-133-uncomment1").css("display") == "block" && $(".bl-blocks-2-133-uncomment2").css("display") == "none") {
+            $(".bl-blocks-2-133-uncomment2").addClass("d-block");
+            $(".bl-blocks-2-133-uncomment2").removeClass("d-none");
+            $(".bl-blocks-2-133-uncomment2").uncomment(true);
+        } else if ($(".bl-blocks-2-133-uncomment2").css("display") == "block" && $(".bl-blocks-2-133-uncomment3").css("display") == "none") {
+            $(".bl-blocks-2-133-uncomment3").addClass("d-block");
+            $(".bl-blocks-2-133-uncomment3").removeClass("d-none");
+            $(".bl-blocks-2-133-uncomment3").uncomment(true);
+        } else if ($(".bl-blocks-2-133-uncomment3").css("display") == "block" && $(".bl-blocks-2-133-uncomment4").css("display") == "none") {
+            $(".bl-blocks-2-133-uncomment4").addClass("d-block");
+            $(".bl-blocks-2-133-uncomment4").removeClass("d-none");
+            $(".bl-blocks-2-133-uncomment4").uncomment(true);
+        } else if ($(".bl-blocks-2-133-uncomment4").css("display") == "block" && $(".bl-blocks-2-133-uncomment5").css("display") == "none") {
+            $(".bl-blocks-2-133-uncomment5").addClass("d-block");
+            $(".bl-blocks-2-133-uncomment5").removeClass("d-none");
+            $(".bl-blocks-2-133-uncomment5").uncomment(true);
+        } else if ($(".bl-blocks-2-133-uncomment5").css("display") == "block" && $(".bl-blocks-2-133-uncomment6").css("display") == "none") {
+            $(".bl-blocks-2-133-uncomment6").addClass("d-block");
+            $(".bl-blocks-2-133-uncomment6").removeClass("d-none");
+            $(".bl-blocks-2-133-uncomment6").uncomment(true);
+        }
+        if ($(".bl-blocks-2-133-uncomment6").length) {
+            if ($(".bl-blocks-2-133-uncomment6 .container").length) {
+                $(".bl-blocks-2-133-load-more").addClass("d-none");
+            }
+        } else if ($(".bl-blocks-2-133-uncomment5").length) {
+            if ($(".bl-blocks-2-133-uncomment5").length) {
+                if ($(".bl-blocks-2-133-uncomment5 .container").length) {
+                    $(".bl-blocks-2-133-load-more").addClass("d-none");
+                }
+            }
+        } else if ($(".bl-blocks-2-133-uncomment4").length) {
+            if ($(".bl-blocks-2-133-uncomment4").length) {
+                if ($(".bl-blocks-2-133-uncomment4 .container").length) {
+                    $(".bl-blocks-2-133-load-more").addClass("d-none");
+                }
+            }
+        } else if ($(".bl-blocks-2-133-uncomment3").length) {
+            if ($(".bl-blocks-2-133-uncomment3").length) {
+                if ($(".bl-blocks-2-133-uncomment3 .container").length) {
+                    $(".bl-blocks-2-133-load-more").addClass("d-none");
+                }
+            }
+        }
+    });
+});
+<\/script>
+<style>
+.bl-133-label {border-bottom: 4px solid #bdcde3;}
+.bl-133-label > span{position: relative;}
+.bl-133-label > span:before {background: #0d6efd;position: absolute;display: inline-block;content: "";width: 100%;height: 4px;bottom: -6px;}
+</style>
+');DisplayHighlight('bl-blocks-2-133');}
+{{LayoutH4End}}
+{{LayoutH5Begin}}
+{{LayoutH5Limit7}}
+{{RemoveHTMLBody}}
+{{SortBy:Issue,Updated}}
+{{BlankValue-TotalArticles}}
+function GetHighlights5(){document.write('
+<div class="bl-blocks-1-133-container container-fluid px-0" id="bl-blocks-1-133" style="display:none;">
+	<div class="bl-blocks-1-133-wrap row mb-3 g-0 border border-light">
+		{{RepeatBegin}}
+            {{If Counter < 2}}
+                <article class="bl-blocks-1-133-article col-lg-8 mb-2 mb-lg-0">
+                    <div class="card rounded-0 text-white position-relative overflow-hidden cus-zoom">
+                        <a href="{{HeadingLink}}">
+                            <div class="ratio-3-2">
+                                <div class="img-content">
+                                    <img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="img-fluid" />
+                                </div>
+                            </div>
+                        </a>
+                        <div class="position-absolute p-3 bottom-0 w-100 cus-bg-lg-shadow">
+                            <a class="badge bg-primary text-white text-decoration-none" href="{{SubMenuLink}}">{{SubMenu}}</a>
+                            <a class="text-decoration-none" href="{{HeadingLink}}">
+                                <h2 class="fs-5 fs-lg-2 fw-bold text-white line-2 lh-base">{{Heading}}</h2>
+                            </a>
+                            <p class="mb-0 fs-5"><i class="fa fa-calendar pe-1" aria-hidden="true"></i>{{IssueDate}}</p>
+                        </div>
+                    </div>
+                </article>
+            {{ElseIf Counter < 4}}
+                <article class="bl-blocks-1-133-article col-lg-12 mb-2 mb-lg-0">
+                    <div class="card rounded-0 text-white position-relative overflow-hidden cus-zoom">
+                        <a href="{{HeadingLink}}">
+                            <div class="ratio-3-2">
+                                <div class="img-content">
+                                    <img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="img-fluid" />
+                                </div>
+                            </div>
+                        </a>
+                        <div class="position-absolute p-3 bottom-0 w-100 cus-bg-shadow">
+                            <a class="badge bg-primary text-white text-decoration-none" href="{{SubMenuLink}}">{{SubMenu}}</a>
+                            <a class="text-decoration-none" href="{{HeadingLink}}">
+                                <h3 class="text-white my-1 fs-5 fw-bold line-2 lh-base">{{Heading}}</h3>
+                            </a>
+                            <p class="mb-0 fs-6"><i class="fa fa-calendar pe-1" aria-hidden="true"></i>{{IssueDate}}</p>
+                        </div>
+                    </div>
+                </article>
+            {{Else}}
+                <article class="bl-blocks-1-133-article col-lg-12 mb-2 mb-lg-0">
+                    <div class="card rounded-0 text-white position-relative overflow-hidden cus-zoom">
+                        <a href="{{HeadingLink}}">
+                            <div class="ratio-3-2">
+                                <div class="img-content">
+                                    <img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="img-fluid" />
+                                </div>
+                            </div>
+                        </a>
+                        <div class="position-absolute p-3 bottom-0 w-100 cus-bg-shadow">
+                            <a class="badge bg-primary text-white text-decoration-none" href="{{SubMenuLink}}">{{SubMenu}}</a>
+                            <a class="text-decoration-none" href="{{HeadingLink}}">
+                                <h3 class="text-white my-1 fs-5 fw-bold line-2 lh-base">{{Heading}}</h3>
+                            </a>
+                            <p class="mb-0 fs-6"><i class="fa fa-calendar pe-1" aria-hidden="true"></i>{{IssueDate}}</p>
+                        </div>
+                    </div>
+                </article>
+            {{EndIf}}
+		{{RepeatEnd}}
+        <div class="col-lg-4" style="display:none;">
+            <div class="bl-blocks-1-133-b23 row">
+            </div>
+        </div>
+        <div class="col-lg-3" style="display:none;">
+            <div class="bl-blocks-1-133-b4 row">
+            </div>
+        </div>
+        <div class="col-lg-3" style="display:none;">
+            <div class="bl-blocks-1-133-b5 row">
+            </div>
+        </div>
+        <div class="col-lg-3" style="display:none;">
+            <div class="bl-blocks-1-133-b6 row">
+            </div>
+        </div>
+        <div class="col-lg-3" style="display:none;">
+            <div class="bl-blocks-1-133-b7 row">
+            </div>
+        </div>
+	</div>
+</div>
+<script>
+if (document.getElementsByClassName("bl-blocks-1-133-wrap").length > 0) {
+var articles = document.getElementsByClassName("bl-blocks-1-133-wrap")[0].children.length;
+var art = document.getElementsByClassName("bl-blocks-1-133-article");
+if (articles > 1) {
+var b2 = art[1].cloneNode(true);
+document.getElementsByClassName("bl-blocks-1-133-b23")[0].appendChild(b2);
+document.getElementsByClassName("bl-blocks-1-133-b23")[0].parentNode.style.display = "block";
+art[1].remove();
+}
+if (articles > 2) {
+var b3 = art[1].cloneNode(true);
+document.getElementsByClassName("bl-blocks-1-133-b23")[0].appendChild(b3);
+document.getElementsByClassName("bl-blocks-1-133-b23")[0].parentNode.style.display = "block";
+art[1].remove();
+}
+if (articles > 3) {
+var b4 = art[1].cloneNode(true);
+document.getElementsByClassName("bl-blocks-1-133-b4")[0].appendChild(b4);
+document.getElementsByClassName("bl-blocks-1-133-b4")[0].parentNode.style.display = "block";
+art[1].remove();
+}
+if (articles > 4) {
+var b5 = art[1].cloneNode(true);
+document.getElementsByClassName("bl-blocks-1-133-b5")[0].appendChild(b5);
+document.getElementsByClassName("bl-blocks-1-133-b5")[0].parentNode.style.display = "block";
+art[1].remove();
+}
+if (articles > 5) {
+var b6 = art[1].cloneNode(true);
+document.getElementsByClassName("bl-blocks-1-133-b6")[0].appendChild(b6);
+document.getElementsByClassName("bl-blocks-1-133-b6")[0].parentNode.style.display = "block";
+art[1].remove();
+}
+if (articles > 6) {
+var b7 = art[1].cloneNode(true);
+document.getElementsByClassName("bl-blocks-1-133-b7")[0].appendChild(b7);
+document.getElementsByClassName("bl-blocks-1-133-b7")[0].parentNode.style.display = "block";
+art[1].remove();
+}
+}
+<\/script>
+');DisplayHighlight('bl-blocks-1-133');}
+{{LayoutH5End}}
+
+{{LayoutArticleGroup113Begin}}
+{{LayoutArticleGroup113Limit10}}
+{{Where:SubMenuIdInclude:113}}
+{{SortBy:Issue,Updated}}
+function GetArticleGroup113(){document.write({{PutHtmlChar39}}
+<div class="event-section-container">
+<div class="event-menu">EVENTZILLA</div>
+<div class="event-line"></div>
+{{RepeatBegin}}
+<div class="event-section-block hpe-in-event" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-menu="{{Menu}}" data-submenu="{{SubMenu}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+<div class="event-section-image"><a href="{{HeadingLink}}"><img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}"/></a></div>
+<div class="event-section-heading"><a href="{{HeadingLink}}"><h2 class="pageheading">{{Heading}}</h2></a></div>
+<div class="event-section-date"><i class="fa fa-calendar" aria-hidden="true"></i>{{IssueDate}}</div>
+<div class="event-section-body pagebody">{{Body}}</div>
+</div>	
+{{RepeatEnd}}
+</div>{{PutHtmlChar39}});}
+{{LayoutArticleGroup113End}}
