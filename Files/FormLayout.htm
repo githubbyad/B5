@@ -17,29 +17,37 @@ obj.className = cname;
 else if (evt.type == "blur")
 /*obj.className = cname;*/
 }
+/* Change URL in Email Subject */
+if(document.getElementById('SystemEmailSubject')) {
+var ses_v = document.getElementById('SystemEmailSubject');
+var ses_url = location.href;
+var ses_urlx = new URL(ses_url);
+var ses_site = ses_urlx.searchParams.get("site");
+ses_v.value = ses_v.value.replace('mywebsite.com', ses_site);
+}
 </script>
 <style>
 .form-check-label:hover {color: #0d6efd;cursor: pointer;}
-.cus-form-loading {display:none;border: 5px solid #0d6efd;border-radius: 50%;border-top: 5px solid #ddd;width:80px;height:80px;-webkit-animation: spin 700ms linear infinite;animation: spin 700ms linear infinite;position: fixed;left: 50%;top: 50%;}
-@-webkit-keyframes spin {0% {-webkit-transform:translate(-50%,-50%) rotate(0deg);}100% {-webkit-transform:translate(-50%,-50%) rotate(360deg);}}
-@keyframes spin {0% {transform: translate(-50%,-50%) rotate(0deg);}100% {transform: translate(-50%,-50%) rotate(360deg);}}
 .cus-form-loader .cus-form-loading {display: block !important;}
-.cus-form-loader .formbody {opacity: 0.2;filter: blur(1px);pointer-events: none;}
+.cus-form-loader .formbody fieldset {opacity: 0.5;pointer-events: none;}
+#cus-form-button-loader {display:none; margin-right: 8px;}
+.cus-form-loader footer, .cus-form-loader button {cursor: no-drop;}
+.fast-spin {-webkit-animation: fa-spin 1s infinite linear;animation: fa-spin 1s infinite linear;}
+.cus-form-loader #cus-form-button-loader {display:inline-block;}
 .form-floating > .form-control:focus ~ label {color: #0d6efd !important;}
 .form-control:not(:disabled):not([readonly])::file-selector-button {position: absolute;right: 0;border-radius: 5px !important;}
 .input-file-preview {display: none;}
 .input-file-preview img {max-width: 30%;max-height: 200px;border: 1px solid #ced4da;border-radius: 5px;padding: 5px;box-sizing: border-box;cursor: zoom-in;}
 .w-96 {width: 96% !important;}
 .p-valid {color: green;}
-.p-valid:before {position: relative;left: -10px;content: "&#10004;";}
+.p-valid:before {position: relative;left: -10px;content: "✔";}
 .p-invalid {color: red;}
-.p-invalid:before {position: relative;left: -10px;content: "&#10006;";font-size: 0.875rem !important;}
+.p-invalid:before {position: relative;left: -10px;content: "✖";font-size: 0.875rem !important;}
 .open-eye, .close-eye {position: absolute;right: 2%;top: 50%;transform: translate(0,-50%);cursor: pointer;}
 .open-eye i:hover, .close-eye i:hover {color: gray !important;}
 .cus-form-help:before {content: "\f05a";font-family: FontAwesome;padding-left: 0.5rem;padding-right: 0.5rem;}
 .cus-form-help:empty {display: none;}
 </style>
-<div class="cus-form-loading"></div>
 <div class="formbody">
 <div class="body p-2">
 <!--FormError-->
@@ -51,7 +59,7 @@ else if (evt.type == "blur")
 {{FormEmailFormat}} 
 {{FormEmailTo}} 
 {{FormEmailCC}}
-<center class="fw-bold mb-5 fs-3 text-secondary">{{FormTitle}}</center>
+<center class="fw-bold mb-3 fs-3 text-secondary">{{FormTitle}}</center>
 <fieldset>
 <div class="system_text Header_text mb-5">
 {{FormHeader}}
@@ -98,9 +106,9 @@ else if (evt.type == "blur")
 <span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span>
 </div>
 <div class="formfieldname text-start">
-<!-- <label class="textarea text-muted" style="font-size:0.875rem">{{TextAreaCount}}</label> -->
-<label class="textarea text-muted" style="font-size:0.875rem">
-<label id="opinion-memo4">0 of {{FieldLength}} characters   |  </label> <label id="opinion-memo42">0 words</label></label>
+<label class="textarea text-muted" style="font-size:0.875rem">{{TextAreaCount}}</label>
+<!-- <label class="textarea text-muted" style="font-size:0.875rem">
+<label id="opinion-memo4">0 of {{FieldLength}} characters   |  </label> <label id="opinion-memo42">0 words</label></label> -->
 </div>
 </section>
 
@@ -329,7 +337,7 @@ length.classList.add("p-invalid");
 </div>
 </fieldset>
 <footer class="text-center mt-3">
-<button class="button btn btn-primary shadow" id="SUBMIT1" type="submit" onclick="document.getElementById('CustomForm').classList.add('was-validated');"><span class="py-1 px-3 d-inline-block">{{FormButtonSubmit}}</span></button>
+<button class="button btn btn-primary shadow text-capitalize" id="SUBMIT1" type="submit" onclick="document.getElementById('CustomForm').classList.add('was-validated');"><span class="py-1 px-3 d-inline-block"><i id="cus-form-button-loader" class='fa fa-circle-o-notch fa-spin fast-spin'></i>{{FormButtonSubmit}}</span></button>
 </footer>
 </form>
 </div>
