@@ -1,0 +1,99 @@
+{{LayoutMenus1Begin}}
+{{File:Menus-Horizontal1.js}}
+{{Where:MenuTypeInclude:'Horizontal'}}
+function GetHorizontalMenu1(){document.write({{PutHtmlChar39}}
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm bg-black px-3 py-2">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav flex-wrap">
+            {{RepeatBegin1}}
+	            <li class="nav-item dropdown pe-4">
+	                <a id="navbarDropdown" class="nav-link fs-5 dropdown-toggle fw-bold text-uppercase text-white" style="{{MenuStyle}} font-family: pt sans,sans-serif;" href="{{MenuLink}}" role="button"  data-bs-toggle="dropdown" aria-expanded="false">{{Menu}}</a>
+	                    <ul class="dropdown-menu fade-up" aria-labelledby="navbarDropdown">
+		                    {{RepeatBegin2}}
+		                        <li style="{{CSSDisplay}}">
+                                    <a class="dropdown-item fs-5 fw-bold text-dark border-bottom border-gray nx-2" style="font-family: pt sans,sans-serif;" href="{{SubMenuLink}}">{{SubMenu}}</a>
+                                </li>
+		                    {{RepeatEnd2}}
+	                    </ul>
+	            </li>
+	        {{RepeatEnd1}}
+        </ul>
+	</div>
+</nav>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
+.no-submenu .dropdown-toggle::after {display: none;}
+@media all and (min-width: 992px) {
+.navbar-nav li:hover>ul.dropdown-menu {display: block;margin-top: 0px;}
+.navbar .dropdown-menu-end{ right:0; left: auto;  }
+.navbar .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  }
+.navbar .nav-item:hover .nav-link{ color: #fff;  }
+.navbar .dropdown-menu.fade-down{ top:80%; transform: rotateX(-75deg); transform-origin: 0% 0%; }
+.navbar .dropdown-menu.fade-up{ top:180%;  }
+.navbar .nav-item:hover .dropdown-menu{ transition: .3s; opacity:1; visibility:visible; top:100%; transform: rotateX(0deg); }
+.dropdown-menu.fade-up:before {
+content: "";  position: absolute;  top: -14px;  color: white;  left: 30px;  border-color: transparent transparent white transparent; border-style: solid;border-width: 7px;}
+.nav-item.dropdown:hover #navbarDropdown::after {transform: rotate(180deg);transition: 300ms linear;transition-property:transform;}
+.fixed-top {top: -40px;  transform: translateY(40px);  transition: transform .3s;opacity: 0.9;}
+.fixed-top:hover{opacity:1;}
+.fixed-top #navbarSupportedContent {padding-left: 1rem;padding-right: 1rem;}
+}	
+</style>
+<script>
+/*HideSubMenu*/
+var nav_dm = document.getElementsByClassName("dropdown-menu");
+var nav_dml = nav_dm.length;
+for (i = 0; i < nav_dml; i++) {
+var nav_dms = nav_dm[i].children.length;
+for (j = 0; j < nav_dms; j++) {
+if (nav_dm[i].children[j].style.display == "none") {
+nav_dm[i].children[j].remove();
+}
+}
+if (nav_dm[i].children.length == 0) {
+nav_dm[i].parentNode.classList.add("no-submenu");
+nav_dm[i].style.display = "none";
+}
+}
+/*MenuLink*/
+var ns = document.getElementsByClassName("no-submenu").length;
+var nss = document.getElementsByClassName("no-submenu");
+for (k = 0; k < ns; k++) {
+var nshref = nss[k].children[0].getAttribute("href");
+var nsso = "location.href = \'" + nshref + "\';";
+nss[k].children[0].setAttribute("onclick", nsso);
+}
+/*SubMenuHTML*/
+$(document).ready(function(){
+$(".dropdown-item").each(function() {
+if ($(this).text() == "" && $(this).siblings("a").length) {
+$(this).siblings("a").attr("class", $(this).attr("class"));
+$(this).siblings("a").attr("style", $(this).attr("style"));
+$(this).css("display", "none");
+}
+});
+});
+/* Menu Sticky*/
+document.addEventListener("DOMContentLoaded", function(){
+if (window.location.href.indexOf("=target_form2.") == -1) {
+if(window.screen.width > 992) {
+var mo = document.getElementsByClassName("navbar")[0].offsetTop;
+window.addEventListener("scroll", function() {
+if (window.scrollY > mo) {
+document.getElementsByClassName("navbar")[0].classList.add("fixed-top");
+navbar_height = document.querySelector(".navbar").offsetHeight;
+document.getElementsByClassName("mainbody")[0].style.paddingTop = navbar_height + "px";
+} else {
+document.getElementsByClassName("navbar")[0].classList.remove("fixed-top");
+document.getElementsByClassName("mainbody")[0].style.paddingTop = "0";
+} 
+});
+}
+}
+});
+<\/script>
+{{PutHtmlChar39}});}
+{{LayoutMenus1End}}
