@@ -20,10 +20,11 @@ else if (evt.type == "blur")
 <style>
 .form-check-label:hover {color: #0d6efd;cursor: pointer;}
 .cus-form-loader .cus-form-loading {display: block !important;}
-.cus-form-loader .formbody fieldset {opacity: 0.5;pointer-events: none;}
-#cus-form-button-loader {display:none; margin-right: 8px;}
+.cus-form-loader .formbody fieldset, .cus-form-loader .system_text.footer_text {opacity: 0.5;pointer-events: none;}
+#cus-form-button-loader {display:none;}
 .cus-form-loader footer, .cus-form-loader button {cursor: no-drop;}
 .fast-spin {-webkit-animation: fa-spin 1s infinite linear;animation: fa-spin 1s infinite linear;}
+.cus-form-loader #SUBMIT1 {display:none;}
 .cus-form-loader #cus-form-button-loader {display:inline-block;}
 .form-floating > .form-control:focus ~ label {color: #0d6efd !important;}
 .form-control:not(:disabled):not([readonly])::file-selector-button {position: absolute;right: 0;border-radius: 5px !important;}
@@ -332,7 +333,8 @@ length.classList.add("p-invalid");
 
 </fieldset>
 <footer class="text-center mt-3">
-<button class="button btn btn-primary shadow text-capitalize" id="SUBMIT1" type="submit" onclick="document.getElementById('CustomForm').classList.add('was-validated');"><span class="py-1 px-3 d-inline-block"><i id="cus-form-button-loader" class='fa fa-circle-o-notch fa-spin fast-spin'></i>{{FormButtonSubmit}}</span></button>
+<button class="button btn btn-primary shadow text-capitalize" id="SUBMIT1" type="submit" onclick="document.getElementById('CustomForm').classList.add('was-validated');"><span class="py-1 px-3 d-inline-block">{{FormButtonSubmit}}</span></button>
+<i id="cus-form-button-loader" class='fa fa-circle-o-notch fa-spin fast-spin fs-1'></i>
 </footer>
 <div class="system_text footer_text mt-5 mb-3">{{FormFooter}}</div>
 </form>
