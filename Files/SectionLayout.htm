@@ -1,0 +1,120 @@
+{{SectionValuesBegin}}
+{{LayoutSection<<SubMenuId>>Begin}}
+{{LayoutSection<<SubMenuId>>Limit<<TotalArticlesSubMenu>>}}
+{{Where:SubMenuIdInclude:<<SubMenuId>>}}
+{{File:section<<SubMenuId>>.htm}}
+{{ReplaceJavascriptChars:No}}
+{{RemoveHTMLBody}}
+{{SortBy:Issue, Updated}}
+<div class="cus-section-133-container container-fluid px-0">
+    <div class="cus-default-menu-bar">
+        <div class="text-uppercase fw-bold px-0 mb-2 text-gray bl-133-label" style="font-family: pt sans,sans-serif;">
+            <span>
+                <span class="cus-default-menu">{{Menu}}</span><i class="fa fa-angle-right mx-2" aria-hidden="true"></i><span class="cus-default-submenu">{{SubMenu}}</span>
+            </span>
+        </div>
+    </div>
+    {{RepeatBegin}}
+        {{If Counter<=TotalArticlesPage}}
+            <div class="cus-section-133-block mb-4 mb-lg-2 mx-0 pb-2 border-bottom row hpe-in-section" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-menu="{{Menu}}" data-submenu="{{SubMenu}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+                <div class="col-lg-5 mb-2 mb-lg-0 px-0">
+                    <a href="{{HeadingLink}}">
+                        <div class="ratio-3-2 cus-zoom" data-cus-src="{{HeadingImage}}">
+                            <div class="img-content">
+                                <img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="img-fluid" />
+                            </div>
+                        </div>
+                   </a>
+                </div>
+                <div class="col-lg-7 px-0 px-lg-2">
+                    <p class="cus-section-133-heading mb-1">
+                        <a class="d-inline-block text-decoration-none fs-4 fw-bold text-black lh-base line-2" href="{{HeadingLink}}">{{Heading}}</a>
+                    </p>
+                    <p class="cus-section-133-date d-inline-block text-decoration-none fs-6 text-muted lh-1 mb-2">
+                        <i class="fa fa-calendar" aria-hidden="true"></i> {{IssueDate}}
+                    </p>
+                    <p class="cus-section-133-body line-4 text-dark fs-5 mb-2 lh-base">
+                        {{Body}}
+                    </p>
+                    <p class="cus-section-133-more">
+                        <a class="d-inline-block text-decoration-none fs-5 text-dark lh-1 fst-italic" href="{{HeadingLink}}">{{more}}</a>
+                    </p>
+                </div>
+            </div>
+        {{Else}}
+            <div class="cus-section-133-archive mb-4 mb-lg-2 mx-0 pb-2 border-bottom row hpe-in-section" style="display: none;" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-menu="{{Menu}}" data-submenu="{{SubMenu}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+                <div class="col-lg-5 mb-2 mb-lg-0 px-0">
+                    <a href="{{HeadingLink}}">
+                        <div class="ratio-3-2 cus-zoom" data-cus-src="{{HeadingImage}}">
+                            <div class="img-content">
+                                <img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="img-fluid" />
+                            </div>
+                        </div>
+                </a>
+                </div>
+                <div class="col-lg-7 px-0 px-lg-2">
+                    <p class="cus-section-133-heading mb-1">
+                        <a class="d-inline-block text-decoration-none fs-4 fw-bold text-black lh-base line-2" href="{{HeadingLink}}">{{Heading}}</a>
+                    </p>
+                    <p class="cus-section-133-date d-inline-block text-decoration-none fs-6 text-muted lh-1 mb-2">
+                        <i class="fa fa-calendar" aria-hidden="true"></i> {{IssueDate}}
+                    </p>
+                    <p class="cus-section-133-body line-4 text-dark fs-5 mb-2 lh-base">
+                        {{Body}}
+                    </p>
+                    <p class="cus-section-133-more">
+                        <a class="d-inline-block text-decoration-none fs-5 text-dark lh-1 fst-italic" href="{{HeadingLink}}">{{more}}</a>
+                    </p>
+                </div>
+            </div>
+        {{EndIf}}
+        {{If TotalArticlesArchive=0}}
+            <style>.DisplayFlag{display:none;}</style>
+        {{EndIf}}
+        {{If Counter=TotalArticlesPage}}
+            <div class="cus-section-133-archivemore DisplayFlag text-center" style="{{SubMenuNoRepeatCSSDisplay}}">
+                <span style="cursor:pointer" class="cus-section-133-load-more border rounded-pill fw-bold lh-lg px-5 my-3 d-inline-block text-gray shadow-sm">
+                    <more class="hpe-custom-text-9">
+                    <script type="text/javascript">Section9();</script>
+                </more> {{SubMenu}}</span>
+            </div>
+        {{EndIf}}
+    {{RepeatEnd}}
+</div>
+<style>
+.cus-section-133-archivemore span:hover {color: #04a1d2 !important;border-color: #04a1d2 !important;}
+.cus-section-133-archivemore-active ~ .cus-section-133-archive {display: flex !important;}
+.cus-section-133-archivemore-active {display: none !important;}
+div[data-cus-src*="lib/images/blank.png"]::after {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+color: gray;
+font-weight: bold;
+font-size: 1.5rem;
+width: 100%;
+text-align: center;
+padding: 0 1rem;
+}
+</style>
+<script>
+/* SubMenu Title */
+document.title = "{{SubMenu}}";
+/* Load More Button */
+if(document.getElementsByClassName('cus-section-133-load-more').length) {
+document.getElementsByClassName('cus-section-133-load-more')[0].addEventListener('click', function(){
+document.getElementsByClassName('cus-section-133-archivemore')[0].classList.add('cus-section-133-archivemore-active');
+});
+}
+/* Blank Image Text */
+var cus_domain = "{{PutDomain}}";
+if (cus_domain.split('/').length > 4) {
+cus_domain = cus_domain.split('://').pop().split('/').slice(1).join('/').split('/').shift();
+} else {
+cus_domain = cus_domain.split('://').pop().split('/').shift();
+}
+document.getElementsByClassName("cus-section-133-container")[0].insertAdjacentHTML("afterend", "<style>div[data-cus-src*='lib/images/blank.png']::after {content: '" + cus_domain + "';</style>");
+</script>
+{{LayoutSection<<SubMenuId>>End}}
+{{SectionValuesEnd}}
