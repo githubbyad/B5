@@ -33,6 +33,9 @@
 .opinionheading {font-size: 0.875rem;color:#1574ba;font-weight: bold;margin-top: 10px;float: left;width: 100%;}
 .opinionbody {font-size: 0.875rem;color: #6c757d;float: left;width: 100%;}
 .opinionbody iframe {margin-top: 20px;}
+.bl-133-label {border-bottom: 4px solid #bdcde3;}
+.bl-133-label > span{position: relative;}
+.bl-133-label > span:before {background: #0d6efd;position: absolute;display: inline-block;content: "";width: 100%;height: 4px;bottom: -6px;}
 @media all and (min-width: 992px) {
 .cus-default-figure[data-photo-align="Left"] {padding-right: 1rem;}
 .cus-default-figure[data-photo-align="Right"] {padding-left: 1rem;float: right !important;}
@@ -75,7 +78,12 @@ cb_c.parentNode.insertBefore(cb_cf, cb_c.nextSibling);
 /* Reader Comment */
 if(document.getElementsByClassName('opiniontitle').length) {
 var rc = document.getElementsByClassName('opinionheading').length;
-document.getElementsByClassName('opiniontitle')[0].innerHTML = rc + " Comments";
+document.getElementsByClassName('opiniontitle')[0].innerHTML = "<i class='fa fa-comments' aria-hidden='true'></i> " + rc + " Comments";
+var och = document.getElementsByClassName('opinionheading');
+var ouser = '<i class="fa fa-user-circle-o text-muted" aria-hidden="true"></i> ';
+for(var m=0; m< och.length; m++) {
+  och[m].innerHTML = ouser + och[m].innerHTML;
+}
 }
 </script>
 {{ArticleValuesEnd}}
