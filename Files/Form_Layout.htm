@@ -24,6 +24,7 @@ else if (evt.type == "blur")
 }
 </script>
 <style>
+#CustomForm {background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%23c9d1cb' fill-opacity='0.16'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E");background-attachment: fixed;}
 .form-check-label:hover {color: #0d6efd;cursor: pointer;}
 .cus-form-loader .cus-form-loading {display: block !important;}
 .cus-form-loader .formbody fieldset, .cus-form-loader .system_text.footer_text {opacity: 0.5;pointer-events: none;}
@@ -120,15 +121,12 @@ else if (evt.type == "blur")
 <div class="input input-file w-100 form-floating">
 <input type="file" id="{{FieldName}}" class="form-control" name="{{FieldName}}" accept="image/*" {{FieldRequiredBrowser}}>
 <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} Upload {{FieldCaption}}</label>
-<span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span>
+<span style="font-size:0.75rem;display:block;" class="text-muted cus-form-help">{{FieldHelpB}}</span>
 <div id="{{FieldName}}-prv-div" class="input-file-preview mt-2 w-100">
 <img id="{{FieldName}}_prvx" src="#" alt="" onclick="window.open(this.src, '_blank');" />
-<span id="{{FieldName}}_sizex" class="text-muted" style="font-size: 0.875rem; !important"></span>
+<span id="{{FieldName}}_sizex" class="text-muted" style="font-size: 0.875rem !important"></span>
 </div>
 </div>
-<style>
-#{{FieldName}} ~ .cus-form-help {display: block;}
-</style>
 <script>
 {{FieldName}}.onchange = evt => {
 const [file] = {{FieldName}}.files
@@ -282,7 +280,7 @@ length.classList.add("p-invalid");
 </select>
 <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
 </div>
-<span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span>
+<span style="font-size:0.75rem;display:block;" class="text-muted cus-form-help">{{FieldHelpB}}</span>
 </section>
 
 {{ElseIf FieldType=Hidden}} 
@@ -314,11 +312,8 @@ length.classList.add("p-invalid");
 <section class="w-96 mb-3" style="margin-left:2%">
 <input id="{{FieldName}}" name="{{FieldName}}"  type="{{FieldType}}" name="checkbox" class="form-check-input" {{FieldRequiredBrowser}}>
 <label for="{{FieldName}}" class="form-label form-check-label user-select-none">{{FieldRequired}} {{FieldCaption}}</label>
-<br><span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span> 
+<br><span style="font-size:0.75rem;display: block;" class="text-muted cus-form-help">{{FieldHelpB}}</span> 
 </section>
-<style>
-#{{FieldName}} ~ .cus-form-help {display: block;}
-</style>
 {{ElseIf FieldType=Captcha}}
 
 <section class="captcha-section w-96 mb-3" style="margin-left: 2%;">
