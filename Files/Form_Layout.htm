@@ -313,9 +313,12 @@ length.classList.add("p-invalid");
 
 <section class="w-96 mb-3" style="margin-left:2%">
 <input id="{{FieldName}}" name="{{FieldName}}"  type="{{FieldType}}" name="checkbox" class="form-check-input" {{FieldRequiredBrowser}}>
-<label for="{{FieldName}}" class="form-label form-check-label user-select-none">{{FieldRequired}} {{FieldCaption}}</label>   
+<label for="{{FieldName}}" class="form-label form-check-label user-select-none">{{FieldRequired}} {{FieldCaption}}</label>
+<br><span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span> 
 </section>
-
+<style>
+#{{FieldName}} ~ .cus-form-help {display: block;}
+</style>
 {{ElseIf FieldType=Captcha}}
 
 <section class="captcha-section w-96 mb-3" style="margin-left: 2%;">
