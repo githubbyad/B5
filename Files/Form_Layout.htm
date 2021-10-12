@@ -71,20 +71,18 @@ else if (evt.type == "blur")
 {{RepeatBegin}} 
 
 {{If FieldType=System}}
-<section class="w-96 mb-3" style="margin-left:2%">
+<section class="w-96 mb-3" style="margin-left:2%" data-bs-toggle="tooltip" data-bs-placement="auto" title="{{FieldHelpB}}">
 <div class="input w-100 form-floating">
 <INPUT NAME="{{FieldName}}" VALUE="{{FieldValue}}" id="{{FieldName}}" placeholder="{{FieldRequired}} {{FieldCaption}}" type="{{FieldType}}" readonly class="formfieldinput formfieldinput_custom form-control formfieldinput_ReadOnly" {{FieldRequiredBrowser}} >
 <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
-<span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span>
 </div>
 </section>
 
 {{ElseIf FieldType=ReadOnly}}
-<section class="w-96 mb-3" style="margin-left:2%">
+<section class="w-96 mb-3" style="margin-left:2%" data-bs-toggle="tooltip" data-bs-placement="auto" title="{{FieldHelpB}}">
 <div class="input w-100 form-floating">
 <INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" placeholder="{{FieldRequired}} {{FieldCaption}}" type="{{FieldType}}" readonly class="formfieldinput formfieldinput_custom form-control formfieldinput_ReadOnly" {{FieldRequiredBrowser}} >
 <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
-<span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span>
 </div>
 </section>
 
@@ -102,26 +100,22 @@ else if (evt.type == "blur")
 
 {{ElseIf FieldType=Memo}}
 
-<section class="w-96 mb-3" style="margin-left:2%">
+<section class="w-96 mb-3" style="margin-left:2%" data-bs-toggle="tooltip" data-bs-placement="auto" title="{{FieldHelpB}}">
 <div class="input w-100 form-floating">
 <{{TextArea}} class="formfieldinput formfieldinput_custom form-control" style="height: 100px" id="{{FieldName}}" placeholder="{{FieldRequired}} {{FieldCaption}}" rows="4" cols="50" name="{{FieldName}}" onfocus="ChangeInputFocus(this, event, 'formfieldinputfocus'), LimitCharacters(this, '{{FieldName}}-memo4', '{{FieldName}}-memo42','{{FieldLengthW}}')" onblur="ChangeInputFocus(this, event, 'formfieldinput')" id="{{FieldName}}-memo"  onkeyup="LimitCharacters(this, '{{FieldName}}-memo4', '{{FieldName}}-memo42','{{FieldLengthW}}');" maxlength="{{FieldLength}}" NAME="{{FieldName}}" {{FieldRequiredBrowser}}></{{TextArea}}>
 <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
-<span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span>
 </div>
 <div class="formfieldname text-start">
 <label class="textarea text-muted" style="font-size:0.875rem">{{TextAreaCount}}</label>
-<!-- <label class="textarea text-muted" style="font-size:0.875rem">
-<label id="opinion-memo4">0 of {{FieldLength}} characters   |  </label> <label id="opinion-memo42">0 words</label></label> -->
 </div>
 </section>
 
 {{ElseIf FieldType=File}}
 
-<section class="w-96 mb-3" style="margin-left:2%">
+<section class="w-96 mb-3" style="margin-left:2%" data-bs-toggle="tooltip" data-bs-placement="auto" title="{{FieldHelpB}}">
 <div class="input input-file w-100 form-floating">
 <input type="file" id="{{FieldName}}" class="form-control" name="{{FieldName}}" accept="image/*" {{FieldRequiredBrowser}}>
 <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} Upload {{FieldCaption}}</label>
-<span style="font-size:0.75rem;display:block;" class="text-muted cus-form-help">{{FieldHelpB}}</span>
 <div id="{{FieldName}}-prv-div" class="input-file-preview mt-2 w-100">
 <img id="{{FieldName}}_prvx" src="#" alt="" onclick="window.open(this.src, '_blank');" />
 <span id="{{FieldName}}_sizex" class="text-muted" style="font-size: 0.875rem !important"></span>
@@ -145,11 +139,11 @@ document.getElementById('{{FieldName}}_sizex').innerHTML = "[File Size: "+ size 
 
 {{ElseIf FieldType=Password}}
 
-<section id="{{FieldName}}_sectionx" class="w-96 mb-3" style="margin-left:2%">
+<section id="{{FieldName}}_sectionx" class="w-96 mb-3" style="margin-left:2%" data-bs-toggle="tooltip" data-bs-placement="auto" title="{{FieldHelpB}}">
 <div class="input w-100 form-floating">
 <INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="{{FieldType}}"  class="formfieldinput formfieldinput_custom form-control"  placeholder="{{FieldRequired}} {{FieldCaption}}" {{FieldRequiredBrowser}} value="" pattern="(?=.*\d)(?=.*[!#$%@])(?=.*[a-z])(?=.*[A-Z]).{8,}" >
 <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
-<span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span>
+<div id="{{FieldName}}-form-forget" class="float-start w-100" style="display: none;"><a class="text-decoration-none mt-1 d-block" href="/target_form2.asp?twindow=Form&smenu=106&pform={{ForgotPassword}}&mad=No&sname=target_form2.asp&site={{PutDomainX}}">Forgot Password?</a></div>
 <div id="{{FieldName}}_show_p" class="open-eye text-dark"><i aria-hidden="true" class="fa fa-eye fs-5"></i></div>
 <div id="{{FieldName}}_hide_p" class="close-eye text-dark" style="display:none;"><i class="fa fa-eye-slash fs-5 text-danger" aria-hidden="true"></i></div>
 </div>
@@ -201,6 +195,9 @@ margin-bottom: 7px !important;
 {{FieldName}}_show_p.style.display = "block";
 {{FieldName}}_hide_p.style.display = "none";
 });
+if(window.location.href.indexOf("pform={{Login}}") != -1){
+document.getElementById("{{FieldName}}-form-forget").style.display = "block";
+}
 if(window.location.href.indexOf("pform={{Login}}") == -1){
 var myInput = document.getElementById("{{FieldName}}");
 var letter = document.getElementById("{{FieldName}}_letter");
@@ -263,24 +260,22 @@ length.classList.add("p-invalid");
 
 {{ElseIf FieldType=Date}}
 
-<section class="w-96 mb-3" style="margin-left:2%">
+<section class="w-96 mb-3" style="margin-left:2%" data-bs-toggle="tooltip" data-bs-placement="auto" title="{{FieldHelpB}}">
 <div class="input w-100 form-floating">
 <INPUT NAME="{{FieldName}}" class="form-control" VALUE="{{FieldDefaultValue}}" placeholder="{{FieldRequired}} {{FieldCaption}}" id="{{FieldName}}" style="cursor: default;" type="{{FieldType}}" {{FieldRequiredBrowser}} value="">
 <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
-<span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span>
 </div>
 </section>
 
 {{ElseIf FieldType=DropDown}}
 
-<section class="w-96 mb-3" style="margin-left:2%">
+<section class="w-96 mb-3" style="margin-left:2%" data-bs-toggle="tooltip" data-bs-placement="auto" title="{{FieldHelpB}}">
 <div class="select w-100 form-floating">
 <select id="{{FieldName}}" name="{{FieldName}}" {{FieldRequiredBrowser}} class="form-select">
 {{FieldDropDown}}
 </select>
 <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
 </div>
-<span style="font-size:0.75rem;display:block;" class="text-muted cus-form-help">{{FieldHelpB}}</span>
 </section>
 
 {{ElseIf FieldType=Hidden}} 
@@ -289,30 +284,27 @@ length.classList.add("p-invalid");
 
 {{ElseIf FieldType=Decimal}} 
 
-<section class="w-96 mb-3" style="margin-left:2%">
+<section class="w-96 mb-3" style="margin-left:2%" data-bs-toggle="tooltip" data-bs-placement="auto" title="{{FieldHelpB}}">
 <div class="input w-100 form-floating">
 <INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="{{FieldType}}"  onkeypress="return keyRestrict(event,this.value,'Decimal')" class="formfieldinput formfieldinput_custom form-control" onfocus="ChangeInputFocus(this, event, 'formfieldinputfocus')" onblur="ChangeInputFocus(this, event, 'formfieldinput formfieldinput_custom')" maxlength="{{FieldLength}}" placeholder="{{FieldRequired}} {{FieldCaption}}" value="" {{FieldRequiredBrowser}}>
 <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
-<span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span>
 </div>
 </section>
 
 {{ElseIf FieldType=Number}} 
 
-<section class="w-96 mb-3" style="margin-left:2%">
+<section class="w-96 mb-3" style="margin-left:2%" data-bs-toggle="tooltip" data-bs-placement="auto" title="{{FieldHelpB}}">
 <div class="input w-100 form-floating">
 <INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="{{FieldType}}"  onkeypress="return keyRestrict(event,this.value,'Decimal')" class="formfieldinput formfieldinput_custom form-control" onfocus="ChangeInputFocus(this, event, 'formfieldinputfocus')" onblur="ChangeInputFocus(this, event, 'formfieldinput formfieldinput_custom')" maxlength="{{FieldLength}}" placeholder="{{FieldRequired}} {{FieldCaption}}" {{FieldRequiredBrowser}}>
 <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
-<span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span>
 </div>
 </section>
 
 {{ElseIf FieldType=CheckBox}} 
 
-<section class="w-96 mb-3" style="margin-left:2%">
+<section class="w-96 mb-3" style="margin-left:2%" data-bs-toggle="tooltip" data-bs-placement="auto" title="{{FieldHelpB}}">
 <input id="{{FieldName}}" name="{{FieldName}}"  type="{{FieldType}}" name="checkbox" class="form-check-input" {{FieldRequiredBrowser}}>
 <label for="{{FieldName}}" class="form-label form-check-label user-select-none">{{FieldRequired}} {{FieldCaption}}</label>
-<br><span style="font-size:0.75rem;display: block;" class="text-muted cus-form-help">{{FieldHelpB}}</span> 
 </section>
 {{ElseIf FieldType=Captcha}}
 
@@ -325,11 +317,10 @@ length.classList.add("p-invalid");
 
 {{Else}}
 
-<section class="w-96 mb-3" style="margin-left:2%">
+<section class="w-96 mb-3" style="margin-left:2%" data-bs-toggle="tooltip" data-bs-placement="auto" title="{{FieldHelpB}}">
 <div class="input w-100 form-floating">
 <INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}"  maxlength="{{FieldLength}}" placeholder="{{FieldRequired}} {{FieldCaption}}" type="{{FieldType}}"  class="formfieldinput formfieldinput_custom form-control" {{FieldRequiredBrowser}}>
 <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
-<span style="font-size:0.75rem" class="text-muted cus-form-help">{{FieldHelpB}}</span>
 </div>
 </section>
 {{EndIf}} 
@@ -341,10 +332,19 @@ length.classList.add("p-invalid");
 <button class="button btn btn-primary shadow text-capitalize" id="SUBMIT1" type="submit" onclick="document.getElementById('CustomForm').classList.add('was-validated');"><span class="py-1 px-3 d-inline-block">{{FormButtonSubmit}}</span></button>
 <i id="cus-form-button-loader" class='fa fa-circle-o-notch fa-spin fast-spin fs-1 text-primary'></i>
 </footer>
-<div class="system_text footer_text mt-5 mb-3">{{FormFooter}}</div>
+<div class="system_text footer_text mt-5 mb-3 text-center">{{FormFooter}}</div>
 </form>
 </div>
 <script language="javascript">GetGoogleAnalytics('FORM:{{FormName}}');</script>
+<!-- Tooltip -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+</script>
+<!-- /Tooltip -->
 </div>
 </body>
 </html>
