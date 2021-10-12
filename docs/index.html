@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Alert</title>
+    <script>
+        function alert(msg, ctl) {
+            if (!document.getElementById('f_alert_button')) {
+                document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_alert_button' type='button' data-bs-toggle='modal' data-bs-target='#f_alert' style='display:none;'></button><div class='f_alert_box modal fade' id='f_alert' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_alertLabel' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable'><div class='modal-content'><div class='modal-header' style='display:none'><button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button></div><div class='modal-body text-center' style='white-space: pre-wrap;''>" + msg + "</div><div class='modal-footer d-flex justify-content-center'><button type='button' class='f_alert_close btn btn-dark' data-bs-dismiss='modal'>Close</button></div></div></div></div>");
+                document.getElementById('f_alert_button').click();
+                document.getElementsByClassName('f_alert_close')[0].addEventListener('click', function() {
+                    document.getElementById('f_alert_button').remove();
+                    document.getElementsByClassName('f_alert_box')[0].remove();
+                    if (ctl) {
+                        ctl.focus();
+                    }
+                });
+            }
+        }
+        
+        function confirm(msg, ctl) {
+            if (!document.getElementById('f_confirm_button')) {
+                document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_confirm_button' type='button' data-bs-toggle='modal' data-bs-target='#f_confirm' style='display:none;'></button><div class='f_confirm_box modal fade' id='f_confirm' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_confirmLabel' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable'><div class='modal-content'><div class='modal-header' style='display:none'><button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button></div><div class='modal-body text-center' style='white-space: pre-wrap;'>" + msg + "</div><div class='modal-footer d-flex justify-content-center'><button type='button' class='f_confirm_yes btn btn-danger me-3' data-bs-dismiss='modal'>Confirm</button><button type='button' class='f_confirm_close btn btn-dark' data-bs-dismiss='modal'>Close</button></div></div></div></div>");
+                document.getElementById('f_confirm_button').click();
+                document.getElementsByClassName('f_confirm_close')[0].addEventListener('click', function() {
+                    document.getElementById('f_confirm_button').remove();
+                    document.getElementsByClassName('f_confirm_box')[0].remove();
+                });
+                document.getElementsByClassName('f_confirm_yes')[0].addEventListener('click', function() {
+                    document.getElementById('f_confirm_button').remove();
+                    document.getElementsByClassName('f_confirm_box')[0].remove();
+                    if (ctl) {
+                        window.location = ctl.href;
+                    }
+                });
+            }
+            return false;
+        }
+
+        function confirmdelete(msg, ctl) {
+            if (!document.getElementById('f_confirm_delete_button')) {
+                document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_confirm_delete_button' type='button' data-bs-toggle='modal' data-bs-target='#f_confirm_delete' style='display:none;'></button><div class='f_confirm_delete_box modal fade' id='f_confirm_delete' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_confirm_deleteLabel' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable'><div class='modal-content'><div class='modal-header' style='display:none'><button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button></div><div class='modal-body text-center' style='white-space: pre-wrap;'>" + msg + "</div><div class='modal-footer d-flex justify-content-center'><button type='button' class='f_confirm_delete_yes btn btn-danger me-3' data-bs-dismiss='modal'>Delete</button><button type='button' class='f_confirm_delete_close btn btn-dark' data-bs-dismiss='modal'>Close</button></div></div></div></div>");
+                document.getElementById('f_confirm_delete_button').click();
+                document.getElementsByClassName('f_confirm_delete_close')[0].addEventListener('click', function() {
+                    document.getElementById('f_confirm_delete_button').remove();
+                    document.getElementsByClassName('f_confirm_delete_box')[0].remove();
+                });
+                document.getElementsByClassName('f_confirm_delete_yes')[0].addEventListener('click', function() {
+                    document.getElementById('f_confirm_delete_button').remove();
+                    document.getElementsByClassName('f_confirm_delete_box')[0].remove();
+                    if (ctl) {
+                        window.location = ctl.href;
+                    }
+                });
+            }
+            return false;
+        }
+
+        function confirmhide(msg, ctl) {
+            if (!document.getElementById('f_confirm_hide_button')) {
+                document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_confirm_hide_button' type='button' data-bs-toggle='modal' data-bs-target='#f_confirm_hide' style='display:none;'></button><div class='f_confirm_hide_box modal fade' id='f_confirm_hide' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_confirm_hideLabel' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable'><div class='modal-content'><div class='modal-header' style='display:none'><button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button></div><div class='modal-body text-center' style='white-space: pre-wrap;'>" + msg + "</div><div class='modal-footer d-flex justify-content-center'><button type='button' class='f_confirm_hide_yes btn btn-danger me-3' data-bs-dismiss='modal'>Hide</button><button type='button' class='f_confirm_hide_close btn btn-dark' data-bs-dismiss='modal'>Close</button></div></div></div></div>");
+                document.getElementById('f_confirm_hide_button').click();
+                document.getElementsByClassName('f_confirm_hide_close')[0].addEventListener('click', function() {
+                    document.getElementById('f_confirm_hide_button').remove();
+                    document.getElementsByClassName('f_confirm_hide_box')[0].remove();
+                });
+                document.getElementsByClassName('f_confirm_hide_yes')[0].addEventListener('click', function() {
+                    document.getElementById('f_confirm_hide_button').remove();
+                    document.getElementsByClassName('f_confirm_hide_box')[0].remove();
+                    if (ctl) {
+                        window.location = ctl.href;
+                    }
+                });
+            }
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <button type="button" class="btn btn-primary" onclick="alert('Alert Message and focus to \'TEST2\' field', TEST2);">Alert</button><br>
+    <input id="TEST" placeholder="TEST" type="text"><br>
+    <input id="TEST2" placeholder="TEST2" type="text"><br>
+    <Br>
+
+    <a href="#Deleted" onclick="return confirmdelete('<center>Do you want to <b>delete</b> current article?\n\nThis operation cannot be undone.\n\n</center>', this)">delete</a>
+    <Br>
+    <a href="#Hide" onclick="return confirmhide('<center>Do you want to <b>Hide</b> current article?\n\nThis operation cannot be undone.\n\n</center>', this)">Hide</a><br>
+    <a href="#Confirm" onclick="return confirm('<center>Please Confirm.</center>', this)">Confirm</a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
