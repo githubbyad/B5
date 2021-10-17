@@ -260,6 +260,8 @@
                 }
                 this.classList.add('btn-success');
                 Amount.value = this.getAttribute('data-plan');
+                Amount.style.pointerEvents = "none";
+                Amount.style.backgroundColor = "#e9ecef";
                 var dcp = this.getAttribute('data-cp');
                 document.getElementsByClassName('plans')[dcp].classList.add('plan-selected');
                 for (k = 0; k < document.getElementsByClassName('cp-btn').length; k++) {
