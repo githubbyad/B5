@@ -100,12 +100,11 @@
 <div class="event-217-bigdiv hpe-in-event" data-datex="{{MonthI1}}-{{DayI}}-{{YearI}}" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-menu="{{Menu}}" data-submenu="{{SubMenu}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
 <div class="event-217-block" name="{{MonthI1}}" data="{{YearI}}">
 <div class="event-217-div2">
-<div class="event-217-day">{{DayI}}</div>
 <div class="event-217-month">{{MonthI1}}</div>
+<div class="event-217-day">{{DayI}}</div>
 </div>
 <div class="event-217-div3">
 <div class="event-217-heading"><a href="{{HeadingLink}}">{{Heading}}</a></div>
-<div class="event-217-caption">{{Picture1Caption}}</div>
 </div>
 </div>
 </div>
@@ -302,11 +301,16 @@ $(document).ready(function() {
     display: none;
 }
 .event-217-none {
-    float: left;
-    width: 100%;
-    text-align: center;
-    padding-top: 20px;
-    font-family: Trebuchet MS;
+	float: left;
+	width: 100%;
+	text-align: center;
+	padding-top: 20px;
+	font-family: Open Sans;
+	margin-top: 44px;
+	border: 1px solid #ddd;
+	padding-bottom: 40px;
+	border-radius: 5px;
+    box-sizing: border-box;
 }
 .event-217-none i {
 	color: gray;
@@ -465,13 +469,13 @@ $(document).ready(function() {
 
 .event-217-div2 {
     float: left;
-    margin-right: 10px;
-    width: 80px;
+    margin-right: 2%;
+    width: 16%;
 }
 
 .event-217-div3 {
     float: left;
-    width: 460px;
+    width: 82%;
 }
 
 .event-217-weekday {
@@ -494,9 +498,8 @@ $(document).ready(function() {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 2px;
 	color: black;
-	font-size: 30px;
+	font-size: 22px;
 	font-family: pt sans, sans-serif;
 	font-weight: bold;
 	border: 1px solid #b8bec3;
@@ -505,6 +508,7 @@ $(document).ready(function() {
 
 .event-217-month {
     display: flex;
+    margin-bottom: 2px;
     justify-content: center;
     align-items: center;
     background: #3899F4;
@@ -516,13 +520,12 @@ $(document).ready(function() {
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
 }
 
-.event-217-heading a:link,
-.event-217-heading a:visited {
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: pt sans, sans-serif;
-    line-height: 22px;
+.event-217-heading a:link, .event-217-heading a:visited {
+	color: black;
+	font-size: 16px;
+	font-family: Open Sans;
+	line-height: 22px;
+	text-transform: uppercase;
 }
 
 .event-217-heading {
@@ -555,7 +558,7 @@ $(document).ready(function() {
     content: "\f111";
     font-family: FontAwesome;
     color: #fa5016;
-    font-size: 7px;
+    font-size: 10px;
     line-height: inherit;
     position: absolute;
     left: 50%;
@@ -614,8 +617,15 @@ $(document).ready(function() {
     width: 100%;
     margin-bottom: 20px;
 }
-
+@media (min-width:993px) {
+    .event-container {
+        margin-top: 44px;
+    }
+}
 @media (max-width:992px) {
+    .event-217-none {
+        margin-top:0;
+    }
     .event-table {
         display: block;
         width: 100%;
@@ -641,10 +651,18 @@ $(document).ready(function() {
     .event-217-div3 {
         width: 77%;
     }
+    .event-in-yes:before {
+        font-size: 7px;
+    }
 }
 @media (max-width:576px) {
     .event-table td, .event-table th {
 	    padding: 1rem 1.6rem;
+    }
+}
+@media (max-width:360px) {
+    .event-table td, .event-table th {
+        padding: 1rem 0.7rem;
     }
 }
 </style>
