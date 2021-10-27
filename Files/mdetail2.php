@@ -72,7 +72,7 @@ if (strlen($FileContentMain) > 0) {
     echo "<script type='text/javascript' language='javascript' src='" . $MyDomain . $DemoSite . "articles.js'></script>" . chr(13) . chr(10);
     echo "<script type='text/javascript' language='javascript' src='" . $MyDomain . $DemoSite . "customform.js'></script>" . chr(13) . chr(10);
     echo "<link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>" . chr(13) . chr(10);
-    echo "<script type='text/javascript' language='javascript' src='" . $MyDomain . "lib/iframeResizer.js'></script>" . chr(13) . chr(10);
+    echo "<script type='text/javascript' language='javascript' src='" . $MyDomain . "lib/iframeResizer.min.js'></script>" . chr(13) . chr(10);
     echo "<link type='text/css' rel='stylesheet' href='" . $MyDomain . $DemoSite . "custom.css'>" . chr(13) . chr(10);
     echo "<meta name='viewport' content='width=device-width, initial-scale=1' />" . chr(13) . chr(10);
 
