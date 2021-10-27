@@ -63,6 +63,7 @@ if (strlen($FileContentMain) > 0) {
     echo "<meta http-equiv='Expires' content='0' />" . chr(13) . chr(10);
     echo "<meta charset='UTF-8'>" . chr(13) . chr(10);
     echo "<script type='text/javascript' language='javascript' src='" . $MyDomain . "lib/bl2.js'></script>" . chr(13) . chr(10);
+    echo "<script>if (window.location.href.indexOf('mdetail2.php') != -1 && window.screen.width > 1024 && window == window.parent) {mburl = location.href;var mbar= new URL(mburl );var murl= mbar.searchParams.get('l');window.location.replace(murl);}</script>" . chr(13) . chr(10);
     echo "<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous'>" . chr(13) . chr(10);
     echo "<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous'></script>" . chr(13) . chr(10);
     echo "<script type='text/javascript' language='javascript' src='" . $MyDomain . "lib/JQuery/jquery.js'></script>" . chr(13) . chr(10);
@@ -71,7 +72,6 @@ if (strlen($FileContentMain) > 0) {
     echo "<script type='text/javascript' language='javascript' src='" . $MyDomain . $DemoSite . "articles.js'></script>" . chr(13) . chr(10);
     echo "<script type='text/javascript' language='javascript' src='" . $MyDomain . $DemoSite . "customform.js'></script>" . chr(13) . chr(10);
     echo "<link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>" . chr(13) . chr(10);
-    echo "<script>if (window.location.href.indexOf('mdetail2.php') != -1 && window.screen.width > 1024 && window == window.parent) {mburl = location.href;var mbar= new URL(mburl );var murl= mbar.searchParams.get('l');window.location.replace(murl);}</script>" . chr(13) . chr(10);
     echo "<script type='text/javascript' language='javascript' src='" . $MyDomain . "lib/iframeResizer.js'></script>" . chr(13) . chr(10);
     echo "<link type='text/css' rel='stylesheet' href='" . $MyDomain . $DemoSite . "custom.css'>" . chr(13) . chr(10);
     echo "<meta name='viewport' content='width=device-width, initial-scale=1' />" . chr(13) . chr(10);
