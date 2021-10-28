@@ -75,12 +75,21 @@ function GetTimeAgo(sDate, adjusttime, Article_Timestamp, format, TimezoneOffset
 
     // Rounding
     if (days > 0) cnt = cnt + 1;
-    if (hours > 0 && cnt < 2) { cnt = cnt + 1; if (cnt == 2 && hours >= 12) days = days + 1;
-        else if (cnt == 2 && hours < 12) hours = 0; }
-    if (mins > 0 && cnt < 2) { cnt = cnt + 1; if (cnt == 2 && mins >= 30) hours = hours + 1;
-        else if (cnt == 2 && mins < 30) mins = 0; }
-    if (secs > 0 && cnt < 2) { cnt = cnt + 1; if (cnt == 2 && secs >= 30) mins = mins + 1;
-        else if (cnt == 2 && secs < 30) secs = 0; }
+    if (hours > 0 && cnt < 2) {
+        cnt = cnt + 1;
+        if (cnt == 2 && hours >= 12) days = days + 1;
+        else if (cnt == 2 && hours < 12) hours = 0;
+    }
+    if (mins > 0 && cnt < 2) {
+        cnt = cnt + 1;
+        if (cnt == 2 && mins >= 30) hours = hours + 1;
+        else if (cnt == 2 && mins < 30) mins = 0;
+    }
+    if (secs > 0 && cnt < 2) {
+        cnt = cnt + 1;
+        if (cnt == 2 && secs >= 30) mins = mins + 1;
+        else if (cnt == 2 && secs < 30) secs = 0;
+    }
 
     //------------------------------------
 
@@ -179,8 +188,10 @@ function ChangeBodyImage(styleName) {
 }
 
 
-function GetTooltipSys1(width) { if (width == null || width == '') { width = 500; }
-    Tipped.create('.s1', { ajax: false, closeButton: true, showOn: 'mouseover', skin: 'yellow', fixed: true, target: 'mouse', maxWidth: width }); }
+function GetTooltipSys1(width) {
+    if (width == null || width == '') { width = 500; }
+    Tipped.create('.s1', { ajax: false, closeButton: true, showOn: 'mouseover', skin: 'yellow', fixed: true, target: 'mouse', maxWidth: width });
+}
 
 
 function DisplayHighlight(divHighlight) {
@@ -351,12 +362,21 @@ function GetTimeDifference(sDate) {
 
     // Rounding
     if (days > 0) cnt = cnt + 1;
-    if (hours > 0 && cnt < 2) { cnt = cnt + 1; if (cnt == 2 && hours >= 12) days = days + 1;
-        else if (cnt == 2 && hours < 12) hours = 0; }
-    if (mins > 0 && cnt < 2) { cnt = cnt + 1; if (cnt == 2 && mins >= 30) hours = hours + 1;
-        else if (cnt == 2 && mins < 30) mins = 0; }
-    if (secs > 0 && cnt < 2) { cnt = cnt + 1; if (cnt == 2 && secs >= 30) mins = mins + 1;
-        else if (cnt == 2 && secs < 30) secs = 0; }
+    if (hours > 0 && cnt < 2) {
+        cnt = cnt + 1;
+        if (cnt == 2 && hours >= 12) days = days + 1;
+        else if (cnt == 2 && hours < 12) hours = 0;
+    }
+    if (mins > 0 && cnt < 2) {
+        cnt = cnt + 1;
+        if (cnt == 2 && mins >= 30) hours = hours + 1;
+        else if (cnt == 2 && mins < 30) mins = 0;
+    }
+    if (secs > 0 && cnt < 2) {
+        cnt = cnt + 1;
+        if (cnt == 2 && secs >= 30) mins = mins + 1;
+        else if (cnt == 2 && secs < 30) secs = 0;
+    }
 
     //------------------------------------
 
@@ -936,9 +956,6 @@ function DoClickOnEnter(link, e) {
     }
 }
 
-
-
-
 function HideControls(objName) {
     var arr = new Array();
     arr = document.getElementsByTagName('span');
@@ -964,7 +981,7 @@ function chkSearch(link, ctrl) {
 
 function alert(msg, ctl) {
     if (!document.getElementById('f_alert_button')) {
-        document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_alert_button' type='button' data-bs-toggle='modal' data-bs-target='#f_alert' style='display:none;'></button><div class='f_alert_box modal fade' id='f_alert' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_alertLabel' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable'><div class='modal-content'><div class='modal-header' style='display:none'><button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button></div><div class='modal-body text-center' style='white-space: pre-wrap;'>" + msg + "</div><div class='modal-footer d-flex justify-content-center border-0'><button type='button' class='f_alert_close btn btn-dark py-2 px-4' data-bs-dismiss='modal'>Close</button></div></div></div><style>@media (min-width:576px){.modal-dialog{max-width:400px}}</style></div>");
+        document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_alert_button' type='button' data-bs-toggle='modal' data-bs-target='#f_alert' style='display:none;'></button><div class='f_alert_box modal fade' id='f_alert' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_alertLabel' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable'><div class='modal-content'><div class='modal-header' style='display:none'><button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button></div><div class='modal-body text-center' style='white-space: pre-wrap;'>" + msg + "</div><div class='modal-footer d-flex justify-content-center border-0'><button type='button' class='f_alert_close btn btn-dark py-2 px-4' data-bs-dismiss='modal'>OK</button></div></div></div><style>@media (min-width:576px){.modal-dialog{max-width:400px}}</style></div>");
         document.getElementById('f_alert_button').click();
         document.getElementsByClassName('f_alert_close')[0].addEventListener('click', function() {
             document.getElementById('f_alert_button').remove();
@@ -978,7 +995,7 @@ function alert(msg, ctl) {
 
 function confirm(msg, ctl) {
     if (!document.getElementById('f_confirm_button')) {
-        document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_confirm_button' type='button' data-bs-toggle='modal' data-bs-target='#f_confirm' style='display:none;'></button><div class='f_confirm_box modal fade' id='f_confirm' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_confirmLabel' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable'><div class='modal-content'><div class='modal-header' style='display:none'><button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button></div><div class='modal-body text-center' style='white-space: pre-wrap;'>" + msg + "</div><div class='modal-footer d-flex justify-content-center border-0'><button type='button' class='f_confirm_yes btn btn-danger me-3 py-2 px-4' data-bs-dismiss='modal'>Confirm</button><button type='button' class='f_confirm_close btn btn-dark py-2 px-4' data-bs-dismiss='modal'>Close</button></div></div></div><style>@media (min-width:576px){.modal-dialog{max-width:400px}}</style></div>");
+        document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_confirm_button' type='button' data-bs-toggle='modal' data-bs-target='#f_confirm' style='display:none;'></button><div class='f_confirm_box modal fade' id='f_confirm' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_confirmLabel' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable'><div class='modal-content'><div class='modal-header' style='display:none'><button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button></div><div class='modal-body text-center' style='white-space: pre-wrap;'>" + msg + "</div><div class='modal-footer d-flex justify-content-center border-0'><button type='button' class='f_confirm_yes btn btn-danger me-3 py-2 px-4' data-bs-dismiss='modal'>Confirm</button><button type='button' class='f_confirm_close btn btn-dark py-2 px-4' data-bs-dismiss='modal'>Cancel</button></div></div></div><style>@media (min-width:576px){.modal-dialog{max-width:400px}}</style></div>");
         document.getElementById('f_confirm_button').click();
         document.getElementsByClassName('f_confirm_close')[0].addEventListener('click', function() {
             document.getElementById('f_confirm_button').remove();
@@ -997,7 +1014,7 @@ function confirm(msg, ctl) {
 
 function confirmdelete(msg, ctl) {
     if (!document.getElementById('f_confirm_delete_button')) {
-        document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_confirm_delete_button' type='button' data-bs-toggle='modal' data-bs-target='#f_confirm_delete' style='display:none;'></button><div class='f_confirm_delete_box modal fade' id='f_confirm_delete' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_confirm_deleteLabel' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable'><div class='modal-content'><div class='modal-header' style='display:none'><button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button></div><div class='modal-body text-center' style='white-space: pre-wrap;'>" + msg + "</div><div class='modal-footer d-flex justify-content-center border-0'><button type='button' class='f_confirm_delete_yes btn btn-danger me-3 py-2 px-4' data-bs-dismiss='modal'>Delete</button><button type='button' class='f_confirm_delete_close btn btn-dark py-2 px-4' data-bs-dismiss='modal'>Close</button></div></div></div><style>@media (min-width:576px){.modal-dialog{max-width:400px}}</style></div>");
+        document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_confirm_delete_button' type='button' data-bs-toggle='modal' data-bs-target='#f_confirm_delete' style='display:none;'></button><div class='f_confirm_delete_box modal fade' id='f_confirm_delete' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_confirm_deleteLabel' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable'><div class='modal-content'><div class='modal-header' style='display:none'><button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button></div><div class='modal-body text-center' style='white-space: pre-wrap;'>" + msg + "</div><div class='modal-footer d-flex justify-content-center border-0'><button type='button' class='f_confirm_delete_yes btn btn-danger me-3 py-2 px-4' data-bs-dismiss='modal'>Delete</button><button type='button' class='f_confirm_delete_close btn btn-dark py-2 px-4' data-bs-dismiss='modal'>Cancel</button></div></div></div><style>@media (min-width:576px){.modal-dialog{max-width:400px}}</style></div>");
         document.getElementById('f_confirm_delete_button').click();
         document.getElementsByClassName('f_confirm_delete_close')[0].addEventListener('click', function() {
             document.getElementById('f_confirm_delete_button').remove();
@@ -1006,6 +1023,25 @@ function confirmdelete(msg, ctl) {
         document.getElementsByClassName('f_confirm_delete_yes')[0].addEventListener('click', function() {
             document.getElementById('f_confirm_delete_button').remove();
             document.getElementsByClassName('f_confirm_delete_box')[0].remove();
+            if (ctl) {
+                window.location = ctl.href;
+            }
+        });
+    }
+    return false;
+}
+
+function confirmhide(msg, ctl) {
+    if (!document.getElementById('f_confirm_hide_button')) {
+        document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_confirm_hide_button' type='button' data-bs-toggle='modal' data-bs-target='#f_confirm_hide' style='display:none;'></button><div class='f_confirm_hide_box modal fade' id='f_confirm_hide' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_confirm_hideLabel' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable'><div class='modal-content'><div class='modal-header' style='display:none'><button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button></div><div class='modal-body text-center' style='white-space: pre-wrap;'>" + msg + "</div><div class='modal-footer d-flex justify-content-center border-0'><button type='button' class='f_confirm_hide_yes btn btn-danger me-3 py-2 px-4' data-bs-dismiss='modal'>Hide</button><button type='button' class='f_confirm_hide_close btn btn-dark py-2 px-4' data-bs-dismiss='modal'>Cancel</button></div></div></div><style>@media (min-width:576px){.modal-dialog{max-width:400px}}</style></div>");
+        document.getElementById('f_confirm_hide_button').click();
+        document.getElementsByClassName('f_confirm_hide_close')[0].addEventListener('click', function() {
+            document.getElementById('f_confirm_hide_button').remove();
+            document.getElementsByClassName('f_confirm_hide_box')[0].remove();
+        });
+        document.getElementsByClassName('f_confirm_hide_yes')[0].addEventListener('click', function() {
+            document.getElementById('f_confirm_hide_button').remove();
+            document.getElementsByClassName('f_confirm_hide_box')[0].remove();
             if (ctl) {
                 window.location = ctl.href;
             }
@@ -1898,7 +1934,13 @@ function OpenPopup2(pageUrl, window_type, fwidth, fheight) {
 
 function OpenPopup3(pageUrl, window_type) {
     if (!document.getElementById('f_Popup3_button')) {
-        var msg = '<figure class="figure"><img id="f-mfp-img" class="mb-0" src="' + pageUrl + '" class="figure-img img-fluid"></figure>';
+        if (pageUrl.indexOf('?pul=') != -1) {
+            var aurl = pageUrl.split('?pul=').pop();
+            pageUrl = pageUrl.split('?pul').shift();
+            var msg = '<figure class="figure"><img id="f-mfp-img" class="mb-0" src="' + pageUrl + '" class="figure-img img-fluid" style="cursor:pointer" onclick="window.open(\'' + aurl + '\', \'_blank\')"></figure>';
+        } else {
+            var msg = '<figure class="figure"><img id="f-mfp-img" class="mb-0" src="' + pageUrl + '" class="figure-img img-fluid"></figure>';
+        }
         document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_Popup3_button' type='button' data-bs-toggle='modal' data-bs-target='#f_Popup3' style='display:none;'></button><div class='f_Popup3_box modal fade' id='f_Popup3' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_Popup3Label' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable mx-auto'><div class='modal-content'><button type='button' class='f_Popup3_close btn-close position-absolute' data-bs-dismiss='modal' aria-label='Close'>✕</button><div class='modal-body text-center' style='white-space: pre-wrap;'>" + msg + "</div></div></div><style>.modal-dialog-scrollable .modal-content {max-height: none;overflow:visible;}.modal-body {padding:0;} .f_Popup3_close{right:-1rem;z-index:999;top:-1rem;background-color:#0d6efd;border-radius:50px;padding:.5rem;opacity:1;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);background-image:none;color:#fff;display:flex;justify-content:center;align-items:center;font-weight:700;font-size:18px}.f_Popup3_close:hover{color:#fff;background-color: red;opacity:1}.modal-dialog{display:flex;justify-content:center} .modal-content{width:auto;border-width:0} #f-mfp-img{max-height:90vh;max-width: 90vw;} @media (min-width:576px) {.modal-content{width:auto;}.modal-dialog{max-width:800px;}} .modal-content{background:0 0}}</style></div>");
         document.getElementById('f_Popup3_button').click();
         document.getElementsByClassName('f_Popup3_close')[0].addEventListener('click', function() {
