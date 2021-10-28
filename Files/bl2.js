@@ -1936,6 +1936,7 @@ function OpenPopup3(pageUrl, window_type) {
     if (!document.getElementById('f_Popup3_button')) {
         if (pageUrl.indexOf('?pul=') != -1) {
             var aurl = pageUrl.split('?pul=').pop();
+            aurl = (aurl.indexOf('http') == -1) ? 'http://' + aurl : aurl; // add http if not added
             pageUrl = pageUrl.split('?pul').shift();
             var msg = '<figure class="figure"><img id="f-mfp-img" class="mb-0" src="' + pageUrl + '" class="figure-img img-fluid" style="cursor:pointer" onclick="window.open(\'' + aurl + '\', \'_blank\')"></figure>';
         } else {
