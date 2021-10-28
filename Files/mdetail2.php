@@ -110,7 +110,7 @@ if (strlen($FileContentMain) > 0) {
     }
 
     if ($QSapp == "Y") {
-        echo "<style>.opinionbutton{display:none;}</style><br>";
+        echo "<style>.opinionbutton{display:none;}</style>";
         $FileContentMain = str_replace("<script type='text/javascript' language='JavaScript'>GetAddThis();</script>", "", $FileContentMain);
     }
 
