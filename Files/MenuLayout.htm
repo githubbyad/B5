@@ -11,13 +11,13 @@ function GetMenuH(){document.write({{PutHtmlChar39}}
             {{RepeatBegin1}}
 	            <li class="nav-item dropdown pe-4">
 	                <a id="navbarDropdown" class="nav-link fs-5 dropdown-toggle fw-bold text-uppercase text-white" style="{{MenuStyle}} font-family: pt sans,sans-serif;" href="{{MenuLink}}" role="button"  data-bs-toggle="dropdown" aria-expanded="false">{{Menu}}</a>
-	                    <ul class="dropdown-menu fade-up" aria-labelledby="navbarDropdown">
-		                    {{RepeatBegin2}}
-		                        <li style="{{CSSDisplay}}">
-                                    <a class="dropdown-item fs-5 fw-bold text-dark border-bottom border-gray nx-2" style="font-family: pt sans,sans-serif;" href="{{SubMenuLink}}">{{SubMenu}}</a>
-                                </li>
-		                    {{RepeatEnd2}}
-	                    </ul>
+	                <ul class="dropdown-menu fade-up" aria-labelledby="navbarDropdown">
+                        {{RepeatBegin2}}
+                            <li style="{{CSSDisplay}}">
+                                <a class="dropdown-item fs-5 fw-bold text-dark border-bottom border-gray nx-2" style="font-family: pt sans,sans-serif;" href="{{SubMenuLink}}">{{SubMenu}}</a>
+                            </li>
+                        {{RepeatEnd2}}
+	                </ul>
 	            </li>
 	        {{RepeatEnd1}}
         </ul>
