@@ -1,0 +1,238 @@
+{{LayoutDirectoryPage1Begin}}
+{{LayoutDirectoryPage1Limit100}}
+{{ReplaceJavascriptChars:No}}
+{{GroupBy:Category}}
+{{File:directory-<<SubMenuId>>.htm}}
+{{FileTemplate:index0.htm}}
+<div class="cus-directory-133-container container-fluid px-0">
+    <div class="cus-default-menu-bar mb-3">
+        <div class="text-uppercase fw-bold px-0 mb-2 text-gray bl-133-label" style="font-family: pt sans,sans-serif;">
+            <span>
+                <span class="cus-default-submenu">{{SubMenu}}</span>
+            </span>
+        </div>
+    </div>
+    <div class="cus-directory-133-wrap row mx-0 pt-3 border rounded shadow">
+        {{RepeatBegin}}
+            <div class="col-md-6 col-lg-4 my-2">
+                <a class="cus-directory-133-link text-decoration-none" href="{{PutDomain}}directory-{{CategoryFile}}-<<SubMenuId>>.htm">
+                    <p class="cus-directory-133-category text-start text-black fw-bold ps-1 py-2">
+                        <span class="cus-directory-133-category-text position-relative" data-bs-toggle="tooltip" data-bs-placement="top" title="{{TotalGroup}} Listings">
+                            {{CategoryNoRepeat}}
+                            <span class="cus-directory-133-list badge rounded-pill bg-secondary">
+                                {{TotalGroup}}
+                            </span>
+                        </span>
+                    </p>
+                </a>
+            </div>
+        {{RepeatEnd}}
+    </div> 
+</div>
+<style>
+.cus-directory-133-wrap {background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%23c9d1cb' fill-opacity='0.16'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E");background-attachment: fixed;}
+.cus-directory-133-category {border-left: 0.25rem solid #9c29bc;}
+.cus-directory-133-category-text:hover {color: #9c29bc !important; transition: 200ms linear;}
+.cus-directory-133-list {background:#8c6ad1 !important}
+.cus-directory-133-category-text:hover .cus-directory-133-list {background: #000 !important; transition: 200ms linear;}
+.cus-default-submenu a {pointer-events: none;color: gray !important;text-decoration: none;}
+</style>
+<script>
+/* title */
+var t = document.getElementsByClassName("cus-default-submenu")[0].innerText;
+document.title = t.toLowerCase().charAt(0).toUpperCase() + t.slice(1).toLowerCase(0);
+</script>
+{{LayoutDirectoryPage1End}} 
+
+
+{{LayoutDirectoryPage2Begin}}
+{{LayoutDirectoryPage2Limit100}}
+{{Where:IncludeCurrentSubMenuId:Yes}}
+{{Where:IncludeCategory:Yes}}
+{{ReplaceJavascriptChars:No}}
+{{File:directory-<<CategoryFile>>-<<SubMenuId>>.htm}}
+{{FileTemplate:index0.htm}}
+<div class="cus-directory-133-container container-fluid px-0">
+    <div class="cus-default-menu-bar mb-3">
+        <div class="text-uppercase fw-bold px-0 mb-2 text-gray bl-133-label" style="font-family: pt sans,sans-serif;">
+            <span>
+                <span class="cus-default-submenu">{{SubMenu}}</span><i class="fa fa-angle-right mx-2" aria-hidden="true"></i><span class="cus-directory-133-category-label text-gray text-transform-uppercase"></span>
+            </span>
+        </div>
+    </div>
+    <div class="cus-directory-133-wrap row py-2 mx-0 border rounded shadow">
+        {{RepeatBegin}}
+            <div class="cus-directory-133-category-hidden d-none">{{CategoryNoRepeat}}</div>
+            <div class="cus-directory-133-box col-lg-4 my-2">
+                <a class="cus-directory-133-link text-decoration-none bg-body d-block p-2 position-relative border rounded shadow-sm" href="{{PutDomain}}directory-<<CategoryFile>>-<<DetailID>>-<<SubMenuId>>.htm">
+                    <div class="ratio-3-2 cus-zoom mb-2">
+                        <div class="img-content">
+                            <img src="{{Picture}}" alt="{{Company}}" class="img-fluid" />
+                        </div>
+                    </div>
+                    <div class="cus-directory-133-name text-black fw-bold">{{Company}}</div>
+                </a>
+            </div>
+        {{RepeatEnd}}
+    </div>
+</div>
+<style>
+.cus-directory-133-wrap {background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%23c9d1cb' fill-opacity='0.16'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E");background-attachment: fixed;}
+.cus-default-submenu a {color: gray !important;text-decoration: none;}
+.cus-default-submenu a:hover {color: #0d6efd !important;}
+.cus-directory-133-name:hover {color: #9c29bc !important;}
+</style>
+<script>
+/* title */
+var t = document.getElementsByClassName("cus-default-submenu")[0].innerText;
+document.title = t.toLowerCase().charAt(0).toUpperCase() + t.slice(1).toLowerCase(0) + " - " + document.getElementsByClassName('cus-directory-133-category-hidden')[0].innerText;
+/* label */
+document.getElementsByClassName('cus-directory-133-category-label')[0].innerText = document.getElementsByClassName('cus-directory-133-category-hidden')[0].innerText;
+</script>
+{{LayoutDirectoryPage2End}}
+
+
+{{LayoutDirectoryPage3Begin}}
+{{LayoutDirectoryPage3Limit1}}
+{{ReplaceJavascriptChars:No}}
+{{Where:IncludeCurrentSubMenuId:Yes}}
+{{Where:IncludeDetailId:Yes}}
+{{File:directory-<<CategoryFile>>-<<DetailID>>-<<SubMenuId>>.htm}}
+{{FileTemplate:index0.htm}}
+<div class="cus-directory-133-container container-fluid px-0">
+    <div class="cus-default-menu-bar mb-3">
+        <div class="text-uppercase fw-bold px-0 mb-2 text-gray bl-133-label" style="font-family: pt sans,sans-serif;">
+            <span>
+                <span class="cus-default-submenu">{{SubMenu}}</span><i class="fa fa-angle-right mx-2" aria-hidden="true"></i><span><a class="cus-directory-133-category-label text-gray text-transform-uppercase" href="#"></a></span>
+            </span>
+        </div>
+    </div>
+    <div class="cus-directory-133-wrap row mx-0 rounded border py-2 shadow-sm">
+        {{RepeatBegin}}
+            <div class="cus-directory-133-category-hidden d-none" data-href="{{PutDomain}}directory-{{CategoryFile}}-<<SubMenuId>>.htm">{{CategoryNoRepeat}}</div>
+            <h1 class="cus-directory-133-name text-black fw-bold mb-3">{{Company}}</h1>
+            <div class="cus-directory-133-img col-12 mb-4 d-flex justify-content-center" data-src="{{Picture}}">
+                <img src="{{Picture}}" alt="{{Company}}" class="img-fluid border p-1 rounded bg-body" />
+            </div>
+            <div class="cus-directory-133-table">
+                <table class="table table-hover table-bordered table-responsive mb-4 bg-body">
+                    <tbody>
+                        <tr class="cus-directory-133-val" data-value="{{FirstName}} {{LastName}}">
+                            <th scope="row" class="text-end">Name</th>
+                            <td>{{FirstName}} {{LastName}}</td>
+                        </tr>
+                        <tr class="cus-directory-133-val" data-value="{{Address1}}">
+                            <th scope="row" class="text-end">Address</th>
+                            <td class="cus-directory-133-address">{{Address1}}</td>
+                        </tr>
+                        <tr class="cus-directory-133-val" data-value="{{City}}">
+                            <th scope="row" class="text-end">City</th>
+                            <td class="cus-directory-133-city">{{City}}</td>
+                        </tr>
+                        <tr class="cus-directory-133-val" data-value="{{State}}">
+                            <th scope="row" class="text-end">State</th>
+                            <td class="cus-directory-133-state">{{State}}</td>
+                        </tr>
+                        <tr class="cus-directory-133-val" data-value="{{Zip}}">
+                            <th scope="row" class="text-end">Zip/Postal Code</th>
+                            <td class="cus-directory-133-zip">{{Zip}}</td>
+                        </tr>
+                        <tr class="cus-directory-133-val" data-value="{{Country}}">
+                            <th scope="row" class="text-end">Country</th>
+                            <td class="cus-directory-133-country">{{Country}}</td>
+                        </tr>
+                        <tr class="cus-directory-133-val" data-value="{{Phone}}">
+                            <th scope="row" class="text-end">Phone</th>
+                            <td>{{Phone}}</td>
+                        </tr>
+                        <tr class="cus-directory-133-val" data-value="{{Cell}}">
+                            <th scope="row" class="text-end">Cell</th>
+                            <td>{{Cell}}</td>
+                        </tr>
+                        <tr class="cus-directory-133-val" data-value="{{Pager}}">
+                            <th scope="row" class="text-end">Pager</th>
+                            <td>{{Pager}}</td>
+                        </tr>
+                        <tr class="cus-directory-133-val" data-value="{{Fax}}">
+                            <th scope="row" class="text-end">Fax</th>
+                            <td>{{Fax}}</td>
+                        </tr>
+                        <tr class="cus-directory-133-val" data-value="{{Email}}">
+                            <th scope="row" class="text-end">Email</th>
+                            <td><a class="text-decoration-none" href="mailto:{{Email}}">{{Email}}</a></td>
+                        </tr>
+                        <tr class="cus-directory-133-val" data-value="{{Website}}">
+                            <th scope="row" class="text-end">Website</th>
+                            <td><a class="cus-directory-133-site text-decoration-none" href="{{Website}}" target="_blank">{{Website}}</a></td>
+                        </tr>
+                        <tr class="cus-directory-133-val" data-value="{{Facebook}}{{Twitter}}">
+                            <th scope="row" class="text-end">Social Links</th>
+                            <td>
+                                <a class="cus-directory-133-val me-2" data-value="{{Facebook}}" href="{{Facebook}}" target="_blank"><i class="fa fa-facebook-official fs-4" aria-hidden="true"></i></a>
+                                <a class="cus-directory-133-val" data-value="{{Twitter}}" href="{{Twitter}}" target="_blank"><i class="fa fa-twitter-square fs-4" aria-hidden="true"></i></a></th>
+                            </td>
+                        </tr>
+                        <tr class="cus-directory-133-coupon" data-src="{{Coupon}}">
+                            <th scope="row" class="text-end">Coupons</th>
+                            <td><img class="img-fluid" src="{{Coupon}}"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <span class="fw-bold mb-2 d-block w-100">Profile</span>
+                                <span class="d-block w-100" style="white-space: pre-wrap;">{{Profile}}</span>
+                            </td>
+                        </tr>
+                        <tr class="cus-directory-133-val" data-value="{{Address1}}{{City}}{{State}}{{Country}}{{Zip}}">
+                            <td colspan="2">
+                                <span class="fw-bold mb-2 d-block w-100">Map</span>
+                                <span class="d-block w-100">
+                                    <iframe id="cus-directory-133-map" scrolling="no" marginheight="0" marginwidth="0" src="" width="100%" height="600" frameborder="0"></iframe>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        {{RepeatEnd}}
+        <div class="my-3 text-center">
+            <a class="cus-directory-133-back btn text-white" href="{{PutDomain}}directory-{{CategoryFile}}-<<SubMenuId>>.htm"><i class="fa fa-chevron-left" aria-hidden="true"></i> Go back</a>
+        </div>
+    </div>
+</div>
+<style>
+.cus-directory-133-wrap {background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%23c9d1cb' fill-opacity='0.16'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E");background-attachment: fixed;}
+.cus-default-submenu a, .cus-directory-133-category-label {color: gray !important;text-decoration: none;}
+.cus-default-submenu a:hover, .cus-directory-133-category-label:hover {color: #0d6efd !important;}
+.cus-directory-133-back {background-color: #8c6ad1 !important;border-color: #7a58bf !important;}
+.cus-directory-133-back:hover {background: #7a58bf !important;}
+.cus-directory-133-img[data-src*="/blank.png"], .cus-directory-133-coupon[data-src*="/blank.png"], .cus-directory-133-val[data-value=""] {display: none !important;}
+</style>
+<script>
+/* title */
+document.title = document.getElementsByClassName("cus-directory-133-name")[0].innerText;
+/* label */
+document.getElementsByClassName("cus-directory-133-category-label")[0].innerText = document.getElementsByClassName("cus-directory-133-category-hidden")[0].innerText;
+document.getElementsByClassName("cus-directory-133-category-label")[0].setAttribute("href",document.getElementsByClassName("cus-directory-133-category-hidden")[0].getAttribute("data-href"));
+document.getElementsByClassName("cus-directory-133-back")[0].setAttribute("href",document.getElementsByClassName("cus-directory-133-category-hidden")[0].getAttribute("data-href"));
+/* website */
+var wst = document.getElementsByClassName("cus-directory-133-site")[0];
+wst.innerText = wst.innerText.split("://").pop();
+wst.innerText = wst.innerText.split("www.").pop();
+if(wst.getAttribute("href").indexOf("http") == -1) {
+wst.setAttribute("href", "http://" + wst.getAttribute("href"));
+}
+/* map */
+var map_address = document.getElementsByClassName('cus-directory-133-address')[0].innerText.replace(/\s+/g, "%20");
+map_address = (map_address == "") ? "" : map_address + ",";
+var map_city = document.getElementsByClassName('cus-directory-133-city')[0].innerText.replace(/\s+/g, "%20");
+map_city = (map_city == "") ? "" : map_city + ",";
+var map_state = document.getElementsByClassName('cus-directory-133-state')[0].innerText.replace(/\s+/g, "%20");
+map_state = (map_state == "") ? "" : map_state + ",";
+var map_country = document.getElementsByClassName('cus-directory-133-country')[0].innerText.replace(/\s+/g, "%20");
+map_country = (map_country == "") ? "" : map_country;
+var map_zip = document.getElementsByClassName('cus-directory-133-zip')[0].innerText.replace(/\s+/g, "%20");
+map_zip = (map_zip == "") ? "" : "-" + map_zip;
+var map_loc = map_address + map_city + map_state + map_country + map_zip;
+document.getElementById('cus-directory-133-map').setAttribute('src','https://maps.google.com/maps?width=100%25&height=600&hl=en&q=' + map_loc + '&t=&z=14&ie=UTF8&iwloc=B&output=embed')
+</script>
+{{LayoutDirectoryPage3End}} 
