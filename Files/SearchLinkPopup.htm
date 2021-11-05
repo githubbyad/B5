@@ -1,0 +1,56 @@
+<!-- search-->
+{{PutGoogleCustomSearch}}
+<a class="search-link text-decoration-none text-black fs-6 fw-bold me-3 border rounded p-1 px-2 bl-toplink-1-133-searchlink" href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Click to Search Articles..."><i class="fa fa-search" aria-hidden="true"></i> SEARCH</a>
+<div class="search_content">
+    <div class="search_box"><gcse:searchbox></gcse:searchbox></div>
+    <div class="search_results"><gcse:searchresults></gcse:searchresults></div>
+    <div class="search_remove">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+            <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+      </svg>
+    </div>
+</div>
+<script>
+    document.getElementsByClassName('search-link')[0].addEventListener("click", function() {
+        document.getElementById("gsc-i-id1").setAttribute("placeholder", "Search for...");
+        document.getElementsByClassName('search_content')[0].classList.add("search-flex");
+        document.getElementsByClassName('search_remove')[0].style.display = "block";
+        document.getElementsByClassName('gsc-results-close-btn')[0].addEventListener("click", function() {
+            document.getElementsByClassName('search_content')[0].classList.remove("search-flex");
+        });
+    });
+    document.getElementsByClassName('search_remove')[0].addEventListener("click", function() {
+        document.getElementsByClassName('search_content')[0].classList.remove("search-flex");
+        document.getElementsByClassName('search_remove')[0].style.display = "none";\
+    });
+</script>
+<style>
+    .gsc-adBlock {display: none !important;}
+    #gsc-i-id1{color:#000!important}
+    #gsc-i-id1::placeholder{color:#555!important;opacity:1;font-size:inherit!important}
+    .search_content{display:flex;display:-webkit-flex;-ms-display:flex;align-items:center;-webkit-align-items:center;-ms-align-items:center;justify-content:center;-webkit-justify-content:center;-ms-justify-content:center;background-color:rgba(255,255,255,.98);height:100%;position:fixed;top:100%;opacity:0;left:0;width:100%;z-index:2147483647;transition: 400ms linear;}
+    .search-flex{top: 0;opacity: 1;display:flex;display:-webkit-flex;-ms-display:flex;align-items:center;-webkit-align-items:center;-ms-align-items:center;justify-content:center;-webkit-justify-content:center;-ms-justify-content:center;transition: 300ms linear;}
+    .search_remove{cursor:pointer;user-select:none;position:absolute;top:10px;left:7%;}
+    .search_remove:hover{color:gray}
+    .gsc-control-cse.gsc-control-cse-en{background-color:transparent;border-width:0;position:absolute}.search_box{border-bottom:2px solid #000;width:70%;padding-bottom:6px}
+    .gsib_b,.gsst_a{display:none!important}
+    .gscb_a{display:none!important}
+    .gsc-input{background-image:none!important}
+    .gsc-input{background-color:transparent!important}
+    .gsc-input-box{background-color:transparent!important;border-bottom:0 solid #ff4500!important;border-width:0!important}
+    .gsc-input{border-width:0!important;color:#fff!important;font-size:20px!important}
+    .gsc-adBlock{display:none!important}
+    .search-icon-desk{cursor:pointer}
+    .search-icon-desk{float:right;height:54px;margin-right:10px}
+    .search-icon-desk i{border:1px solid #ddd;border-radius:4px;color:#000;display:block;line-height:35px;margin-top:9px;padding:0 12px}
+    .search-icon-desk i:hover{color:#79655d}
+    .gsc-results-wrapper-overlay.gsc-results-wrapper-visible {width: 100%;left: 0;top: 0;height: 100%;}
+    .gcsc-branding {display: none;}
+    .gsc-search-button.gsc-search-button-v2{padding:0 18px;line-height:35px;display:inline-block!important;background:#ddd;border-radius:5px;border-color:#555}
+    .gsc-search-button{width:auto!important;float:right!important}.gsc-search-button.gsc-search-button-v2:hover{background:#ddd!important}
+    .gsc-search-button-v2 svg{fill:#000!important}
+    .gsc-search-button.gsc-search-button-v2:hover{background:#05a2d3!important;border-color:#006899!important}
+    .gsc-search-button.gsc-search-button-v2:hover svg{fill:#fff!important}
+</style>
+<!-- /search-->
