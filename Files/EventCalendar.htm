@@ -1,9 +1,10 @@
 {{LayoutSection217Begin}}
-{{LayoutSection217Limit<<TotalArticlesSubMenu>>}}
+{{LayoutSection217Limit150}}
 {{Where:SubMenuIdInclude:217}}
 {{File:section217.htm}}
 {{ReplaceJavascriptChars:No}}
 {{SortBy:Issue Asc}}
+<!-- Guide client to use "Ending Date" to remove past event as it will take occupy space for new events -->
 <div class="event-217-container">
 <div class="event-217-label block-label"><span class="hpe-custom-text-10">EVENTS</span></div>
 <div class="event-container">
@@ -116,10 +117,11 @@
 if(document.getElementsByClassName('event-217-link').length) {
   for(var m = 0; m < document.getElementsByClassName('event-217-link').length; m++) {
     var am = document.getElementsByClassName('event-217-link')[m].innerHTML;
-    if(am.split(' ## ').length == 3){
-      var am_1 = '<span class="event-217-link-1"><i class="fa fa-clock-o" aria-hidden="true"></i>' +  am.split(' ## ')[0] + '</span>';
-      var am_2 = '<span class="event-217-link-2">' +  am.split(' ## ')[1] + '</span>';
-      var am_3 = '<span class="event-217-link-3"><i class="fa fa-map-marker" aria-hidden="true"></i>' +  am.split(' ## ')[2] + '</span>';
+    /* Use "|" in Heading field to place time and location. For example, 5 AM | Heading text... | Texas */
+    if(am.split(' | ').length == 3){
+      var am_1 = '<span class="event-217-link-1"><i class="fa fa-clock-o" aria-hidden="true"></i>' +  am.split(' | ')[0] + '</span>';
+      var am_2 = '<span class="event-217-link-2">' +  am.split(' | ')[1] + '</span>';
+      var am_3 = '<span class="event-217-link-3"><i class="fa fa-map-marker" aria-hidden="true"></i>' +  am.split(' | ')[2] + '</span>';
       document.getElementsByClassName('event-217-link')[m].innerHTML = am_1 + am_2 + am_3; 
     }
   }
