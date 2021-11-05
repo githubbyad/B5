@@ -100,11 +100,10 @@
 <div class="event-217-bigdiv hpe-in-event" data-datex="{{MonthI1}}-{{DayI}}-{{YearI}}" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-menu="{{Menu}}" data-submenu="{{SubMenu}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
 <div class="event-217-block" name="{{MonthI1}}" data="{{YearI}}">
 <div class="event-217-div2">
-<div class="event-217-month">{{MonthI1}}</div>
-<div class="event-217-day">{{DayI}}</div>
+<img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}">
 </div>
 <div class="event-217-div3">
-<div class="event-217-heading"><a href="{{HeadingLink}}">{{Heading}}</a></div>
+<div class="event-217-heading"><a class="event-217-link" href="{{HeadingLink}}">{{Heading}}</a></div>
 </div>
 </div>
 </div>
@@ -113,6 +112,18 @@
 </div>
 </div>
 <script>
+/*Changing heading*/
+if(document.getElementsByClassName('event-217-link').length) {
+  for(var m = 0; m < document.getElementsByClassName('event-217-link').length; m++) {
+    var am = document.getElementsByClassName('event-217-link')[m].innerHTML;
+    if(am.split(' ## ').length == 3){
+      var am_1 = '<span class="event-217-link-1"><i class="fa fa-clock-o" aria-hidden="true"></i>' +  am.split(' ## ')[0] + '</span>';
+      var am_2 = '<span class="event-217-link-2">' +  am.split(' ## ')[1] + '</span>';
+      var am_3 = '<span class="event-217-link-3"><i class="fa fa-map-marker" aria-hidden="true"></i>' +  am.split(' ## ')[2] + '</span>';
+      document.getElementsByClassName('event-217-link')[m].innerHTML = am_1 + am_2 + am_3; 
+    }
+  }
+}
 today = new Date();
 currentMonth = today.getMonth();
 currentYear = today.getFullYear();
@@ -323,7 +334,10 @@ $(document).ready(function() {
     padding-right: 2%;
     user-select: none;
 }
-
+.event-217-div2 img {
+	max-width: 100%;
+	height: auto;
+}
 .event-217-wrap {
     width: 48%;
     float: left;
@@ -398,7 +412,6 @@ $(document).ready(function() {
     text-align: center;
     line-height: 2rem;
 }
-
 .event-today {
 	font-weight: bold;
 	background: #e3e9ff;
@@ -617,6 +630,37 @@ $(document).ready(function() {
     width: 100%;
     margin-bottom: 20px;
 }
+.event-217-link-1 {
+  font-size: 11px !important;
+  color: black !important;
+  width: 100%;
+  float: left;
+  font-weight: normal;
+}
+.event-217-link-1 i {
+  margin-right: 5px;
+}
+.event-217-link-2 {
+  color: #4d71da !important;
+  float: left;
+  width: 100%;
+}
+.event-217-link-3 {
+  color: #777 !important;
+  float: left;
+  width: 100%;
+  font-size: 12px !important;
+  font-weight: normal;
+}
+.event-217-link-3 i {
+  margin-right: 5px;
+}
+.event-217-heading a:link, .event-217-heading a:visited {
+  color: #4d71da !important;
+  font-weight: bold;
+  font-size: 14px !important;
+}
+
 @media (min-width:993px) {
     .event-container {
         margin-top: 44px;
