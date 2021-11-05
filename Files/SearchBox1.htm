@@ -1,0 +1,19 @@
+<!-- search -->
+{{PutGoogleCustomSearch}}
+<div class="search_box d-none"><gcse:searchbox></gcse:searchbox></div>
+<div class="search_results position-absolute"><gcse:searchresults></gcse:searchresults></div>
+<form class="form-inline my-2 my-lg-0 d-flex align-items-center">
+    <input type="search" placeholder="Search here..." aria-label="Search" class="cus-gcs-input col-9 p-2 border border-success rounded me-1">
+    <span class="cus-gcs-button btn btn-success py-2" type="submit"><i class="fa fa-search" aria-hidden="true"></i></span>
+</form>
+<style>
+.gsc-control-cse.gsc-control-cse-en {background-color: transparent !important;border-color: transparent !important;}
+.gsc-adBlock {display: none !important;}
+</style>
+<script>
+    document.getElementsByClassName('cus-gcs-button')[0].addEventListener('click', function(){
+        document.getElementById('gsc-i-id1').value = document.getElementsByClassName('cus-gcs-input')[0].value;
+        document.getElementsByClassName('gsc-search-button-v2')[0].click();
+    });
+</script>
+<!-- /search -->
