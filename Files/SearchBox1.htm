@@ -4,7 +4,7 @@
 <div class="search_results position-absolute"><gcse:searchresults></gcse:searchresults></div>
 <form action="javascript:void(0)" class="form-inline my-2 my-lg-0 d-flex align-items-center">
     <input type="search" placeholder="Search here..." aria-label="Search" class="cus-gcs-input col-9 p-2 border border-success rounded me-1">
-    <span class="cus-gcs-button btn btn-success py-2" type="submit"><i class="fa fa-search" aria-hidden="true"></i></span>
+    <span class="cus-gcs-button btn btn-success py-2 border border-success" type="submit"><i class="fa fa-search" aria-hidden="true"></i></span>
 </form>
 <style>
 .gsc-control-cse.gsc-control-cse-en {background-color: transparent !important;border-color: transparent !important;}
@@ -12,13 +12,22 @@
 </style>
 <script>
     document.getElementsByClassName('cus-gcs-input')[0].value = "";
+    function searchCustom() {
+        if(document.getElementsByClassName('cus-gcs-input')[0].value == "") {
+            alert('<i class="fa fa-exclamation-circle fs-1 text-danger mb-3" aria-hidden="true"></i><br> Please write keyword to search.');
+        }
+        else {
+            document.getElementById('gsc-i-id1').value = document.getElementsByClassName('cus-gcs-input')[0].value;
+            document.getElementsByClassName('gsc-search-button-v2')[0].click();
+        }
+    }
     document.getElementsByClassName('cus-gcs-button')[0].addEventListener('click', function(){
-        document.getElementById('gsc-i-id1').value = document.getElementsByClassName('cus-gcs-input')[0].value;
-        document.getElementsByClassName('gsc-search-button-v2')[0].click();
+        searchCustom();
     });
     document.getElementsByClassName('cus-gcs-input')[0].addEventListener('keyup', function(){
-        document.getElementById('gsc-i-id1').value = document.getElementsByClassName('cus-gcs-input')[0].value;
-        document.getElementsByClassName('gsc-search-button-v2')[0].click();
+        if (event.keyCode === 13) {
+            searchCustom();
+        }
     });
 </script>
 <!-- /search -->
