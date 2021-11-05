@@ -1,0 +1,17 @@
+<!-- go to top -->
+<div class="cus-scroll-top position-fixed end-0 bg-dark text-white fs-4 px-2" style="cursor: pointer;bottom: auto;transition: 400ms linear;" data-bs-toggle="tooltip" data-bs-placement="top" title="Go to top"><i class="fa fa-angle-up"></i></div>
+<script>
+    if (document.getElementsByClassName("cus-scroll-top")) {
+        window.addEventListener("scroll", function() {
+            if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+                document.getElementsByClassName('cus-scroll-top')[0].style.bottom = 0;
+            } else {
+                document.getElementsByClassName('cus-scroll-top')[0].style.bottom = "-100px";
+            }
+        });
+        document.getElementsByClassName('cus-scroll-top')[0].addEventListener('click', function() {
+            window.scrollTo(0, 0);
+        });
+    }
+</script>
+<!-- /go to top -->
