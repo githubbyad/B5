@@ -8,17 +8,17 @@
         <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css'>
     </head>
     <body>
-        <div class="cus-photogallery-133-container container">
-            <div class="row">
-                <div class="col-12 hpe-custom-text-1 text-uppercase fw-bold mb-2 text-gray cus-blocks-2-133-label cus-133-label px-0" style="font-family: pt sans,sans-serif;">
+        <div class="cus-photogallery-133-container container px-0">
+            <div class="cus-default-menu-bar">
+                <div class="text-uppercase fw-bold px-0 mb-2 text-gray cus-133-label" style="font-family: pt sans,sans-serif;">
                     <span>
                         <span class="cus-default-submenu">{{SubMenu}}</span>
                     </span>
                 </div>
             </div>
-            <div class="row hp-parent">
+            <div class="row mx-0 hp-parent">
                 {{RepeatBegin}}
-                    <div class="col-sm-6 col-md-2 px-lg-1 mb-2">
+                    <div class="col-6 col-md-2 px-lg-1 mb-2">
                         <a data-fancybox="gallery" data-src="{{HeadingImage}}" data-caption="{{HeadingImageAlt}}" >
                             <div class="ratio-3-2 cus-zoom">
                                 <div class="img-content">
@@ -32,6 +32,9 @@
         </div>
         <style>
             .cus-photogallery-133-img {cursor: zoom-in;}
+            .cus-133-label {border-bottom: 4px solid #bdcde3;}
+            .cus-133-label > span{position: relative;}
+            .cus-133-label > span:before {background: #25add8;position: absolute;display: inline-block;content: "";width: 100%;height: 4px;bottom: -6px;}
         </style>
         <script src='https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js'></script>
     </body>
