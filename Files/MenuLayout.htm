@@ -69,7 +69,15 @@ for (i = 0; i < nav_dml; i++) {
     var nav_dms = nav_dm[i].children.length;
     for (j = 0; j < nav_dms; j++) {
         if (nav_dm[i].children[j].style.display == "none") {
-            nav_dm[i].children[j].remove();
+            nav_dm[i].children[j].classList.add("remove-submenu");
+        }
+    }
+    var nav_rm = document.getElementsByClassName("remove-submenu");
+    if(nav_rm) {
+        for(r = 0; r < nav_rm.length; r++) {
+            if(nav_rm[r]) {
+                nav_rm[r].remove();
+            }
         }
     }
     if (nav_dm[i].children.length == 0) {
@@ -77,6 +85,14 @@ for (i = 0; i < nav_dml; i++) {
         nav_dm[i].style.display = "none";
     }
 }
+document.addEventListener("DOMContentLoaded", function() {
+    for (s = 0; s < nav_dml; s++) {
+        if (nav_dm[s].children.length == 0) {
+            nav_dm[s].parentNode.classList.add("no-submenu");
+            nav_dm[s].style.display = "none";
+        }
+    }
+});
 /*MenuWithoutSubmenu*/
 var ns = document.getElementsByClassName("no-submenu").length;
 var nss = document.getElementsByClassName("no-submenu");
