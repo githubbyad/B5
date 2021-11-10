@@ -1,0 +1,39 @@
+{{LayoutSection118Begin}}
+{{LayoutSection118Limit<<TotalArticlesSubMenu>>}}
+{{Where:SubMenuIdInclude:118}}
+{{File:section118.htm}}
+{{SortBy:Issue,Updated}}
+<html>
+    <head>
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css'>
+    </head>
+    <body>
+        <div class="cus-photogallery-133-container container">
+            <div class="row">
+                <div class="col-12 hpe-custom-text-1 text-uppercase fw-bold mb-2 text-gray cus-blocks-2-133-label cus-133-label px-0" style="font-family: pt sans,sans-serif;">
+                    <span>
+                        <span class="cus-default-submenu">{{SubMenu}}</span>
+                    </span>
+                </div>
+            </div>
+            <div class="row hp-parent">
+                {{RepeatBegin}}
+                    <div class="col-sm-6 col-md-2 px-lg-1 mb-2">
+                        <a data-fancybox="gallery" data-src="{{HeadingImage}}" data-caption="{{HeadingImageAlt}}" >
+                            <div class="ratio-3-2 cus-zoom">
+                                <div class="img-content">
+                                    <img class="cus-photogallery-133-img img-fluid lazy loaded" src="{{HeadingImage}}" data-src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" data-was-processed="true">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {{RepeatEnd}}
+            </div>
+        </div>
+        <style>
+            .cus-photogallery-133-img {cursor: zoom-in;}
+        </style>
+        <script src='https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js'></script>
+    </body>
+</html>
+{{LayoutSection118End}}
