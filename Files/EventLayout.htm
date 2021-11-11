@@ -7,7 +7,7 @@
 {{SortBy:Issue Asc}}
 <div class="cus-event-133-container container-fluid px-0">
     <div class="cus-default-menu-bar mb-3">
-        <div class="text-uppercase fw-bold px-0 mb-2 text-gray bl-133-label" style="font-family: pt sans,sans-serif;">
+        <div class="text-uppercase fw-bold px-0 mb-2 text-gray cus-133-label" style="font-family: pt sans,sans-serif;">
             <span>
                 <span class="cus-default-submenu">Events</span>
             </span>
@@ -18,8 +18,8 @@
             <div class="hpe-in-event col-lg-6 my-2" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-menu="{{Menu}}" data-submenu="{{SubMenu}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
                 <span class="cus-event-133-box row mx-0 border rounded bg-body shadow-sm py-2">
                     <div class="col-3">
-                        <p class="cus-event-133-month bg-secondary text-white fs-5 px-2 text-center d-block fw-bold text-uppercase">{{MonthI1}}</p>
-                        <p class="cus-event-133-day bg-secondary text-white fs-1 px-2 fw-bold text-center d-block mb-0">{{DayI}}</p>
+                        <p class="cus-event-133-month bg-secondary fs-5 px-2 text-center d-block fw-bold text-uppercase">{{MonthI1}}</p>
+                        <p class="cus-event-133-day bg-secondary fs-1 px-2 fw-bold text-center d-block mb-0">{{DayI}}</p>
                     </div>
                     <div class="col-9 ps-0">
                         <a class="cus-event-133-heading text-decoration-none text-black fw-bold line-2 mb-1" href="{{HeadingLink}}">{{Heading}}</a>
@@ -32,13 +32,13 @@
 </div>
 <style>
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
-.bl-133-label {border-bottom: 4px solid #bdcde3;}
-.bl-133-label > span{position: relative;}
-.bl-133-label > span:before {background: #25add8;position: absolute;display: inline-block;content: "";width: 100%;height: 4px;bottom: -6px;}
+.cus-133-label {border-bottom: 4px solid #bdcde3;}
+.cus-133-label > span{position: relative;}
+.cus-133-label > span:before {background: #25add8;position: absolute;display: inline-block;content: "";width: 100%;height: 4px;bottom: -6px;}
 .cus-event-133-wrap {background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%23c9d1cb' fill-opacity='0.16'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E");background-attachment: fixed;}
-.cus-event-133-month {margin-bottom: 0.15rem !important;}
-.cus-event-133-month, .cus-event-133-day {background-color:#25add8 !important}
-a.cus-event-133-heading:hover {color: #25add8 !important;}
+.cus-event-133-month {background-color:#3a3a3a !important; color:#f1f1f1 !important; margin-bottom: 0 !important;}
+.cus-event-133-day {background-color:#eaeaea !important; color:#505050 !important}
+a.cus-event-133-heading:hover {color: gray !important;}
 </style>
 <script>
 document.title = document.getElementsByClassName('cus-default-submenu')[0].innerText;
