@@ -8,7 +8,7 @@
 {{SortBy:Issue, Updated}}
 <div class="cus-section-133-container container-fluid px-0">
     <div class="cus-default-menu-bar">
-        <div class="text-uppercase fw-bold px-0 mb-2 text-gray bl-133-label" style="font-family: pt sans,sans-serif;">
+        <div class="text-uppercase fw-bold px-0 mb-2 text-gray cus-133-label" style="font-family: pt sans,sans-serif;">
             <span>
                 <span class="cus-default-menu">{{Menu}}</span><i class="fa fa-angle-right mx-2" aria-hidden="true"></i><span class="cus-default-submenu">{{SubMenu}}</span>
             </span>
@@ -82,9 +82,10 @@
     {{RepeatEnd}}
 </div>
 <style>
-.bl-133-label {border-bottom: 4px solid #bdcde3;}
-.bl-133-label > span{position: relative;}
-.bl-133-label > span:before {background: #0d6efd;position: absolute;display: inline-block;content: "";width: 100%;height: 4px;bottom: -6px;}
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
+.cus-133-label {border-bottom: 4px solid #bdcde3;}
+.cus-133-label > span{position: relative;}
+.cus-133-label > span:before {background: #25add8;position: absolute;display: inline-block;content: "";width: 100%;height: 4px;bottom: -6px;}
 .cus-section-133-archivemore span:hover {color: #04a1d2 !important;border-color: #04a1d2 !important;}
 .cus-section-133-archivemore-active ~ .cus-section-133-archive {display: flex !important;}
 .cus-section-133-archivemore-active {display: none !important;}
