@@ -1,0 +1,41 @@
+{{SectionValuesBegin}}
+{{LayoutSection<<SubMenuId>>Begin}}
+{{LayoutSection<<SubMenuId>>Limit150}}
+{{Where:SubMenuIdInclude:<<SubMenuId>>}}
+{{File:section<<SubMenuId>>.htm}}
+{{SortBy:Issue,Updated}}
+{{RemoveMore:Yes}} 
+{{RemoveHTMLBody}}
+{{ReplaceJavascriptChars:No}}
+<div class="cus-edition-133-container container-fluid px-0">
+    <div class="cus-default-menu-bar">
+        <div class="text-uppercase fw-bold px-0 mb-2 text-gray cus-133-label" style="font-family: pt sans,sans-serif;">
+            <span>
+                <span class="cus-default-menu">{{Menu}}</span><i class="fa fa-angle-right mx-2" aria-hidden="true"></i><span class="cus-default-submenu">{{SubMenu}}</span>
+            </span>
+        </div>
+    </div>
+    <div class="row mx-0 hp-parent">
+        {{RepeatBegin}}
+        <div class="col-sm-6 col-md-3 px-1 mb-2">
+            <a class="cus-edition-133-link position-relative d-block text-decoration-none" href="{{Picture2}}" target="_blank">
+                <div class="ratio-2-3">
+                    <div class="img-content">
+                        <img class="cus-edition-133-img img-fluid lazy loaded" src="{{HeadingImage}}" data-src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" data-was-processed="true">
+                    </div>
+                </div>
+                <p class="cus-edition-133-heading mb-0 bg-dark text-white p-2 line-1 fs-6 lh-lg fw-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" title="{{Heading}}">{{Heading}}</p>
+            </a>
+        </div>
+        {{RepeatEnd}}
+    </div>
+</div>
+<style>
+.cus-133-label {border-bottom: 4px solid #bdcde3;}
+.cus-133-label > span{position: relative;}
+.cus-133-label > span:before {background: #25add8;position: absolute;display: inline-block;content: "";width: 100%;height: 4px;bottom: -6px;}
+.cus-edition-133-link {border: 2px solid #212529;}
+.cus-edition-133-link .ratio-2-3 {background-color: white;}
+</style>
+{{LayoutSection<<SubMenuId>>End}}
+{{SectionValuesEnd}}
