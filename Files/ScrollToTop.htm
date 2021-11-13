@@ -1,5 +1,5 @@
 <!-- go to top -->
-<div class="cus-scroll-top position-fixed end-0 bg-dark text-white fs-4 px-2" style="cursor: pointer;bottom: auto;transition: 400ms linear;" data-bs-toggle="tooltip" data-bs-placement="top" title="Go to top"><i class="fa fa-angle-up"></i></div>
+<div class="cus-scroll-top position-fixed end-0 bg-dark text-white fs-4 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Go to top"><i class="fa fa-angle-up"></i></div>
 <script>
     if (document.getElementsByClassName("cus-scroll-top")) {
         window.addEventListener("scroll", function() {
@@ -14,4 +14,8 @@
         });
     }
 </script>
+<style>
+    .cus-scroll-top {cursor: pointer;bottom: auto;transition: 400ms linear;opacity: 0.5;}
+    .cus-scroll-top {transition: 300ms linear;opacity: 1;}
+</style>
 <!-- /go to top -->
