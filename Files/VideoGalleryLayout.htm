@@ -4,7 +4,7 @@
 {{File:section119.htm}}
 {{ReplaceJavascriptChars:No}}
 {{SortBy:Issue,Updated}}
-<div class="cus-videogallery-133-container container-fluid px-0">
+<div class="cus-videogallery-133">
     <div class="cus-default-menu-bar">
         <div class="text-uppercase fw-bold px-0 mb-2 text-gray cus-133-label" style="font-family: pt sans,sans-serif;">
             <span>
@@ -17,7 +17,7 @@
         <div class="col-sm-6 col-md-4 px-1 mb-2">
             <a class="cus-videogallery-133-link position-relative d-block text-decoration-none border rounded overflow-hidden" href="javascript:void(0);" onclick="OpenYouTube('{{Body}}');">
                 <div class="ratio-16-9">
-                    <div class="img-content cus-videogallery-133-img">
+                    <div class="img-content cus-dark-img">
                         <img class="cus-videogallery-133-img img-fluid lazy loaded" src="https://img.youtube.com/vi/{{Body}}/maxresdefault.jpg" data-src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" data-was-processed="true">
                     </div>
                 </div>
@@ -29,30 +29,12 @@
     </div>
 </div>
 <style>
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
 .cus-133-label {border-bottom: 4px solid #bdcde3;}
 .cus-133-label > span {position: relative;}
-.cus-133-label > span:before {
-background: #25add8;
-position: absolute;
-display: inline-block;
-content: "";
-width: 100%;
-height: 4px;
-bottom: -6px;
-}
+.cus-133-label > span:before {background: #25add8;position: absolute;display: inline-block;content: "";width: 100%;height: 4px;bottom: -6px;}
 .cus-videogallery-133-link:hover .cus-videogallery-133-play i {transform: scale(1.2);transition: 200ms linear;}
 .cus-videogallery-133-play i {transition: 100ms linear;}
-.cus-videogallery-133-img {transition: 200ms linear;}
-.cus-videogallery-133-img:hover:after {
-position: absolute;
-background: rgba(0,0,0,0.4);
-top: 0;
-left: 0;
-content: "";
-width: 100%;
-height: 100%;
-transition: 300ms linear;
-}
 </style>
 <script>
 /* SubMenu Title */
