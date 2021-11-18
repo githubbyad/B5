@@ -17,11 +17,11 @@ function GetMenuH(){document.write({{PutHtmlChar39}}
         <ul class="navbar-nav flex-wrap">
             {{RepeatBegin1}}
 	            <li class="nav-item dropdown pe-4 hp-menu" data-menu="{{MenuId}}">
-	                <a id="navbarDropdown" class="nav-link fs-5 dropdown-toggle fw-bold text-uppercase text-white hpe-in-menu" data-view="Horizontal" data-menu="{{MenuId}}" data-link="{{MenuLink}}" data-order="{{MenuOrder}}" style="{{MenuStyle}} font-family: pt sans,sans-serif;" href="{{MenuLink}}" role="button"  data-bs-toggle="dropdown" aria-expanded="false">{{Menu}}</a>
+	                <a id="navbarDropdown" class="nav-link cus-menu-id-{{MenuId}} fs-5 dropdown-toggle fw-bold text-uppercase text-white hpe-in-menu" data-view="Horizontal" data-menu="{{MenuId}}" data-link="{{MenuLink}}" data-order="{{MenuOrder}}" style="{{MenuStyle}} font-family: pt sans,sans-serif;" href="{{MenuLink}}" role="button"  data-bs-toggle="dropdown" aria-expanded="false">{{Menu}}</a>
 	                <ul class="dropdown-menu fade-up mb-2 mb-lg-0 hp-submenu" data-menu="{{MenuId}}" aria-labelledby="navbarDropdown">
                         {{RepeatBegin2}}
                             <li class="hpe-in-submenu" data-menu="{{MenuId}}" data-submenu="{{SubMenuId}}" data-link="{{SubMenuLink}}" data-order="{{SubMenuOrder}}" style="{{CSSDisplay}}">
-                                <a class="dropdown-item fs-5 fw-bold text-dark border-bottom border-gray nx-2 transition text-red-hover" style="font-family: pt sans,sans-serif;" href="{{SubMenuLink}}">{{SubMenu}}</a>
+                                <a class="dropdown-item cus-submenu-id-{{SubMenuId}} fs-5 fw-bold text-dark border-bottom border-gray nx-2 transition text-red-hover" style="font-family: pt sans,sans-serif;" href="{{SubMenuLink}}">{{SubMenu}}</a>
                             </li>
                         {{RepeatEnd2}}
 	                </ul>
