@@ -2,8 +2,8 @@
 {{File:menu_horizontal.js}}
 {{Where:MenuTypeInclude:'Horizontal'}}
 function GetMenuH(){document.write({{PutHtmlChar39}}
-<nav class="navbar navbar-expand-lg navbar-dark shadow-sm bg-black px-3 py-2">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm bg-black px-3 py-2 py-lg-0">
+    <button class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon cus-menu-bar"></span>
         <span class="navbar-toggler-icon cus-menu-close d-none">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
@@ -16,11 +16,11 @@ function GetMenuH(){document.write({{PutHtmlChar39}}
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav flex-wrap">
             {{RepeatBegin1}}
-	            <li class="nav-item dropdown pe-4 hp-menu" data-menu="{{MenuId}}">
-	                <a id="navbarDropdown" class="nav-link cus-menu-id-{{MenuId}} fs-5 dropdown-toggle fw-bold text-uppercase text-white hpe-in-menu" data-view="Horizontal" data-menu="{{MenuId}}" data-link="{{MenuLink}}" data-order="{{MenuOrder}}" style="{{MenuStyle}} font-family: pt sans,sans-serif;" href="{{MenuLink}}" role="button"  data-bs-toggle="dropdown" aria-expanded="false">{{Menu}}</a>
-	                <ul class="dropdown-menu fade-up mb-2 mb-lg-0 hp-submenu" data-menu="{{MenuId}}" aria-labelledby="navbarDropdown">
+	            <li class="cus-menu-li nav-item dropdown py-1 py-lg-2 px-lg-2 pe-2 hp-menu" data-menu="{{MenuId}}" data-submenu-list="-">
+	                <a id="navbarDropdown" class="nav-link cus-menu-id-{{MenuId}} fs-5 dropdown-toggle fw-bold text-uppercase text-white hpe-in-menu px-2 px-lg-0" data-view="Horizontal" data-menu="{{MenuId}}" data-link="{{MenuLink}}" data-order="{{MenuOrder}}" style="{{MenuStyle}} font-family: pt sans,sans-serif;" href="{{MenuLink}}" role="button"  data-bs-toggle="dropdown" aria-expanded="false">{{Menu}}</a>
+	                <ul class="dropdown-menu cus-submenu-ul fade-up mb-2 mb-lg-0 hp-submenu" data-menu="{{MenuId}}" aria-labelledby="navbarDropdown">
                         {{RepeatBegin2}}
-                            <li class="hpe-in-submenu" data-menu="{{MenuId}}" data-submenu="{{SubMenuId}}" data-link="{{SubMenuLink}}" data-order="{{SubMenuOrder}}" style="{{CSSDisplay}}">
+                            <li class="cus-submenu-li hpe-in-submenu" data-menu="{{MenuId}}" data-submenu="{{SubMenuId}}" data-link="{{SubMenuLink}}" data-order="{{SubMenuOrder}}" style="{{CSSDisplay}}">
                                 <a class="dropdown-item cus-submenu-id-{{SubMenuId}} fs-5 fw-bold text-dark border-bottom border-gray nx-2 transition text-red-hover" style="font-family: pt sans,sans-serif;" href="{{SubMenuLink}}">{{SubMenu}}</a>
                             </li>
                         {{RepeatEnd2}}
@@ -50,9 +50,13 @@ content: "";  position: absolute;  top: -14px;  color: white;  left: 30px;  bord
 .fixed-top {top: -40px;  transform: translateY(40px);  transition: transform .3s;opacity: 0.9;}
 .fixed-top:hover{opacity:1;}
 .dropdown-menu {z-index: 999;}
+.cus-active-menu {border-top: 0.3rem solid #dd0707 !important;}
+.cus-menu-li {border-top: 0.3rem solid transparent;}
 }
 .cus-menu-social {display: none;}
+.cus-active-submenu {color: #dd0707 !important;}
 @media all and (max-width: 991px) {
+.cus-active-menu > .nav-link {border-left: 0.3rem solid #dd0707 !important;}
 .nav-item.dropdown {border-bottom: 1px solid;}
 .navbar-dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon.cus-menu-bar {display: none !important; background: none !important;}
 .navbar-dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon.cus-menu-close {display: block !important; background: none !important}
@@ -63,6 +67,23 @@ content: "";  position: absolute;  top: -14px;  color: white;  left: 30px;  bord
 }
 </style>
 <script>
+/* Active Menu */
+for (var s = 0; s < document.getElementsByClassName("cus-submenu-li").length; s++) {
+var ss = document.getElementsByClassName("cus-submenu-li")[s];
+var gs = ss.getAttribute("data-submenu");
+ss.parentNode.parentNode.setAttribute("data-submenu-list", ss.parentNode.parentNode.getAttribute("data-submenu-list") + gs + "-");
+}
+var sid = "-" + ReadSubmenu() + "-";
+if(sid != undefined || sid != "") {
+for(ml = 0; ml < document.getElementsByClassName("cus-menu-li").length; ml ++) {
+if(document.getElementsByClassName("cus-menu-li")[ml].getAttribute("data-submenu-list").indexOf(sid) != -1) {
+document.getElementsByClassName("cus-menu-li")[ml].classList.add("cus-active-menu")
+}
+}
+if(document.getElementsByClassName("cus-submenu-id-" + ReadSubmenu())[0]) {
+document.getElementsByClassName("cus-submenu-id-" + ReadSubmenu())[0].classList.add("cus-active-submenu")
+}
+}
 /*HideSubMenu*/
 var nav_dm = document.getElementsByClassName("dropdown-menu");
 var nav_dml = nav_dm.length;
