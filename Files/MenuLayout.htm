@@ -18,7 +18,7 @@ function GetMenuH(){document.write({{PutHtmlChar39}}
             {{RepeatBegin1}}
 	            <li class="cus-menu-li nav-item dropdown py-1 py-lg-2 px-lg-4 pe-2 hp-menu" data-menu="{{MenuId}}" data-submenu-list="-">
 	                <a id="navbarDropdown" class="nav-link cus-menu-id-{{MenuId}} fs-5 dropdown-toggle fw-bold text-uppercase text-white hpe-in-menu px-2 px-lg-0" data-view="Horizontal" data-menu="{{MenuId}}" data-link="{{MenuLink}}" data-order="{{MenuOrder}}" style="{{MenuStyle}} font-family: pt sans,sans-serif;" href="{{MenuLink}}" role="button"  data-bs-toggle="dropdown" aria-expanded="false">{{Menu}}</a>
-	                <ul class="dropdown-menu cus-submenu-ul fade-up mb-2 mb-lg-0 hp-submenu" data-menu="{{MenuId}}" aria-labelledby="navbarDropdown">
+	                <ul class="dropdown-menu cus-submenu-ul fade-up mb-2 mb-lg-0 mx-3 mx-lg-0 hp-submenu" data-menu="{{MenuId}}" aria-labelledby="navbarDropdown">
                         {{RepeatBegin2}}
                             <li class="cus-submenu-li hpe-in-submenu" data-menu="{{MenuId}}" data-submenu="{{SubMenuId}}" data-link="{{SubMenuLink}}" data-order="{{SubMenuOrder}}" style="{{CSSDisplay}}">
                                 <a class="dropdown-item cus-submenu-id-{{SubMenuId}} fs-5 fw-bold text-dark border-bottom border-gray nx-2 transition text-red-hover" style="font-family: pt sans,sans-serif;" href="{{SubMenuLink}}">{{SubMenu}}</a>
