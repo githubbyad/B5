@@ -107,14 +107,27 @@ for (i = 0; i < nav_dml; i++) {
         nav_dm[i].style.display = "none";
     }
 }
-document.addEventListener("DOMContentLoaded", function() {
-    for (s = 0; s < nav_dml; s++) {
-        if (nav_dm[s].children.length == 0) {
-            nav_dm[s].parentNode.classList.add("no-submenu");
-            nav_dm[s].style.display = "none";
+var rs = setInterval(function(){
+    var nav_rm2 = document.getElementsByClassName("remove-submenu");
+    if(nav_rm2.length != 0) {
+        if(nav_rm2) {
+            for(r = 0; r < nav_rm2.length; r++) {
+                if(nav_rm2[r]) {
+                    nav_rm2[r].remove();
+                }
+            }
+        }
+        for (s = 0; s < nav_dml; s++) {
+            if (nav_dm[s].children.length == 0) {
+                nav_dm[s].parentNode.classList.add("no-submenu");
+                nav_dm[s].style.display = "none";
+            }
         }
     }
-});
+    else if(nav_rm2 == 0) {
+        clearInterval(rs);
+    }
+},10);
 /*MenuWithoutSubmenu*/
 var ns = document.getElementsByClassName("no-submenu").length;
 var nss = document.getElementsByClassName("no-submenu");
