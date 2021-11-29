@@ -1,16 +1,16 @@
 {{ArticleValuesBegin}}
-<div class="hpe-article-detail" data-submenu={{SubMenuId}} data-detailid="{{ArticleId}}">
+<div class="hpe-article-detail border-bottom mb-2" data-submenu={{SubMenuId}} data-detailid="{{ArticleId}}">
     <div class="cus-default-menu-bar">
-        <div class="text-uppercase fw-bold px-0 mb-2 text-gray bl-133-label" style="font-family: pt sans,sans-serif;">
+        <div class="text-uppercase fw-bold px-0 mb-2 text-black cus-133-label" style="font-family: pt sans,sans-serif;">
             <span>
-                <span class="cus-default-menu">{{Menu}}</span><i class="fa fa-angle-right mx-2" aria-hidden="true"></i><span class="cus-default-submenu"><a class="text-gray text-decoration-none" href="{{SubMenuLink}}">{{SubMenu}}</a></span>
+                <span class="cus-default-menu">{{Menu}}</span><i class="fa fa-angle-right mx-2" aria-hidden="true"></i><span class="cus-default-submenu"><a class="text-black text-decoration-none" href="{{SubMenuLink}}">{{SubMenu}}</a></span>
             </span>
         </div>
     </div>
     <h1 class="cus-default-heading pageheading layout_pageheading custom_color_{{MenuId}} text-black fw-bold mb-3">{{Heading}}</h1>
     <div class="mb-2 text-muted">
         <span class="pagebyline layout_pagebyline cus-default-byline"><span class="text-primary">{{<span class="text-muted">By</span> :By:<span class="px-1 text-muted">•</span>}}</span></span>
-        <span class="pageissuedate layout_pageissuedate custom_color_{{MenuId}} cus-default-date"><i class="fa fa-calendar me-1" aria-hidden="true"></i>{{IssueDate}}</span>
+        <span class="pageissuedate layout_pageissuedate custom_color_{{MenuId}} cus-default-date"><i class="fa fa-calendar me-1" aria-hidden="true"></i><span class="cus-default-date-text">{{IssueDate}}</span></span>
     </div>
     <div class="cus-default-share-top sharebody layout_sharebody pageheading top_share w-100 mb-2 f-left">{{ShareToolsTop}}</div>
     <div class="pagebody layout_pagebody text-dark">
@@ -20,71 +20,72 @@
         </figure>
         <div class="cus-default-body mb-2 text-dark float-start float-lg-none">{{Body}}</div>
         <div class="cus-default-sourceline mb-2 w-100 text-muted fst-italic">{{— :Source}}</div>
-        <div class="cus-default-share-bottom sharebody layout_sharebody bottom_share w-100 mb-2 f-left">{{ShareToolsBottom}}</div>
+        <div class="cus-default-share-bottom sharebody layout_sharebody bottom_share w-100 my-3 f-left">{{ShareToolsBottom}}</div>
     </div>
-    <div class="cus-default-comment opinionbody layout_opinionbody mb-2 w-100 f-left border-bottom">{{AllowComments:}}</div>
+    <div class="cus-default-comment opinionbody layout_opinionbody mb-2 w-100 f-left">{{AllowComments:}}</div>
 </div>
 <style>
-.pagedropcap {float:none;}
-.opinionbody .opinionbutton {display: none;}
-.cus-default-submenu a:hover {color: #0d6efd !important;}
-.cus-default-caption:empty {display: none !important;}
-.opiniontitle {margin-top: 20px;border-bottom: 1px solid #dee2e6 !important;font-weight: bold;color: #2c2f2d;font-size: 1.25rem;}
-.opinionheading {font-size: 0.875rem;color:#1574ba;font-weight: bold;margin-top: 10px;float: left;width: 100%;}
-.opinionbody {font-size: 0.875rem;color: #6c757d;float: left;width: 100%;}
-.opinionbody iframe {margin-top: 20px;}
-.bl-133-label {border-bottom: 4px solid #bdcde3;}
-.bl-133-label > span{position: relative;}
-.cus-default-body iframe {max-width: 100%;}
-.bl-133-label > span:before {background: #25add8;position: absolute;display: inline-block;content: "";width: 100%;height: 4px;bottom: -6px;}
-@media all and (min-width: 992px) {
-.cus-default-figure[data-photo-align="Left"] {padding-right: 1rem;}
-.cus-default-figure[data-photo-align="Right"] {padding-left: 1rem;float: right !important;}
-.cus-default-figure[data-photo-align="Center"] {float: none !important;display: flex;justify-content: center;align-items: center;flex-direction: column;}
-}
+    @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
+    .pagedropcap {float:none;}
+    .opinionbody .opinionbutton {display: none;}
+    .cus-default-submenu a:hover {color: #dc3545 !important;}
+    .cus-default-caption:empty {display: none !important;}
+    .opiniontitle {margin-top: 20px;border-bottom: 1px solid #dee2e6 !important;font-weight: bold;color: #2c2f2d;font-size: 1.25rem;}
+    .opinionheading {font-size: 0.875rem;color:#1574ba;font-weight: bold;margin-top: 10px;float: left;width: 100%;}
+    .opinionbody {font-size: 0.875rem;color: #6c757d;float: left;width: 100%;}
+    .opinionbody iframe {margin-top: 20px;}
+    .cus-133-label {border-bottom: 4px solid #bdcde3;}
+    .cus-133-label > span{position: relative;}
+    .cus-default-body iframe, .cus-default-body embed {max-width: 100%;}
+    .cus-133-label > span:before {background: #dc3545;position: absolute;display: inline-block;content: "";width: 100%;height: 4px;bottom: -6px;}
+    @media all and (min-width: 992px) {
+    .cus-default-figure[data-photo-align="Left"] {padding-right: 1rem;}
+    .cus-default-figure[data-photo-align="Right"] {padding-left: 1rem;float: right !important;}
+    .cus-default-figure[data-photo-align="Center"] {float: none !important;display: flex;justify-content: center;align-items: center;flex-direction: column;}
+    }
 </style>
 <script>
-/* Caption width */
-function setIntervalLimited(callback, interval, x) {
-for (var i = 0; i < x; i++) {
-setTimeout(callback, i * interval);
-}
-}
-setIntervalLimited(function() {
-var dcn = document.getElementsByClassName('cus-default-caption');
-if (dcn.length) {
-for (var j = 0; j < dcn.length; j++) {
-if(dcn[j].innerHTML != "") {
-dcn[j].style.width = document.getElementsByClassName('cus-default-img')[j].offsetWidth + "px";
-}
-}
-}
-}, 2000, 5);
-/* Comment Form Show */
-if (document.getElementsByClassName('opinionbutton').length) {
-var cb_length = document.getElementsByClassName('opinionbutton').length;
-for (i = 0; i < cb_length; i++) {
-var cb_c = document.getElementsByClassName('opinionbutton')[i];
-var cb_url = cb_c.getAttribute('onclick').split("',").shift().split("OpenPopup2('").pop();
-var cb_cf = document.createElement('iframe');
-cb_cf.src = cb_url;
-cb_cf.width = '100%';
-cb_cf.id = 'CB_FRAME_' + i;
-cb_cf.setAttribute('style', 'border: medium none; overflow: hidden;');
-cb_cf.setAttribute('scrolling', 'no');
-cb_cf.setAttribute('onload', 'iFrameResize({log:true}, \'#' + cb_cf.id + '\');');
-cb_c.parentNode.insertBefore(cb_cf, cb_c.nextSibling);
-}
-}
-/* Reader Comment */
-if(document.getElementsByClassName('opiniontitle').length) {
-var rc = document.getElementsByClassName('opinionheading').length;
-document.getElementsByClassName('opiniontitle')[0].innerHTML = "<i class='fa fa-comments' aria-hidden='true'></i> " + rc + " Comments";
-var och = document.getElementsByClassName('opinionheading');
-var ouser = '<i class="fa fa-user-circle-o text-muted" aria-hidden="true"></i> ';
-for(var m=0; m< och.length; m++) {
-  och[m].innerHTML = ouser + och[m].innerHTML;
-}
-}
+    /* Caption width */
+    function setIntervalLimited(callback, interval, x) {
+        for (var i = 0; i < x; i++) {
+            setTimeout(callback, i * interval);
+        }
+    }
+    setIntervalLimited(function() {
+        var dcn = document.getElementsByClassName('cus-default-caption');
+        if (dcn.length) {
+            for (var j = 0; j < dcn.length; j++) {
+                if(dcn[j].innerHTML != "") {
+                    dcn[j].style.width = document.getElementsByClassName('cus-default-img')[j].offsetWidth + "px";
+                }
+            }
+        }
+    }, 2000, 5);
+    /* Comment Form Show */
+    if (document.getElementsByClassName('opinionbutton').length) {
+        var cb_length = document.getElementsByClassName('opinionbutton').length;
+        for (i = 0; i < cb_length; i++) {
+            var cb_c = document.getElementsByClassName('opinionbutton')[i];
+            var cb_url = cb_c.getAttribute('onclick').split("',").shift().split("OpenPopup2('").pop();
+            var cb_cf = document.createElement('iframe');
+            cb_cf.src = cb_url;
+            cb_cf.width = '100%';
+            cb_cf.id = 'CB_FRAME_' + i;
+            cb_cf.setAttribute('style', 'border: medium none; overflow: hidden;');
+            cb_cf.setAttribute('scrolling', 'no');
+            cb_cf.setAttribute('onload', 'iFrameResize({log:true}, \'#' + cb_cf.id + '\');');
+            cb_c.parentNode.insertBefore(cb_cf, cb_c.nextSibling);
+        }
+    }
+    /* Reader Comment */
+    if(document.getElementsByClassName('opiniontitle').length) {
+        var rc = document.getElementsByClassName('opinionheading').length;
+        document.getElementsByClassName('opiniontitle')[0].innerHTML = "<i class='fa fa-comments' aria-hidden='true'></i> " + rc + " Comments";
+        var och = document.getElementsByClassName('opinionheading');
+        var ouser = '<i class="fa fa-user-circle-o text-muted" aria-hidden="true"></i> ';
+        for(var m=0; m< och.length; m++) {
+            och[m].innerHTML = ouser + och[m].innerHTML;
+        }
+    }
 </script>
 {{ArticleValuesEnd}}
