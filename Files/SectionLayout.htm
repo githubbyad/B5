@@ -6,9 +6,9 @@
 {{ReplaceJavascriptChars:No}}
 {{RemoveHTMLBody}}
 {{SortBy:Issue, Updated}}
-<div class="cus-section-133-container container-fluid px-0">
+<div class="cus-section-133-container border-bottom mb-2">
     <div class="cus-default-menu-bar">
-        <div class="text-uppercase fw-bold px-0 mb-2 text-gray cus-133-label" style="font-family: pt sans,sans-serif;">
+        <div class="text-uppercase fw-bold px-0 mb-2 text-black cus-133-label" style="font-family: pt sans,sans-serif;">
             <span>
                 <span class="cus-default-menu">{{Menu}}</span><i class="fa fa-angle-right mx-2" aria-hidden="true"></i><span class="cus-default-submenu">{{SubMenu}}</span>
             </span>
@@ -28,16 +28,16 @@
                 </div>
                 <div class="col-lg-7 px-0 px-lg-2">
                     <p class="cus-section-133-heading mb-1">
-                        <a class="d-inline-block text-decoration-none fs-4 fw-bold text-black lh-base line-2" href="{{HeadingLink}}">{{Heading}}</a>
+                        <a class="d-inline-block text-decoration-none fs-4 fw-bold text-black lh-base line-2 transition text-red-hover" href="{{HeadingLink}}">{{Heading}}</a>
                     </p>
-                    <p class="cus-section-133-date d-inline-block text-decoration-none fs-6 text-muted lh-1 mb-2">
+                    <p class="cus-section-133-date d-inline-block text-decoration-none fs-6 text-muted lh-1 mb-2" data-by="{{By}}">
                         <i class="fa fa-calendar" aria-hidden="true"></i> {{IssueDate}}
                     </p>
                     <p class="cus-section-133-body line-4 text-dark fs-5 mb-2 lh-base">
                         {{Body}}
                     </p>
                     <p class="cus-section-133-more">
-                        <a class="d-inline-block text-decoration-none fs-5 text-dark lh-1 fst-italic" href="{{HeadingLink}}">{{more}}</a>
+                        <a class="d-inline-block text-decoration-none fs-5 text-dark lh-1 fst-italic transition text-red-hover" href="{{HeadingLink}}">{{more}}</a>
                     </p>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                 </div>
                 <div class="col-lg-7 px-0 px-lg-2">
                     <p class="cus-section-133-heading mb-1">
-                        <a class="d-inline-block text-decoration-none fs-4 fw-bold text-black lh-base line-2" href="{{HeadingLink}}">{{Heading}}</a>
+                        <a class="d-inline-block text-decoration-none fs-4 fw-bold text-black lh-base line-2 transition text-red-hover" href="{{HeadingLink}}">{{Heading}}</a>
                     </p>
                     <p class="cus-section-133-date d-inline-block text-decoration-none fs-6 text-muted lh-1 mb-2">
                         <i class="fa fa-calendar" aria-hidden="true"></i> {{IssueDate}}
@@ -63,7 +63,7 @@
                         {{Body}}
                     </p>
                     <p class="cus-section-133-more">
-                        <a class="d-inline-block text-decoration-none fs-5 text-dark lh-1 fst-italic" href="{{HeadingLink}}">{{more}}</a>
+                        <a class="d-inline-block text-decoration-none fs-5 text-dark lh-1 fst-italic transition text-red-hover" href="{{HeadingLink}}">{{more}}</a>
                     </p>
                 </div>
             </div>
@@ -82,43 +82,44 @@
     {{RepeatEnd}}
 </div>
 <style>
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
-.cus-133-label {border-bottom: 4px solid #bdcde3;}
-.cus-133-label > span{position: relative;}
-.cus-133-label > span:before {background: #25add8;position: absolute;display: inline-block;content: "";width: 100%;height: 4px;bottom: -6px;}
-.cus-section-133-archivemore span:hover {color: #04a1d2 !important;border-color: #04a1d2 !important;}
-.cus-section-133-archivemore-active ~ .cus-section-133-archive {display: flex !important;}
-.cus-section-133-archivemore-active {display: none !important;}
-div[data-cus-src*="lib/images/blank.png"]::after {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%,-50%);
-color: gray;
-font-weight: bold;
-font-size: 1.5rem;
-width: 100%;
-text-align: center;
-padding: 0 1rem;
-}
+    @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
+    .cus-133-label {border-bottom: 4px solid #bdcde3;}
+    .cus-133-label > span{position: relative;}
+    .cus-133-label > span:before {background: #dc3545;position: absolute;display: inline-block;content: "";width: 100%;height: 4px;bottom: -6px;}
+    .cus-section-133-archivemore span:hover {color: #dd0707 !important;border-color: #dd0707 !important;}
+    .cus-section-133-archivemore-active ~ .cus-section-133-archive {display: flex !important;}
+    .cus-section-133-archivemore-active {display: none !important;}
+    .cus-section-133-block:last-of-type, .cus-section-133-archive:last-of-type {border-width: 0 !important;}
+    div[data-cus-src*="lib/images/blank.png"]::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: gray;
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+    padding: 0 1rem;
+    }
 </style>
 <script>
-/* SubMenu Title */
-document.title = "{{SubMenu}}";
-/* Load More Button */
-if(document.getElementsByClassName('cus-section-133-load-more').length) {
-document.getElementsByClassName('cus-section-133-load-more')[0].addEventListener('click', function(){
-document.getElementsByClassName('cus-section-133-archivemore')[0].classList.add('cus-section-133-archivemore-active');
-});
-}
-/* Blank Image Text */
-var cus_domain = "{{PutDomain}}";
-if (cus_domain.split('/').length > 4) {
-cus_domain = cus_domain.split('://').pop().split('/').slice(1).join('/').split('/').shift();
-} else {
-cus_domain = cus_domain.split('://').pop().split('/').shift();
-}
-document.getElementsByClassName("cus-section-133-container")[0].insertAdjacentHTML("afterend", "<style>div[data-cus-src*='lib/images/blank.png']::after {content: '" + cus_domain + "';</style>");
+    /* SubMenu Title */
+    document.title = "{{SubMenu}}";
+    /* Load More Button */
+    if(document.getElementsByClassName('cus-section-133-load-more').length) {
+        document.getElementsByClassName('cus-section-133-load-more')[0].addEventListener('click', function(){
+            document.getElementsByClassName('cus-section-133-archivemore')[0].classList.add('cus-section-133-archivemore-active');
+        });
+    }
+    /* Blank Image Text */
+    var cus_domain = "{{PutDomain}}";
+    if (cus_domain.split('/').length > 4) {
+        cus_domain = cus_domain.split('://').pop().split('/').slice(1).join('/').split('/').shift();
+    } else {
+        cus_domain = cus_domain.split('://').pop().split('/').shift();
+    }
+    document.getElementsByClassName("cus-section-133-container")[0].insertAdjacentHTML("afterend", "<style>div[data-cus-src*='lib/images/blank.png']::after {content: '" + cus_domain + "';</style>");
 </script>
 {{LayoutSection<<SubMenuId>>End}}
 {{SectionValuesEnd}}
