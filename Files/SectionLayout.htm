@@ -72,11 +72,12 @@
             <style>.DisplayFlag{display:none;}</style>
         {{EndIf}}
         {{If Counter=TotalArticlesPage}}
-            <div class="cus-section-133-archivemore DisplayFlag text-center" style="{{SubMenuNoRepeatCSSDisplay}}">
+            <div class="cus-section-133-archivemore DisplayFlag text-center position-relative" style="{{SubMenuNoRepeatCSSDisplay}}">
                 <span style="cursor:pointer" class="cus-section-133-load-more border rounded-pill fw-bold lh-lg px-5 my-3 d-inline-block text-gray shadow-sm">
                     <more class="hpe-custom-text-9">
                     <script type="text/javascript">Section9();</script>
                 </more> {{SubMenu}}</span>
+                <center style="top: 0;left: 50%;transform: translateX(-50%);" class="cus-section-133-load-more-i d-none mt-4 position-absolute"><i aria-hidden="true" class="fa fa-circle-o-notch fa-spin text-red fs-3"></i></center>
             </div>
         {{EndIf}}
     {{RepeatEnd}}
@@ -90,18 +91,7 @@
     .cus-section-133-archivemore-active ~ .cus-section-133-archive {display: flex !important;}
     .cus-section-133-archivemore-active {display: none !important;}
     .cus-section-133-block:last-of-type, .cus-section-133-archive:last-of-type {border-width: 0 !important;}
-    div[data-cus-src*="lib/images/blank.png"]::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: gray;
-    font-weight: bold;
-    font-size: 1.5rem;
-    width: 100%;
-    text-align: center;
-    padding: 0 1rem;
-    }
+    div[data-cus-src*="lib/images/blank.png"]::after {position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);color: gray;font-weight: bold;font-size: 1.5rem;width: 100%;text-align: center;padding: 0 1rem;}
 </style>
 <script>
     /* SubMenu Title */
@@ -109,7 +99,13 @@
     /* Load More Button */
     if(document.getElementsByClassName('cus-section-133-load-more').length) {
         document.getElementsByClassName('cus-section-133-load-more')[0].addEventListener('click', function(){
-            document.getElementsByClassName('cus-section-133-archivemore')[0].classList.add('cus-section-133-archivemore-active');
+            document.getElementsByClassName("cus-section-133-load-more")[0].classList.add("invisible");
+            document.getElementsByClassName("cus-section-133-load-more-i")[0].classList.remove("d-none");
+            setTimeout(function(){
+                document.getElementsByClassName("cus-section-133-load-more")[0].classList.remove("invisible");
+                document.getElementsByClassName("cus-section-133-load-more-i")[0].classList.add("d-none");
+                document.getElementsByClassName('cus-section-133-archivemore')[0].classList.add('cus-section-133-archivemore-active');
+            },1200);
         });
     }
     /* Blank Image Text */
