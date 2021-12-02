@@ -12,8 +12,9 @@ function GetHighlights7(){document.write({{PutHtmlChar39}}
         <div class="carousel-inner cus-carousel-121-2-inner bg-body position-relative">
             {{RepeatBegin}}
                 <div class="carousel-item cus-carousel-121-2-item">
-                    <article class="mb-0 w-100 d-block text-start">
-                        <a class="cus-carousel-121-2-link d-block text-decoration-none line-1 text-black fw-bold lh-sm text-uppercase transition text-red-hover fs-6" href="{{HeadingLink}}">{{Heading}}</a>
+                    <span class="col-1 d-inline d-lg-none pe-0"><i class="fa fa-circle text-red" style="transform: scale(0.8);" aria-hidden="true"></i></span>
+                    <article class="cus-carousel-121-2-article mb-0 w-100 d-block text-start">
+                        <a class="cus-carousel-121-2-link d-block text-decoration-none line-1 text-black fw-bold text-uppercase transition text-red-hover" href="{{HeadingLink}}">{{Heading}}</a>
                     </article>
                 </div>
             {{RepeatEnd}}
@@ -28,25 +29,12 @@ function GetHighlights7(){document.write({{PutHtmlChar39}}
         document.getElementById("ticker121").classList.remove("bg-body");
         var ta = document.getElementsByClassName("cus-carousel-121-2-item");
         for(var t = 0; t < ta.length; t++) {
-            ta[t].classList.add("d-block","mx-2","float-end","py-3","border-bottom");
+            ta[t].classList.add("row","d-flex","mx-auto","float-end","py-3","border-bottom");
             document.getElementsByClassName("cus-carousel-121-2-link")[t].classList.remove("line-1");
+            document.getElementsByClassName("cus-carousel-121-2-article")[t].classList.add("col-11","ps-0");
+            document.getElementsByClassName("cus-carousel-121-2-article")[t].classList.remove("w-100");
         }
     }
 <\/script>
-<style>
-    @media all and (max-width: 991px) {
-        .cus-carousel-121-2-item {width:96%;}
-        .cus-carousel-121-2-item::before {color: #dd0707;position: absolute;left: -2%;font-size: 1.5rem;content: "•";top: 0.2rem;transform: scale(1.5);}
-        .cus-carousel-121-2-item:last-of-type {border-bottom-width: 0 !important;}
-    }
-    @media all and (max-width: 576px) {
-        .cus-carousel-121-2-item {width:92%;}
-        .cus-carousel-121-2-item::before {left: -4%;}
-    }
-    @media all and (max-width: 360px) {
-        .cus-carousel-121-2-item {width:88%;}
-        .cus-carousel-121-2-item::before {left: -6%;}
-    }
-</style>
 {{PutHtmlChar39}});DisplayHighlight('cus-blocks-2-121');}
 {{LayoutH7End}}
