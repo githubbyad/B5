@@ -1,0 +1,108 @@
+{{LayoutH4Begin}}
+{{LayoutH4Limit40}}
+{{SortBy:Issue, Updated}}
+function GetHighlights4(){document.write({{PutHtmlChar39}} 
+<div id="cus-blocks-3-121" class="cus-blocks-3-121" style="display:none">
+    <p class="cus-121-label my-2 position-relative"><span class="text-black fw-bold text-uppercase border-top border-4 border-red position-relative z-index-2">LATEST NEWS</span></p>
+    <div class="row">
+        {{RepeatBegin}}
+            {{If Counter < 7}}
+                <div class="cus-blocks-3-121-box col-lg-6 row mb-3 mx-0">
+                    <div class="col-5 px-0 border-top border-bottom border-start rounded-top-start rounded-bottom-start overflow-hidden">
+                        <a href="{{HeadingLink}}">
+                            <div class="ratio-3-2 cus-zoom">
+                                <div class="img-content">
+                                    <img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="img-fluid" />
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-7 border-top border-bottom border-end rounded-top-end rounded-bottom-end">
+                        <p class="mb-0"><a class="text-decoration-none text-primary text-uppercase fw-bold fs-5_1" href="{{SubMenuLink}}">{{SubMenu}}</a></p>
+                        <p class="mb-0"><a class="text-decoration-none text-black text-red-hover line-3 fw-bold" href="{{HeadingLink}}">{{Heading}}</a></p>
+                        <p class="mb-0 text-gray fs-5_1"><i class="fa fa-calendar me-1" aria-hidden="true"></i>{{DayNameI1}}, {{MonthI1}} {{DayI}} {{YearI}}</p>
+                    </div>
+                </div>
+            {{Else}}
+                <div class="cus-blocks-3-121-box col-lg-6 row mb-3 mx-0">
+                    <!--<div class="col-5 px-0 border-top border-bottom border-start rounded-top-start rounded-bottom-start overflow-hidden">
+                        <a href="{{HeadingLink}}">
+                            <div class="ratio-3-2 cus-zoom">
+                                <div class="img-content">
+                                    <img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="img-fluid" />
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-7 border-top border-bottom border-end rounded-top-end rounded-bottom-end">
+                        <p class="mb-0"><a class="text-decoration-none text-primary text-uppercase fw-bold fs-5_1" href="{{SubMenuLink}}">{{SubMenu}}</a></p>
+                        <p class="mb-0"><a class="text-decoration-none text-black text-red-hover line-3 fw-bold" href="{{HeadingLink}}">{{Heading}}</a></p>
+                        <p class="mb-0 text-gray fs-5_1"><i class="fa fa-calendar me-1" aria-hidden="true"></i>{{DayNameI1}}, {{MonthI1}} {{DayI}} {{YearI}}</p>
+                    </div>-->
+                </div>
+            {{EndIf}}
+        {{RepeatEnd}}
+    </div>
+    <div class="row mb-3 d-flex justify-content-center border-bottom">
+        <p class="text-center cus-blocks-3-121-load-more-p">
+            <span class="cus-blocks-3-121-load-more d-none user-select-none cus-cursor-pointer fw-bold text-gray border rounded-pill fw-bold lh-lg px-5 lh-lg d-inline-block shadow-sm text-primary-hover">
+                <more class="hpe-custom-text-8 pe-2">Load More</more><i class="fa fa-angle-down fw-bold" aria-hidden="true"></i>
+            </span>
+        </p>
+        <center class="cus-blocks-3-121-load-more-i d-none my-1 position-absolute"><i aria-hidden="true" class="fa fa-circle-o-notch fa-spin text-red fs-3"></i></center>
+    </div>
+</div>
+<script>
+    var a = "cus-blocks-3-121-box";
+    var l = "cus-blocks-3-121-load-more";
+    var v = 6;
+    var t = document.getElementsByClassName(a).length;
+    if (document.getElementsByClassName(a)[1]) {
+        document.getElementsByClassName(l)[0].classList.remove("d-none");
+    }
+
+    function countActiveBoxes() {
+        var u = 0;
+        var b = document.getElementsByClassName(a);
+        for (i = 0; i < b.length; i++) {
+            if (b[i].childElementCount > 0) {
+                u++;
+            } else {
+                b[i].classList.add("d-none"); 
+            }
+        }
+        return u;
+    }
+    document.getElementsByClassName(l)[0].setAttribute("data-load-start", countActiveBoxes());
+    document.getElementsByClassName(l)[0].setAttribute("data-load-show", v + countActiveBoxes());
+    document.getElementsByClassName(l)[0].setAttribute("data-load-max", t);
+    document.getElementsByClassName(l)[0].addEventListener("click", function() {
+        document.getElementsByClassName(l + "-p")[0].classList.add("invisible");
+        document.getElementsByClassName(l + "-i")[0].classList.remove("d-none");
+        setTimeout(function() {
+            document.getElementsByClassName(l + "-i")[0].classList.add("d-none");
+            document.getElementsByClassName(l + "-p")[0].classList.remove("invisible");
+            var st = document.getElementsByClassName(l)[0].getAttribute("data-load-start");
+            var sw = document.getElementsByClassName(l)[0].getAttribute("data-load-show");
+            for (i = parseInt(st); i < parseInt(sw); i++) {
+                if (document.getElementsByClassName(a)[i]) {
+                    if (document.getElementsByClassName(a)[i].childElementCount == 0) {
+                        document.getElementsByClassName(a)[i].classList.remove("d-none");
+                        document.getElementsByClassName(a)[i].innerHTML = document.getElementsByClassName(a)[i].innerHTML.replace("<!--", "").replace("-->", "");
+                    }
+                }
+            }
+            document.getElementsByClassName(l)[0].setAttribute("data-load-start", countActiveBoxes());
+            document.getElementsByClassName(l)[0].setAttribute("data-load-show", v + countActiveBoxes());
+            if(document.getElementsByClassName(l)[0].getAttribute("data-load-start") == document.getElementsByClassName(l)[0].getAttribute("data-load-max")) {
+                document.getElementsByClassName(l)[0].classList.add("d-none");
+            }
+        }, 800);
+    });
+<\/script>
+<style>
+    .cus-121-label::before {content: "";position: absolute;width: 100%;height: 0.2rem;background: rgba(221, 7, 7, 0.2);margin-top: -0.2rem;z-index: 2;}
+    .cus-blocks-3-121-load-more:hover {border-color: #3d8bfd !important;}
+</style>
+{{PutHtmlChar39}});DisplayHighlight('cus-blocks-3-121');}
+{{LayoutH4End}}
