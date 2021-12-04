@@ -7,7 +7,7 @@
 {{RemoveHTMLBody}}
 {{RemoveMore:Yes}}
 {{SortBy:Issue, Updated}}
-<div class="cus-section-133-container border-bottom mb-2">
+<div class="cus-section-133-container mb-3">
     <div class="cus-default-menu-bar">
         <div class="text-uppercase fw-bold px-0 mb-2 text-black cus-133-label" style="font-family: pt sans,sans-serif;">
             <span>
@@ -98,10 +98,15 @@
     /* SubMenu Title */
     document.title = "{{SubMenu}}";
     /* Load More Button */
+    if(document.getElementsByClassName("cus-section-133-archive").length == 0) {
+        document.getElementsByClassName("cus-section-133-archivemore")[0].classList.add("d-none");
+    }
     if(document.getElementsByClassName('cus-section-133-load-more').length) {
         document.getElementsByClassName('cus-section-133-load-more')[0].addEventListener('click', function(){
             document.getElementsByClassName("cus-section-133-load-more")[0].classList.add("invisible");
-            document.getElementsByClassName("cus-section-133-load-more-i")[0].classList.remove("d-none");
+            setTimeout(function(){
+                document.getElementsByClassName("cus-section-133-load-more-i")[0].classList.remove("d-none");
+            },100);
             setTimeout(function(){
                 document.getElementsByClassName("cus-section-133-load-more")[0].classList.remove("invisible");
                 document.getElementsByClassName("cus-section-133-load-more-i")[0].classList.add("d-none");
