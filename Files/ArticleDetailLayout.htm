@@ -14,7 +14,7 @@
     </div>
     <div class="cus-default-share-top sharebody layout_sharebody pageheading top_share w-100 mb-2 f-left">{{ShareToolsTop}}</div>
     <div class="pagebody layout_pagebody text-dark">
-        <figure class="cus-default-figure figure mb-2 float-start" data-photo-align="{{PictureAlignment}}">
+        <figure class="cus-default-figure figure mb-2 float-start" data-photo-url="{{Picture1}}" data-photo-align="{{PictureAlignment}}">
             <img src="{{Picture1}}" class="cus-default-img figure-img img-fluid" alt="{{Heading}}">
             <figcaption class="cus-default-caption figure-caption text-center line-3">{{Picture1Caption}}</figcaption>
         </figure>
@@ -28,6 +28,7 @@
     @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
     .pagedropcap {float:none;}
     .opinionbody .opinionbutton {display: none;}
+    .cus-default-figure[data-photo-url=""] {display: none !important;}
     .cus-default-submenu a:hover {color: #dc3545 !important;}
     .cus-default-caption:empty {display: none !important;}
     .opiniontitle {margin-top: 20px;border-bottom: 1px solid #dee2e6 !important;font-weight: bold;color: #2c2f2d;font-size: 1.25rem;}
