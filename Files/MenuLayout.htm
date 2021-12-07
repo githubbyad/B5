@@ -141,6 +141,7 @@ function GetMenuH(){document.write({{PutHtmlChar39}}
         var mh_this = document.getElementsByClassName("dropdown-toggle")[mh];
         if (mh_this.innerHTML == "" && mh_this.parentNode.children.length == 3) {
             mh_this.nextSibling.setAttribute("class", mh_this.getAttribute("class"));
+	    mh_this.nextSibling.setAttribute("id", mh_this.getAttribute("id"));
             mh_this.nextSibling.setAttribute("style", mh_this.getAttribute("style"));
             mh_this.remove();
         }
