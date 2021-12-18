@@ -1,6 +1,6 @@
-{{LayoutArticleGroup702Begin}}
+{{LayoutArticleGroup700Begin}}
 {{File:business.xml}}
-{{LayoutArticleGroup702Limit25}}
+{{LayoutArticleGroup700Limit25}}
 {{ReplaceJavascriptChars:No}}
 {{RemoveHTMLBody}}
 {{Where:SubMenuIdInclude:122}}
@@ -42,4 +42,4 @@
         {{RepeatEnd}}
     </channel>
 </rss>
-{{LayoutArticleGroup702End}}
+{{LayoutArticleGroup700End}}
