@@ -1,42 +1,35 @@
 {{LayoutArticleGroup700Begin}}
-{{File:business.xml}}
+{{File:filename.xml}}
 {{LayoutArticleGroup700Limit25}}
 {{ReplaceJavascriptChars:No}}
 {{RemoveHTMLBody}}
-{{Where:SubMenuIdInclude:122}}
+{{Where:SubMenuIdInclude:1XX}}
 {{RemoveMore:Yes}}
 {{SortBy:Issue,Updated}}
 {{Find&ReplaceString:&,and}}
 <?xml version="1.0"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:media="http://search.yahoo.com/mrss/">
     <channel>
-        <title>Sacobaynews - Business</title>
-        <atom:link rel="self" href="https://sacobaynews.com/business.xml" type="application/rss+xml" />
-        <link>https://sacobaynews.com/index122.htm</link>
-        <description>Sacobaynews - Business</description>
+        <title>{{SubMenu}}</title>
+        <atom:link rel="self" href="{{PutDomain}}filename.xml" type="application/rss+xml" />
+        <link>{{SubMenuLink}}</link>
+        <description>{{SubMenu}}</description>
         <language>en-US</language>
         <sy:updatePeriod>hourly</sy:updatePeriod>
         <sy:updateFrequency>1</sy:updateFrequency>
-        <image>
-            <url>https://sacobaynews.com/favicon.ico</url>
-            <title>Sacobaynews - Business</title>
-            <link>https://sacobaynews.com/index122.htm</link>
-            <width>32</width>
-            <height>32</height>
-        </image>
         {{RepeatBegin}}
             <item>
                 <title>{{Heading}}</title>
                 <link>{{HeadingLink}}</link>
                 <description>{{Body}}</description>
                 <pubDate>{{DayNameI1}}, {{DayI}} {{MonthI1}} {{YearI}} 00:00:00 GMT</pubDate>
-                <dc:creator><![CDATA[sacobaynews.com]]></dc:creator>
+                <dc:creator><![CDATA[{{PutDomainX}}]]></dc:creator>
                 <category><![CDATA[{{SubMenu}}]]></category>
                 <guid isPermaLink="false">{{HeadingLink}}</guid>
                 <atom:updated>1994-11-05T08:15:30-05:00</atom:updated>
                 <media:content url="{{HeadingImage}}" type="image/jpeg" medium="image" width="1000" height="666">
                     <media:thumbnail url="{{HeadingImage}}" width="150" height="100" />
-                    <media:copyright> sacobaynews</media:copyright>
+                    <media:copyright>{{PutDomainX}}</media:copyright>
                 </media:content>
             </item>
         {{RepeatEnd}}
