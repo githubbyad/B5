@@ -18,7 +18,7 @@
         <sy:updatePeriod>hourly</sy:updatePeriod>
         <sy:updateFrequency>1</sy:updateFrequency>
         <image>
-            <url>https://sacobaynews.com/favicon.png</url>
+            <url>https://sacobaynews.com/favicon.ico</url>
             <title>Sacobaynews - Business</title>
             <link>https://sacobaynews.com/index122.htm</link>
             <width>32</width>
@@ -28,7 +28,7 @@
             <item>
                 <title>{{Heading}}</title>
                 <link>{{HeadingLink}}</link>
-                <description>{{Heading}}</description>
+                <description>{{Body}}</description>
                 <pubDate>{{DayNameI1}}, {{DayI}} {{MonthI1}} {{YearI}} 00:00:00 GMT</pubDate>
                 <dc:creator><![CDATA[sacobaynews.com]]></dc:creator>
                 <category><![CDATA[{{SubMenu}}]]></category>
