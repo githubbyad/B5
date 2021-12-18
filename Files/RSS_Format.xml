@@ -35,7 +35,7 @@
                 <guid isPermaLink="false">{{HeadingLink}}</guid>
                 <atom:updated>1994-11-05T08:15:30-05:00</atom:updated>
                 <media:content url="{{HeadingImage}}" type="image/jpeg" medium="image" width="1000" height="666">
-                    <media:thumbnail url="{{HeadingImage}}" width="150" height="150" />
+                    <media:thumbnail url="{{HeadingImage}}" width="150" height="100" />
                     <media:copyright> sacobaynews</media:copyright>
                 </media:content>
             </item>
