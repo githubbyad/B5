@@ -78,7 +78,9 @@ function GetHighlights4(){document.write({{PutHtmlChar39}}
     document.getElementsByClassName(l)[0].setAttribute("data-load-max", t);
     document.getElementsByClassName(l)[0].addEventListener("click", function() {
         document.getElementsByClassName(l + "-p")[0].classList.add("invisible");
-        document.getElementsByClassName(l + "-i")[0].classList.remove("d-none");
+        setTimeout(function() {
+            document.getElementsByClassName(l + "-i")[0].classList.remove("d-none");
+        },500);        
         setTimeout(function() {
             document.getElementsByClassName(l + "-i")[0].classList.add("d-none");
             document.getElementsByClassName(l + "-p")[0].classList.remove("invisible");
