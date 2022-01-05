@@ -1,7 +1,7 @@
 {{ArticleValuesBegin}}
-<div class="hpe-article-detail border-bottom mb-2 d-block w-100 overflow-hidden" data-submenu={{SubMenuId}} data-detailid="{{ArticleId}}">
+<div class="hpe-article-detail border-bottom mb-2 d-block overflow-hidden w-100 position-relative" data-submenu={{SubMenuId}} data-detailid="{{ArticleId}}">
     <div class="cus-default-menu-bar">
-        <div class="text-uppercase fw-bold px-0 mb-2 text-black cus-133-label" style="font-family: pt sans,sans-serif;">
+        <div class="text-uppercase fw-bold px-0 mb-2 text-black cus-133-label">
             <span>
                 <span class="cus-default-menu">{{Menu}}</span><i class="fa fa-angle-right mx-2" aria-hidden="true"></i><span class="cus-default-submenu"><a class="text-black text-decoration-none" href="{{SubMenuLink}}">{{SubMenu}}</a></span>
             </span>
@@ -18,7 +18,7 @@
             <img src="{{Picture1}}" class="cus-default-img figure-img img-fluid" alt="{{Heading}}">
             <figcaption class="cus-default-caption figure-caption text-center line-3">{{Picture1Caption}}</figcaption>
         </figure>
-        <div class="cus-default-body mb-2 text-dark float-start float-lg-none">{{Body}}</div>
+        <div class="cus-default-body mb-2 text-gray float-start float-lg-none">{{Body}}</div>
         <div class="cus-default-sourceline mb-2 w-100 text-muted fst-italic">{{— :Source}}</div>
         <div class="cus-default-share-bottom sharebody layout_sharebody bottom_share w-100 my-3 f-left">{{ShareToolsBottom}}</div>
     </div>
@@ -27,22 +27,22 @@
 <style>
     @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
     .pagedropcap {float:none;}
-    .opinionbody .opinionbutton {display: none;}
     .cus-default-figure[data-photo-url=""] {display: none !important;}
+    .opinionbody .opinionbutton {display: none;}
     .cus-default-submenu a:hover {color: #dc3545 !important;}
     .cus-default-caption:empty {display: none !important;}
     .opiniontitle {margin-top: 20px;border-bottom: 1px solid #dee2e6 !important;font-weight: bold;color: #2c2f2d;font-size: 1.25rem;}
     .opinionheading {font-size: 0.875rem;color:#1574ba;font-weight: bold;margin-top: 10px;float: left;width: 100%;}
     .opinionbody {font-size: 0.875rem;color: #6c757d;float: left;width: 100%;}
     .opinionbody iframe {margin-top: 20px;}
-    .cus-133-label {border-bottom: 4px solid #bdcde3;}
+    .cus-133-label {font-family: pt sans,sans-serif;border-bottom: 4px solid #bdcde3;}
     .cus-133-label > span{position: relative;}
     .cus-default-body iframe, .cus-default-body embed {max-width: 100%;}
     .cus-133-label > span:before {background: #dc3545;position: absolute;display: inline-block;content: "";width: 100%;height: 4px;bottom: -6px;}
     @media all and (min-width: 992px) {
-        .cus-default-figure[data-photo-align="Left"] {padding-right: 1rem;}
-        .cus-default-figure[data-photo-align="Right"] {padding-left: 1rem;float: right !important;}
-        .cus-default-figure[data-photo-align="Center"] {float: none !important;display: flex;justify-content: center;align-items: center;flex-direction: column;}
+    .cus-default-figure[data-photo-align="Left"] {padding-right: 1rem;}
+    .cus-default-figure[data-photo-align="Right"] {padding-left: 1rem;float: right !important;}
+    .cus-default-figure[data-photo-align="Center"] {float: none !important;display: flex;justify-content: center;align-items: center;flex-direction: column;}
     }
 </style>
 <script>
