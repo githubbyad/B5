@@ -8,9 +8,9 @@
         <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css'>
     </head>
     <body>
-        <div class="cus-photogallery-133-container container-fluid px-0">
+        <div class="cus-photogallery-133">
             <div class="cus-default-menu-bar">
-                <div class="text-uppercase fw-bold px-0 mb-2 text-gray cus-133-label" style="font-family: pt sans,sans-serif;">
+                <div class="text-uppercase fw-bold px-0 mb-2 text-black cus-133-label">
                     <span>
                         <span class="cus-default-submenu">{{SubMenu}}</span>
                     </span>
@@ -19,10 +19,11 @@
             <div class="row mx-0 hp-parent">
                 {{RepeatBegin}}
                     <div class="col-6 col-md-2 px-1 mb-2">
-                        <a data-fancybox="gallery" data-src="{{HeadingImage}}" data-caption="{{HeadingImageAlt}}" >
-                            <div class="ratio-3-2 cus-zoom">
-                                <div class="img-content">
+                        <a class="cus-photogallery-133-popup d-block position-relative" data-fancybox="gallery" data-src="{{HeadingImage}}" data-caption="{{HeadingImageAlt}}" >
+                            <div class="ratio-3-2">
+                                <div class="img-content cus-dark-img cus-cursor-zoom">
                                     <img class="cus-photogallery-133-img img-fluid lazy loaded" src="{{HeadingImage}}" data-src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" data-was-processed="true">
+                                    <span class="cus-photogallery-133-icon position-absolute translate-middle top-50 start-50 z-index-1"><i class="fa fa-picture-o text-white text-shadow-1" aria-hidden="true"></i></span>
                                 </div>
                             </div>
                         </a>
@@ -31,10 +32,12 @@
             </div>
         </div>
         <style>
-            .cus-photogallery-133-img {cursor: zoom-in;}
-            .cus-133-label {border-bottom: 4px solid #bdcde3;}
+            @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
+            .cus-133-label {font-family: pt sans,sans-serif;border-bottom: 4px solid #bdcde3;}
             .cus-133-label > span{position: relative;}
-            .cus-133-label > span:before {background: #25add8;position: absolute;display: inline-block;content: "";width: 100%;height: 4px;bottom: -6px;}
+            .cus-133-label > span:before {background: #dc3545;position: absolute;display: inline-block;content: "";width: 100%;height: 4px;bottom: -6px;}
+            .cus-photogallery-133-icon {opacity: 0;  transition: 200ms linear;}
+            .cus-photogallery-133-popup:hover .cus-photogallery-133-icon {opacity: 1; transition: 300ms linear;}
         </style>
         <script src='https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js'></script>
         <script>
