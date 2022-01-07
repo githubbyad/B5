@@ -130,13 +130,15 @@ function GetMenuH(){document.write({{PutHtmlChar39}}
         }
     },10);
     /*MenuWithoutSubmenu*/
-    var ns = document.getElementsByClassName("no-submenu").length;
-    var nss = document.getElementsByClassName("no-submenu");
-    for (k = 0; k < ns; k++) {
-        var nshref = nss[k].children[0].getAttribute("href");
-        var nsso = "location.href = \'" + nshref + "\';";
-        nss[k].children[0].setAttribute("onclick", nsso);
-    }
+    window.addEventListener("DOMContentLoaded", function() {
+	    var ns = document.getElementsByClassName("no-submenu").length;
+	    var nss = document.getElementsByClassName("no-submenu");
+	    for (k = 0; k < ns; k++) {
+            var nshref = nss[k].children[0].getAttribute("href");
+            var nsso = "location.href = \'" + nshref + "\';";
+            nss[k].children[0].setAttribute("onclick", nsso);
+	    }
+    });
     /*MenuHTML*/
     for (var mh = 0; mh < document.getElementsByClassName("dropdown-toggle").length; mh++) {
         var mh_this = document.getElementsByClassName("dropdown-toggle")[mh];
