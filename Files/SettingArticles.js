@@ -8,7 +8,7 @@
     bp[0].insertAdjacentHTML("beforeend", "<div class=\'col-12 cus-101-blocks-1-a1\'></div>");
     document.getElementsByClassName("cus-101-blocks-1-a1")[0].appendChild(bl[0]);
     }
-    for (var i = 1; i < bl.length; i++) {
+    for (var i = 1; i <= bl.length; i++) {
         if (bl[i]) {
             if (i < 3) {
                 if (i == 1) {
