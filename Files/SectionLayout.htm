@@ -95,7 +95,9 @@
 </style>
 <script>
     /* SubMenu Title */
-    document.title = "{{SubMenu}}";
+    if(ReadSubmenu() == {{SubMenuId}} && ReadSubmenu() != ReadSParameters()) {
+        document.title = "{{SubMenu}}";
+    }
     /* Load More Button */
     if(document.getElementsByClassName("cus-section-133-archive").length == 0) {
         document.getElementsByClassName("cus-section-133-archivemore")[0].classList.add("d-none");
