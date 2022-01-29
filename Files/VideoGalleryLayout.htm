@@ -37,7 +37,9 @@
 .cus-videogallery-133-play i {transition: 100ms linear;}
 </style>
 <script>
-/* SubMenu Title */
-document.title = "{{SubMenu}}";
+    /* SubMenu Title */
+    if(ReadSubmenu() == {{SubMenuId}} && ReadSubmenu() != ReadSParameters()) {
+        document.title = "{{SubMenu}}";
+    }
 </script>
 {{LayoutSection119End}}
