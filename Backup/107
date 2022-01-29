@@ -1,0 +1,2022 @@
+{{LayoutDirectoryPage1Begin}}
+{{LayoutDirectoryPage1Limit100}}
+{{ReplaceJavascriptChars:No}}
+{{GroupBy:Category}}
+{{File:directory-<<SubMenuId>>.htm}}
+{{FileTemplate:index0.htm}}
+<div class="cus-directory-107-container">
+    <div class="d-block w-100 border-bottom border-2 border-red mb-2">
+        <p class="text-decoration-none text-uppercase text-white bg-dark px-2 d-inline-block mb-1 lh-lg">
+            <span class="cus-default-submenu">{{SubMenu}}</span>
+        </span>
+    </div>
+    <div class="cus-directory-107-wrap row mx-0 pt-3 border rounded shadow">
+        {{RepeatBegin}}
+            <div class="col-md-6 col-lg-4 my-2">
+                <a class="cus-directory-107-link text-decoration-none" href="{{PutDomain}}directory-{{CategoryFile}}-<<SubMenuId>>.htm">
+                    <p class="cus-directory-107-category text-start text-black fw-bold ps-1 py-2">
+                        <span class="cus-directory-107-category-text position-relative" data-bs-toggle="tooltip" data-bs-placement="top" title="{{TotalGroup}} Listings">
+                            {{CategoryNoRepeat}}
+                            <span class="cus-directory-107-list badge rounded-pill bg-secondary">
+                                {{TotalGroup}}
+                            </span>
+                        </span>
+                    </p>
+                </a>
+            </div>
+        {{RepeatEnd}}
+    </div> 
+</div>
+<style>
+.cus-directory-107-wrap {background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%23c9d1cb' fill-opacity='0.16'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E");background-attachment: fixed;}
+.cus-directory-107-category {border-left: 0.25rem solid #9c29bc;}
+.cus-directory-107-category-text:hover {color: #9c29bc !important; transition: 200ms linear;}
+.cus-directory-107-list {background:#8c6ad1 !important}
+.cus-directory-107-category-text:hover .cus-directory-107-list {background: #000 !important; transition: 200ms linear;}
+.cus-default-submenu a {pointer-events: none;color: white !important;text-decoration: none;}
+</style>
+<script>
+/* title */
+var t = document.getElementsByClassName("cus-default-submenu")[0].innerText;
+document.title = t.toLowerCase().charAt(0).toUpperCase() + t.slice(1).toLowerCase(0);
+</script>
+{{LayoutDirectoryPage1End}} 
+
+
+{{LayoutDirectoryPage2Begin}}
+{{LayoutDirectoryPage2Limit100}}
+{{Where:IncludeCurrentSubMenuId:Yes}}
+{{Where:IncludeCategory:Yes}}
+{{ReplaceJavascriptChars:No}}
+{{File:directory-<<CategoryFile>>-<<SubMenuId>>.htm}}
+{{FileTemplate:index0.htm}}
+<div class="cus-directory-107-container">
+    <div class="d-block w-100 border-bottom border-2 border-red mb-2">
+        <p class="text-decoration-none text-uppercase text-white bg-dark px-2 d-inline-block mb-1 lh-lg">
+            <span class="cus-default-submenu">{{SubMenu}}</span><i class="fa fa-angle-right mx-2" aria-hidden="true"></i><span class="cus-directory-107-category-label"></span>
+        </span>
+    </div>
+    <div class="cus-directory-107-wrap row py-2 mx-0 border rounded shadow">
+        {{RepeatBegin}}
+            <div class="cus-directory-107-category-hidden d-none">{{CategoryNoRepeat}}</div>
+            <div class="cus-directory-107-box col-lg-4 my-2">
+                <a class="cus-directory-107-link text-decoration-none bg-body d-block p-2 position-relative border rounded shadow-sm" href="{{PutDomain}}directory-<<CategoryFile>>-<<DetailID>>-<<SubMenuId>>.htm">
+                    <div class="ratio-3-2 cus-zoom mb-2">
+                        <div class="img-content">
+                            <img src="{{Picture}}" alt="{{Company}}" class="img-fluid" />
+                        </div>
+                    </div>
+                    <div class="cus-directory-107-name text-black fw-bold">{{Company}}</div>
+                </a>
+            </div>
+        {{RepeatEnd}}
+    </div>
+</div>
+<style>
+.cus-directory-107-wrap {background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%23c9d1cb' fill-opacity='0.16'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E");background-attachment: fixed;}
+.cus-default-submenu a {color: white !important;text-decoration: none;}
+.cus-default-submenu a:hover {color: #dd0707 !important;}
+.cus-directory-107-name:hover {color: #9c29bc !important;}
+</style>
+<script>
+/* title */
+var t = document.getElementsByClassName("cus-default-submenu")[0].innerText;
+document.title = t.toLowerCase().charAt(0).toUpperCase() + t.slice(1).toLowerCase(0) + " - " + document.getElementsByClassName('cus-directory-107-category-hidden')[0].innerText;
+/* label */
+document.getElementsByClassName('cus-directory-107-category-label')[0].innerText = document.getElementsByClassName('cus-directory-107-category-hidden')[0].innerText;
+</script>
+{{LayoutDirectoryPage2End}}
+
+
+{{LayoutDirectoryPage3Begin}}
+{{LayoutDirectoryPage3Limit1}}
+{{ReplaceJavascriptChars:No}}
+{{Where:IncludeCurrentSubMenuId:Yes}}
+{{Where:IncludeDetailId:Yes}}
+{{File:directory-<<CategoryFile>>-<<DetailID>>-<<SubMenuId>>.htm}}
+{{FileTemplate:index0.htm}}
+<div class="cus-directory-107-container">
+    <div class="d-block w-100 border-bottom border-2 border-red mb-2">
+        <p class="text-decoration-none text-uppercase text-white bg-dark px-2 d-inline-block mb-1 lh-lg">
+            <span class="cus-default-submenu">{{SubMenu}}</span><i class="fa fa-angle-right mx-2" aria-hidden="true"></i><span><a class="cus-directory-107-category-label" href="#"></a></span>
+        </span>
+        </span>
+    </div>
+    <div class="cus-directory-107-wrap row mx-0 rounded border py-2 shadow-sm">
+        {{RepeatBegin}}
+            <div class="cus-directory-107-category-hidden d-none" data-href="{{PutDomain}}directory-{{CategoryFile}}-<<SubMenuId>>.htm">{{CategoryNoRepeat}}</div>
+            <h1 class="cus-directory-107-name text-black fw-bold mb-3">{{Company}}</h1>
+            <div class="cus-directory-107-img col-12 mb-4 d-flex justify-content-center" data-src="{{Picture}}">
+                <img src="{{Picture}}" alt="{{Company}}" class="img-fluid border p-1 rounded bg-body" />
+            </div>
+            <div class="cus-directory-107-table">
+                <table class="table table-hover table-bordered table-responsive mb-4 bg-body">
+                    <tbody>
+                        <tr class="cus-directory-107-val" data-value="{{FirstName}} {{LastName}}">
+                            <th scope="row" class="text-end">Name</th>
+                            <td>{{FirstName}} {{LastName}}</td>
+                        </tr>
+                        <tr class="cus-directory-107-val" data-value="{{Address1}}">
+                            <th scope="row" class="text-end">Address</th>
+                            <td class="cus-directory-107-address">{{Address1}}</td>
+                        </tr>
+                        <tr class="cus-directory-107-val" data-value="{{City}}">
+                            <th scope="row" class="text-end">City</th>
+                            <td class="cus-directory-107-city">{{City}}</td>
+                        </tr>
+                        <tr class="cus-directory-107-val" data-value="{{State}}">
+                            <th scope="row" class="text-end">State</th>
+                            <td class="cus-directory-107-state">{{State}}</td>
+                        </tr>
+                        <tr class="cus-directory-107-val" data-value="{{Zip}}">
+                            <th scope="row" class="text-end">Zip/Postal Code</th>
+                            <td class="cus-directory-107-zip">{{Zip}}</td>
+                        </tr>
+                        <tr class="cus-directory-107-val" data-value="{{Country}}">
+                            <th scope="row" class="text-end">Country</th>
+                            <td class="cus-directory-107-country">{{Country}}</td>
+                        </tr>
+                        <tr class="cus-directory-107-val" data-value="{{Phone}}">
+                            <th scope="row" class="text-end">Phone</th>
+                            <td>{{Phone}}</td>
+                        </tr>
+                        <tr class="cus-directory-107-val" data-value="{{Cell}}">
+                            <th scope="row" class="text-end">Cell</th>
+                            <td>{{Cell}}</td>
+                        </tr>
+                        <tr class="cus-directory-107-val" data-value="{{Pager}}">
+                            <th scope="row" class="text-end">Pager</th>
+                            <td>{{Pager}}</td>
+                        </tr>
+                        <tr class="cus-directory-107-val" data-value="{{Fax}}">
+                            <th scope="row" class="text-end">Fax</th>
+                            <td>{{Fax}}</td>
+                        </tr>
+                        <tr class="cus-directory-107-val" data-value="{{Email}}">
+                            <th scope="row" class="text-end">Email</th>
+                            <td><a class="text-decoration-none" href="mailto:{{Email}}">{{Email}}</a></td>
+                        </tr>
+                        <tr class="cus-directory-107-val" data-value="{{Website}}">
+                            <th scope="row" class="text-end">Website</th>
+                            <td><a class="cus-directory-107-site text-decoration-none" href="{{Website}}" target="_blank">{{Website}}</a></td>
+                        </tr>
+                        <tr class="cus-directory-107-val" data-value="{{Facebook}}{{Twitter}}">
+                            <th scope="row" class="text-end">Social Links</th>
+                            <td>
+                                <a class="cus-directory-107-val me-2" data-value="{{Facebook}}" href="{{Facebook}}" target="_blank"><i class="fa fa-facebook-official fs-4" aria-hidden="true"></i></a>
+                                <a class="cus-directory-107-val" data-value="{{Twitter}}" href="{{Twitter}}" target="_blank"><i class="fa fa-twitter-square fs-4" aria-hidden="true"></i></a></th>
+                            </td>
+                        </tr>
+                        <tr class="cus-directory-107-coupon" data-src="{{Coupon}}">
+                            <th scope="row" class="text-end">Coupons</th>
+                            <td><img class="img-fluid" src="{{Coupon}}"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <span class="fw-bold mb-2 d-block w-100">Profile</span>
+                                <span class="d-block w-100" style="white-space: pre-wrap;">{{Profile}}</span>
+                            </td>
+                        </tr>
+                        <tr class="cus-directory-107-val" data-value="{{Address1}}{{City}}{{State}}{{Country}}{{Zip}}">
+                            <td colspan="2">
+                                <span class="fw-bold mb-2 d-block w-100">Map</span>
+                                <span class="d-block w-100">
+                                    <iframe id="cus-directory-107-map" scrolling="no" marginheight="0" marginwidth="0" src="" width="100%" height="600" frameborder="0"></iframe>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        {{RepeatEnd}}
+        <div class="my-3 text-center">
+            <a class="cus-directory-107-back btn text-white" href="{{PutDomain}}directory-{{CategoryFile}}-<<SubMenuId>>.htm"><i class="fa fa-chevron-left" aria-hidden="true"></i> Go back</a>
+        </div>
+    </div>
+</div>
+<style>
+.cus-directory-107-wrap {background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%23c9d1cb' fill-opacity='0.16'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E");background-attachment: fixed;}
+.cus-default-submenu a, .cus-directory-107-category-label {color: white !important;text-decoration: none;}
+.cus-default-submenu a:hover, .cus-directory-107-category-label:hover {color: #dd0707 !important;}
+.cus-directory-107-back {background-color: #8c6ad1 !important;border-color: #7a58bf !important;}
+.cus-directory-107-back:hover {background: #7a58bf !important;}
+.cus-directory-107-img[data-src*="/blank.png"], .cus-directory-107-coupon[data-src*="/blank.png"], .cus-directory-107-val[data-value=""] {display: none !important;}
+</style>
+<script>
+/* title */
+document.title = document.getElementsByClassName("cus-directory-107-name")[0].innerText;
+/* label */
+document.getElementsByClassName("cus-directory-107-category-label")[0].innerText = document.getElementsByClassName("cus-directory-107-category-hidden")[0].innerText;
+document.getElementsByClassName("cus-directory-107-category-label")[0].setAttribute("href",document.getElementsByClassName("cus-directory-107-category-hidden")[0].getAttribute("data-href"));
+document.getElementsByClassName("cus-directory-107-back")[0].setAttribute("href",document.getElementsByClassName("cus-directory-107-category-hidden")[0].getAttribute("data-href"));
+/* website */
+var wst = document.getElementsByClassName("cus-directory-107-site")[0];
+wst.innerText = wst.innerText.split("://").pop();
+wst.innerText = wst.innerText.split("www.").pop();
+if(wst.getAttribute("href").indexOf("http") == -1) {
+wst.setAttribute("href", "http://" + wst.getAttribute("href"));
+}
+/* map */
+var map_address = document.getElementsByClassName('cus-directory-107-address')[0].innerText.replace(/\s+/g, "%20");
+map_address = (map_address == "") ? "" : map_address + ",";
+var map_city = document.getElementsByClassName('cus-directory-107-city')[0].innerText.replace(/\s+/g, "%20");
+map_city = (map_city == "") ? "" : map_city + ",";
+var map_state = document.getElementsByClassName('cus-directory-107-state')[0].innerText.replace(/\s+/g, "%20");
+map_state = (map_state == "") ? "" : map_state + ",";
+var map_country = document.getElementsByClassName('cus-directory-107-country')[0].innerText.replace(/\s+/g, "%20");
+map_country = (map_country == "") ? "" : map_country;
+var map_zip = document.getElementsByClassName('cus-directory-107-zip')[0].innerText.replace(/\s+/g, "%20");
+map_zip = (map_zip == "") ? "" : "-" + map_zip;
+var map_loc = map_address + map_city + map_state + map_country + map_zip;
+document.getElementById('cus-directory-107-map').setAttribute('src','https://maps.google.com/maps?width=100%25&height=600&hl=en&q=' + map_loc + '&t=&z=14&ie=UTF8&iwloc=B&output=embed')
+</script>
+{{LayoutDirectoryPage3End}} 
+
+{{SectionValuesBegin}}
+{{LayoutSection<<SubMenuId>>Begin}}
+{{LayoutSection<<SubMenuId>>Limit<<TotalArticlesSubMenu>>}}
+{{Where:SubMenuIdInclude:<<SubMenuId>>}}
+{{File:section<<SubMenuId>>.htm}}
+{{ReplaceJavascriptChars:No}}
+{{RemoveHTMLBody}}
+{{RemoveMore:Yes}}
+{{SortBy:Issue, Updated}}
+<div class="cus-section-107-container mb-3">
+    <div class="d-block w-100 border-bottom border-2 border-red mb-2">
+        <p class="text-decoration-none text-uppercase text-white bg-dark px-2 d-inline-block mb-1 lh-lg">
+            <span>{{Menu}}</span><i class="fa fa-angle-right mx-2" aria-hidden="true"></i><span>{{SubMenu}}</span>
+        </span>
+    </div>
+    {{RepeatBegin}}
+        {{If Counter<=TotalArticlesPage}}
+            <div class="cus-section-107-block mb-4 mb-lg-2 mx-0 pb-2 border-bottom row hpe-in-section" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-menu="{{Menu}}" data-submenu="{{SubMenu}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+                <div class="col-lg-5 mb-2 mb-lg-0 px-0">
+                    <a href="{{HeadingLink}}">
+                        <div class="ratio-3-2 cus-zoom" data-cus-src="{{HeadingImage}}">
+                            <div class="img-content">
+                                <img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="img-fluid" />
+                            </div>
+                        </div>
+                   </a>
+                </div>
+                <div class="col-lg-7 px-0 px-lg-2">
+                    <p class="cus-section-107-heading mb-1">
+                        <a class="d-inline-block text-decoration-none fs-4 fw-bold text-black lh-base line-2 transition text-red-hover" href="{{HeadingLink}}">{{Heading}}</a>
+                    </p>
+                    <p class="cus-section-107-date d-inline-block text-decoration-none fs-5_1 text-muted lh-1 mb-2" data-by="{{By}}">
+                        <i class="fa fa-calendar" aria-hidden="true"></i> {{IssueDate}}
+                    </p>
+                    <p class="cus-section-107-body line-4 text-gray fs-5 mb-2 lh-base">{{Body}}</p>
+                    <p class="cus-section-107-more">
+                        <a class="d-inline-block text-decoration-none fs-5 text-dark lh-1 transition text-red-hover" href="{{HeadingLink}}">{{more}} <i class="fa fa-arrow-circle-right"></i></a>
+                    </p>
+                </div>
+            </div>
+        {{Else}}
+            <div class="cus-section-107-archive mb-4 mb-lg-2 mx-0 pb-2 border-bottom row hpe-in-section" style="display: none;" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-menu="{{Menu}}" data-submenu="{{SubMenu}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+                <div class="col-lg-5 mb-2 mb-lg-0 px-0">
+                    <a href="{{HeadingLink}}">
+                        <div class="ratio-3-2 cus-zoom" data-cus-src="{{HeadingImage}}">
+                            <div class="img-content">
+                                <img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="img-fluid" />
+                            </div>
+                        </div>
+                </a>
+                </div>
+                <div class="col-lg-7 px-0 px-lg-2">
+                    <p class="cus-section-107-heading mb-1">
+                        <a class="d-inline-block text-decoration-none fs-4 fw-bold text-black lh-base line-2 transition text-red-hover" href="{{HeadingLink}}">{{Heading}}</a>
+                    </p>
+                    <p class="cus-section-107-date d-inline-block text-decoration-none fs-5_1 text-muted lh-1 mb-2">
+                        <i class="fa fa-calendar" aria-hidden="true"></i> {{IssueDate}}
+                    </p>
+                    <p class="cus-section-107-body line-4 text-gray fs-5 mb-2 lh-base">{{Body}}</p>
+                    <p class="cus-section-107-more">
+                        <a class="d-inline-block text-decoration-none fs-5 text-dark lh-1 transition text-red-hover" href="{{HeadingLink}}">{{more}} <i class="fa fa-arrow-circle-right"></i></a>
+                    </p>
+                </div>
+            </div>
+        {{EndIf}}
+        {{If TotalArticlesArchive=0}}
+            <style>.DisplayFlag{display:none;}</style>
+        {{EndIf}}
+        {{If Counter=TotalArticlesPage}}
+            <div class="cus-section-107-archivemore DisplayFlag text-center position-relative border-bottom" style="{{SubMenuNoRepeatCSSDisplay}}">
+                <span style="cursor:pointer" class="cus-section-107-load-more border rounded fw-bold lh-lg px-5 mt-3 mb-5 d-inline-block text-gray shadow-sm">
+                    <more class="hpe-custom-text-9">
+                    <script type="text/javascript">Section9();</script>
+                </more> {{SubMenu}}</span>
+                <center style="top: 0;left: 50%;transform: translateX(-50%);" class="cus-section-107-load-more-i d-none mt-4 position-absolute"><i aria-hidden="true" class="fa fa-circle-o-notch fa-spin text-red fs-3"></i></center>
+            </div>
+        {{EndIf}}
+    {{RepeatEnd}}
+</div>
+<style>
+    .cus-section-107-archivemore span:hover {color: #dd0707 !important;border-color: #dd0707 !important;}
+    .cus-section-107-archivemore-active ~ .cus-section-107-archive {display: flex !important;}
+    .cus-section-107-archivemore-active {display: none !important;}
+    div[data-cus-src*="lib/images/blank.png"]::after {position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);color: gray;font-weight: bold;font-size: 1.5rem;width: 100%;text-align: center;padding: 0 1rem;}
+</style>
+<script>
+    /* SubMenu Title */
+    if(ReadSubmenu() == {{SubMenuId}} && ReadSubmenu() != ReadSParameters()) {
+        document.title = "{{SubMenu}}";
+    }
+    /* Load More Button */
+    if(document.getElementsByClassName("cus-section-107-archive").length == 0) {
+        document.getElementsByClassName("cus-section-107-archivemore")[0].classList.add("d-none");
+    }
+    if(document.getElementsByClassName('cus-section-107-load-more').length) {
+        document.getElementsByClassName('cus-section-107-load-more')[0].addEventListener('click', function(){
+            document.getElementsByClassName("cus-section-107-load-more")[0].classList.add("invisible");
+            setTimeout(function(){
+                document.getElementsByClassName("cus-section-107-load-more-i")[0].classList.remove("d-none");
+            },100);
+            setTimeout(function(){
+                document.getElementsByClassName("cus-section-107-load-more")[0].classList.remove("invisible");
+                document.getElementsByClassName("cus-section-107-load-more-i")[0].classList.add("d-none");
+                document.getElementsByClassName('cus-section-107-archivemore')[0].classList.add('cus-section-107-archivemore-active');
+            },1200);
+        });
+    }
+    /* Blank Image Text */
+    var cus_domain = "{{PutDomain}}";
+    if (cus_domain.split('/').length > 4) {
+        cus_domain = cus_domain.split('://').pop().split('/').slice(1).join('/').split('/').shift();
+    } else {
+        cus_domain = cus_domain.split('://').pop().split('/').shift();
+    }
+    document.getElementsByClassName("cus-section-107-container")[0].insertAdjacentHTML("afterend", "<style>div[data-cus-src*='lib/images/blank.png']::after {content: '" + cus_domain + "';</style>");
+</script>
+{{LayoutSection<<SubMenuId>>End}}
+{{SectionValuesEnd}}
+
+{{LayoutNewsLetter1Begin}}
+{{LayoutNewsLetter1Limit10}}
+{{ReplaceJavascriptChars:No}}{{Where:MaxIssue}}{{SortBy:Menu, Issue Desc}}
+<html><head></head><body style="font: 13px Trebuchet MS"><br><table cellpadding="3" style="background:#ECECEC;border:2px solid #088484;padding:5px;border-radius:10px;"><tbody><tr><td align="center" colspan="2"><a href="{{Home}}"><img style="max-width:300px;" src="Logo Image"></a><br><font size="3" face="Trebuchet MS"><strong>Welcome to {{Company}}!</strong></font></td></tr>
+{{RepeatBegin}}
+<tr><td style="background:#088484;height: 25px;border-radius: 3px;vertical-align: middle;" colspan="2" align="LEFT" style="{{SubMenuNoRepeatCSSDisplay}}"><font size="2" face="Trebuchet MS" ><a style="text-decoration:none;color:white;text-transform: uppercase;" href="{{SubMenuLink}}" target="_BLANK"><strong>{{SubMenuNoRepeat}}</strong></a></font></td></tr><tr>
+<td align="LEFT"><a href="{{HeadingLink}}"><img style="max-width:100px;" src="{{HeadingImage}}" alt="" /></a></td><td align="LEFT"><font size="2" face="Trebuchet MS"><strong><a style="text-decoration:none;" href="{{HeadingLink}}">{{Heading}}</a><strong></font></td></tr>
+{{RepeatEnd}}
+</tbody></table></body></html>
+{{LayoutNewsLetter1End}}
+
+{{ArticleValuesBegin}}
+<div class="hpe-article-detail border-bottom mb-2 d-block overflow-hidden w-100 position-relative" data-submenu={{SubMenuId}} data-detailid="{{ArticleId}}">
+    <div class="d-block w-100 border-bottom border-2 border-red mb-2">
+        <p class="text-decoration-none text-uppercase text-white bg-dark px-2 d-inline-block mb-1 lh-lg">
+            <span>{{Menu}}</span><i class="fa fa-angle-right mx-2" aria-hidden="true"></i><a class="text-white text-warning-hover text-decoration-none" href="{{SubMenuLink}}">{{SubMenu}}</span>
+        </span>
+    </div>
+    <h1 class="cus-default-heading pageheading layout_pageheading custom_color_{{MenuId}} text-black fw-bold mb-3">{{Heading}}</h1>
+    <div class="mb-2 text-muted">
+        <span class="pagebyline layout_pagebyline cus-default-byline"><span class="text-primary">{{<span class="text-muted">By</span> :By:<span class="px-1 text-muted">•</span>}}</span></span>
+        <span class="pageissuedate layout_pageissuedate custom_color_{{MenuId}} cus-default-date"><i class="fa fa-calendar me-1" aria-hidden="true"></i><span class="cus-default-date-text">{{IssueDate}}</span></span>
+    </div>
+    <div class="cus-default-share-top sharebody layout_sharebody pageheading top_share w-100 mb-2 f-left">{{ShareToolsTop}}</div>
+    <div class="pagebody layout_pagebody text-dark">
+        <figure class="cus-default-figure figure mb-2 float-start" data-photo-url="{{Picture1}}" data-photo-align="{{PictureAlignment}}">
+            <img src="{{Picture1}}" class="cus-default-img figure-img img-fluid" alt="{{Heading}}">
+            <figcaption class="cus-default-caption figure-caption text-center line-3">{{Picture1Caption}}</figcaption>
+        </figure>
+        <div class="cus-default-body mb-2 text-gray float-start float-lg-none">{{Body}}</div>
+        <div class="cus-default-sourceline mb-2 w-100 text-muted fst-italic">{{— :Source}}</div>
+        <div class="cus-default-share-bottom sharebody layout_sharebody bottom_share w-100 my-3 f-left">{{ShareToolsBottom}}</div>
+    </div>
+    <div class="cus-default-comment opinionbody layout_opinionbody mb-2 w-100 f-left">{{AllowComments:}}</div>
+</div>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
+    .pagedropcap {float:none;}
+    .cus-default-figure[data-photo-url=""] {display: none !important;}
+    .opinionbody .opinionbutton {display: none;}
+    .cus-default-submenu a:hover {color: #dd0707 !important;}
+    .cus-default-caption:empty {display: none !important;}
+    .opiniontitle {margin-top: 20px;border-bottom: 1px solid #dee2e6 !important;font-weight: bold;color: #2c2f2d;font-size: 1.25rem;}
+    .opinionheading {font-size: 0.875rem;color:#1574ba;font-weight: bold;margin-top: 10px;float: left;width: 100%;}
+    .opinionbody {font-size: 0.875rem;color: #6c757d;float: left;width: 100%;}
+    .opinionbody iframe {margin-top: 20px;}
+    .cus-107-label {font-family: pt sans,sans-serif;border-bottom: 4px solid #bdcde3;}
+    .cus-107-label > span{position: relative;}
+    .cus-default-body iframe, .cus-default-body embed {max-width: 100%;}
+    .cus-107-label > span:before {background: #dc3545;position: absolute;display: inline-block;content: "";width: 100%;height: 4px;bottom: -6px;}
+    @media all and (min-width: 992px) {
+    .cus-default-figure[data-photo-align="Left"] {padding-right: 1rem;}
+    .cus-default-figure[data-photo-align="Right"] {padding-left: 1rem;float: right !important;}
+    .cus-default-figure[data-photo-align="Center"] {float: none !important;display: flex;justify-content: center;align-items: center;flex-direction: column;}
+    }
+</style>
+<script>
+    /* Caption width */
+    function setIntervalLimited(callback, interval, x) {
+        for (var i = 0; i < x; i++) {
+            setTimeout(callback, i * interval);
+        }
+    }
+    setIntervalLimited(function() {
+        var dcn = document.getElementsByClassName('cus-default-caption');
+        if (dcn.length) {
+            for (var j = 0; j < dcn.length; j++) {
+                if(dcn[j].innerHTML != "") {
+                    dcn[j].style.width = document.getElementsByClassName('cus-default-img')[j].offsetWidth + "px";
+                }
+            }
+        }
+    }, 2000, 5);
+    /* Comment Form Show */
+    if (document.getElementsByClassName('opinionbutton').length) {
+        var cb_length = document.getElementsByClassName('opinionbutton').length;
+        for (i = 0; i < cb_length; i++) {
+            var cb_c = document.getElementsByClassName('opinionbutton')[i];
+            var cb_url = cb_c.getAttribute('onclick').split("',").shift().split("OpenPopup2('").pop();
+            var cb_cf = document.createElement('iframe');
+            cb_cf.src = cb_url;
+            cb_cf.width = '100%';
+            cb_cf.id = 'CB_FRAME_' + i;
+            cb_cf.setAttribute('style', 'border: medium none; overflow: hidden;');
+            cb_cf.setAttribute('scrolling', 'no');
+            cb_cf.setAttribute('onload', 'iFrameResize({log:true}, \'#' + cb_cf.id + '\');');
+            cb_c.parentNode.insertBefore(cb_cf, cb_c.nextSibling);
+        }
+    }
+    /* Reader Comment */
+    if(document.getElementsByClassName('opiniontitle').length) {
+        var rc = document.getElementsByClassName('opinionheading').length;
+        document.getElementsByClassName('opiniontitle')[0].innerHTML = "<i class='fa fa-comments' aria-hidden='true'></i> " + rc + " Comments";
+        var och = document.getElementsByClassName('opinionheading');
+        var ouser = '<i class="fa fa-user-circle-o text-muted" aria-hidden="true"></i> ';
+        for(var m=0; m< och.length; m++) {
+            och[m].innerHTML = ouser + och[m].innerHTML;
+        }
+    }
+    /* Big Image Setting */
+    function calculatePercentage(o, n) {
+        var percentChange = ((o - n) / o) * 100;
+        return percentChange;
+    }
+    window.addEventListener('DOMContentLoaded', function(){
+        if(document.getElementsByClassName('cus-default-figure')[0]){
+            var a = document.getElementsByClassName('layout_pagebody')[0].offsetWidth;
+            var b = document.getElementsByClassName('cus-default-figure')[0].offsetWidth;
+            var df = a - b;
+            var pt = 100 - calculatePercentage(a, df)
+            if(pt <= 14) {
+                document.getElementsByClassName('cus-default-figure')[0].setAttribute('data-photo-align','Center');
+            }
+        }
+    });
+</script>
+{{ArticleValuesEnd}}
+
+
+
+{{FormValuesBegin}}
+{{ReplaceFieldHelpWithFieldCaption:Yes}}
+{{SelectValue:Select}}
+{{RequiredValue:*}}
+{{FieldHelpValue:<b class="tooltip tooltip-top-right"><<FieldHelp>></b>}}
+{{TextAreaCount:<label id="<<FieldName>>-memo4"></label> <label id="<<FieldName>>-memo42"></label>}}
+<!doctype html>
+<html lang="en">
+<head>
+<title>{{FormTitle}}</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="/iframe-resizer-master/js/iframeResizer.contentWindow.js"></script>
+<script type="text/javascript" language="javascript" src="{{PutDomainT}}lib/bl2.js"></script>
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="{{PutDomain}}custom.css?v=9.000009">
+<script>
+    function ChangeInputFocus(obj, evt, cname) {
+    /*if (evt.type == "focus")
+    obj.className = cname;
+    else if (evt.type == "blur")
+    /*obj.className = cname;*/
+    }
+</script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet"> 
+    <!-- /font -->
+<style>
+    #CustomForm {background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%23c9d1cb' fill-opacity='0.16'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E");background-attachment: fixed;}
+    .form-check-label:hover {color: #0d6efd;cursor: pointer;}
+    .cus-form-loader .cus-form-loading {display: block !important;}
+    .cus-form-loader .formbody fieldset, .cus-form-loader .system_text.footer_text {opacity: 0.5;pointer-events: none;}
+    #cus-form-button-loader {display:none;}
+    .cus-form-loader footer, .cus-form-loader button {cursor: no-drop;}
+    .fast-spin {-webkit-animation: fa-spin 1s infinite linear;animation: fa-spin 1s infinite linear;}
+    .cus-form-loader #SUBMIT1 {display:none;}
+    .cus-form-loader #cus-form-button-loader {display:inline-block;}
+    .form-floating > .form-control:focus ~ label {color: #0d6efd !important;}
+    .form-control:not(:disabled):not([readonly])::file-selector-button {position: absolute;right: 0;border-radius: 5px !important;}
+    .input-file-preview {display: none;}
+    .input-file-preview img {max-width: 30%;max-height: 200px;border: 1px solid #ced4da;border-radius: 5px;padding: 5px;box-sizing: border-box;cursor: zoom-in;}
+    .w-96 {width: 96% !important;}
+    .p-valid {color: green;}
+    .p-valid:before {position: relative;left: -10px;content: "✔";}
+    .p-invalid {color: red;}
+    .p-invalid:before {position: relative;left: -10px;content: "✖";font-size: 0.875rem !important;}
+    .open-eye, .close-eye {position: absolute;right: 2%;top: 50%;transform: translate(0,-50%);cursor: pointer;}
+    .open-eye i:hover, .close-eye i:hover {color: gray !important;}
+    .cus-form-help:before {content: "\f05a";font-family: FontAwesome;padding-left: 0.5rem;padding-right: 0.5rem;}
+    .cus-form-help {display: none;}
+    .cus-form-help:empty {display: none !important;}
+    .form-control:focus ~ .cus-form-help {display: block;}
+    .form-floating > .form-control {caret-color: #0d6efd;}
+    .border-red {border-color: #dd0707!important}
+</style>
+</head>
+<body style="font-family: 'Roboto Condensed', sans-serif;">
+    <div class="formbody">
+        <div class="body p-2">
+            <!--FormError-->
+            <!--FormMessage-->
+            <form class="custom-form p-3 mx-0 border rounded" enctype="multipart/form-data" autocomplete="off" id="CustomForm" method="post" name="CustomForm" onsubmit="return Vailidate(this);">
+            <!--FKeys-->
+            {{FormEmailSubject}} 
+            {{FormEmailConfirmMessage}} 
+            {{FormEmailFormat}} 
+            {{FormEmailTo}} 
+            {{FormEmailCC}}
+            <center class="fw-bold mb-3 fs-3 text-secondary">{{FormTitle}}</center>
+            <fieldset>
+                <div class="system_text Header_text mb-5 text-center">{{FormHeader}}</div>
+                {{RepeatBegin}} 
+                
+                    {{If FieldType=System}}
+                        <section class="w-96 mb-3" style="margin-left:2%" data-bs-toggle="tooltip" data-bs-placement="auto" title="{{FieldHelpB}}">
+                            <div class="input w-100 form-floating">
+                                <INPUT NAME="{{FieldName}}" VALUE="{{FieldValue}}" id="{{FieldName}}" placeholder="{{FieldRequired}} {{FieldCaption}}" type="{{FieldType}}" readonly class="formfieldinput formfieldinput_custom form-control formfieldinput_ReadOnly" {{FieldRequiredBrowser}} >
+                                <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
+                            </div>
+                        </section>
+
+                    {{ElseIf FieldType=ReadOnly}}
+                        <section class="w-96 mb-3" style="margin-left:2%" data-bs-toggle="tooltip" data-bs-placement="auto" title="{{FieldHelpB}}">
+                            <div class="input w-100 form-floating">
+                            <INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" placeholder="{{FieldRequired}} {{FieldCaption}}" type="{{FieldType}}" readonly class="formfieldinput formfieldinput_custom form-control formfieldinput_ReadOnly" {{FieldRequiredBrowser}} >
+                            <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
+                        </div>
+                        </section>
+
+                    {{ElseIf FieldType=Divider}}
+                        <section class="w-100 mb-3 mt-5">
+                            <div class="label w-100 mb-2">
+                                <div class="inp_custom">
+                                    <div class="formdivider formdivider_custom border-bottom border-2 border-red">
+                                        <span class="text-white d-inline-block fw-bold bg-dark px-3 py-2">{{FieldCaption}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    {{ElseIf FieldType=Memo}}
+                        <section class="w-96 mb-3" style="margin-left:2%" data-bs-toggle="tooltip" data-bs-placement="auto" title="{{FieldHelpB}}">
+                            <div class="input w-100 form-floating">
+                                <{{TextArea}} class="formfieldinput formfieldinput_custom form-control" style="height: 100px" id="{{FieldName}}" placeholder="{{FieldRequired}} {{FieldCaption}}" rows="4" cols="50" name="{{FieldName}}" onfocus="ChangeInputFocus(this, event, 'formfieldinputfocus'), LimitCharacters(this, '{{FieldName}}-memo4', '{{FieldName}}-memo42','{{FieldLengthW}}')" onblur="ChangeInputFocus(this, event, 'formfieldinput')" id="{{FieldName}}-memo"  onkeyup="LimitCharacters(this, '{{FieldName}}-memo4', '{{FieldName}}-memo42','{{FieldLengthW}}');" maxlength="{{FieldLength}}" NAME="{{FieldName}}" {{FieldRequiredBrowser}}></{{TextArea}}>
+                                <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
+                            </div>
+                            <div class="formfieldname text-start">
+                                <label class="textarea text-muted" style="font-size:0.875rem">{{TextAreaCount}}</label>
+                            </div>
+                        </section>
+
+                    {{ElseIf FieldType=File}}
+                        <section class="w-96 mb-3" style="margin-left:2%" data-bs-toggle="tooltip" data-bs-placement="auto" title="{{FieldHelpB}}">
+                            <div class="input input-file w-100 form-floating">
+                                <input type="file" id="{{FieldName}}" class="form-control" name="{{FieldName}}" accept="image/*" {{FieldRequiredBrowser}}>
+                                <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} Upload {{FieldCaption}}</label>
+                                <div id="{{FieldName}}-prv-div" class="input-file-preview mt-2 w-100">
+                                    <img id="{{FieldName}}_prvx" src="#" alt="" onclick="window.open(this.src, '_blank');" />
+                                    <span id="{{FieldName}}_sizex" class="text-muted" style="font-size: 0.875rem !important"></span>
+                                </div>
+                            </div>
+                            <script>
+                            {{FieldName}}.onchange = evt => {
+                                var re = /(?:\.([^.]+))?$/;
+                                var y = 0;
+                                const vf = ["gif", "jpg", "jpeg", "png"];
+                                var ext = re.exec(document.getElementById('{{FieldName}}').value)[1].toLowerCase();
+                                for (v = 0; v < vf.length; v++) {
+                                    if (ext == vf[v]) {
+                                        y = 1;
+                                    }
+                                }
+                                if (y == 1) {
+                                    const [file] = {{FieldName}}.files;
+                                    if (file) {
+                                        document.getElementById('{{FieldName}}-prv-div').style.display = "block";
+                                        {{FieldName}}_prvx.src = URL.createObjectURL(file);
+                                        var fileUpload = document.getElementById("{{FieldName}}");
+                                        if (typeof(fileUpload.files) != "undefined") {
+                                            var size = parseFloat(fileUpload.files[0].size / 1024).toFixed(2);
+                                            document.getElementById('{{FieldName}}_sizex').innerHTML = "[File Size: " + size + " KB]"
+                                        }
+                                    }
+                                } else {
+                                    document.getElementById('{{FieldName}}').value = ""
+                                    document.getElementById('{{FieldName}}-prv-div').style.display = "none";
+                                    alert('Invalid file type: <b style="color:red;">' + ext + '</b><br><br>Valid files: <b>gif, jpg, jpeg, png</b>')
+                                }
+                            }
+                            </script>
+                        </section>
+
+                    {{ElseIf FieldType=Password}}
+                        <section id="{{FieldName}}_sectionx" class="w-96 mb-3" style="margin-left:2%" data-bs-toggle="tooltip" data-bs-placement="auto" title="{{FieldHelpB}}">
+                            <div class="input w-100 form-floating">
+                                <INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="{{FieldType}}"  class="formfieldinput formfieldinput_custom form-control"  placeholder="{{FieldRequired}} {{FieldCaption}}" {{FieldRequiredBrowser}} value="" pattern="(?=.*\d)(?=.*[!#$%@])(?=.*[a-z])(?=.*[A-Z]).{8,}" >
+                                <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
+                                <div id="{{FieldName}}-form-forget" class="float-start w-100" style="display: none;"><a class="text-decoration-none mt-1 d-block" href="/target_form2.asp?twindow=Form&smenu=106&pform={{ForgotPassword}}&mad=No&sname=target_form2.asp&site={{PutDomainX}}">Forgot Password?</a></div>
+                                <div id="{{FieldName}}_show_p" class="open-eye text-dark"><i aria-hidden="true" class="fa fa-eye fs-5"></i></div>
+                                <div id="{{FieldName}}_hide_p" class="close-eye text-dark" style="display:none;"><i class="fa fa-eye-slash fs-5 text-danger" aria-hidden="true"></i></div>
+                            </div>
+                            <div id="{{FieldName}}_message">
+                                <h6>Password must contain the following:</h6>
+                                <p id="{{FieldName}}_letter" class="p-invalid">A <b>lowercase</b> letter</p>
+                                <p id="{{FieldName}}_capital" class="p-invalid">A <b>capital (uppercase)</b> letter</p>
+                                <p id="{{FieldName}}_number" class="p-invalid">A <b>number</b></p>
+                                <p id="{{FieldName}}_special" class="p-invalid">A <b>special character</b> such as ! # $ % @</p>
+                                <p id="{{FieldName}}_length" class="p-invalid">Minimum <b>8 characters</b></p>
+                            </div>
+                            <style>
+                                #{{FieldName}}_message {
+                                display: none;
+                                background: #d1e7dd;
+                                color: #000;
+                                position: relative;
+                                padding: 20px;
+                                margin-top: 10px;
+                                box-sizing: border-box;
+                                border-radius: 10px;
+                                }
+                                #{{FieldName}}_message::before {
+                                content: "";
+                                position: absolute;
+                                top: -14px;
+                                left: 30px;
+                                border-color: transparent transparent #d1e7dd transparent;
+                                border-style: solid;
+                                border-width: 7px;
+                                }
+                                #{{FieldName}}_message p {
+                                padding: 0 0 0 10px;
+                                font-size: 0.875rem;
+                                margin-bottom: 7px !important;
+                                }
+                                #{{FieldName}}:invalid {
+                                background-image: none !important;
+                                }
+                            </style>
+                            <script>
+                            {{FieldName}}_show_p.addEventListener('click', function() {
+                                {{FieldName}}.type = "text";
+                                {{FieldName}}_show_p.style.display = "none";
+                                {{FieldName}}_hide_p.style.display = "block";
+                            });
+                            {{FieldName}}_hide_p.addEventListener('click', function() {
+                                {{FieldName}}.type = "password";
+                                {{FieldName}}_show_p.style.display = "block";
+                                {{FieldName}}_hide_p.style.display = "none";
+                            });
+                            if(window.location.href.indexOf("pform={{Login}}") != -1){
+                                document.getElementById("{{FieldName}}-form-forget").style.display = "block";
+                            }
+                            if(window.location.href.indexOf("pform={{Login}}") == -1){
+                                var myInput = document.getElementById("{{FieldName}}");
+                                var letter = document.getElementById("{{FieldName}}_letter");
+                                var capital = document.getElementById("{{FieldName}}_capital");
+                                var special = document.getElementById("{{FieldName}}_special");
+                                var number = document.getElementById("{{FieldName}}_number");
+                                var length = document.getElementById("{{FieldName}}_length");
+                                myInput.onfocus = function() {
+                                    document.getElementById('{{FieldName}}_sectionx').previousElementSibling.scrollIntoView();
+                                    document.getElementById("{{FieldName}}_message").style.display = "block";
+                                }
+                                myInput.onblur = function() {
+                                    document.getElementById("{{FieldName}}_message").style.display = "none";
+                                }
+                                myInput.onkeyup = function() {
+                                    myInput.value = myInput.value.replace(/\s+/g, '');
+                                    var lowerCaseLetters = /[a-z]/g;
+                                    if(myInput.value.match(lowerCaseLetters)) {
+                                        letter.classList.remove("p-invalid");
+                                        letter.classList.add("p-valid");
+                                    } else {
+                                        letter.classList.remove("p-valid");
+                                        letter.classList.add("p-invalid");
+                                    }
+                                    var upperCaseLetters = /[A-Z]/g;
+                                    if(myInput.value.match(upperCaseLetters)) {
+                                        capital.classList.remove("p-invalid");
+                                        capital.classList.add("p-valid");
+                                    } else {
+                                        capital.classList.remove("p-valid");
+                                        capital.classList.add("p-invalid");
+                                    }
+                                    var numbers = /[0-9]/g;
+                                    if(myInput.value.match(numbers)) {
+                                        number.classList.remove("p-invalid");
+                                        number.classList.add("p-valid");
+                                    } else {
+                                        number.classList.remove("p-valid");
+                                        number.classList.add("p-invalid");
+                                    }
+                                    var specialChar = /[!#$%@]/g;
+                                    if(myInput.value.match(specialChar)) {
+                                        special.classList.remove("p-invalid");
+                                        special.classList.add("p-valid");
+                                    } else {
+                                        special.classList.remove("p-valid");
+                                        special.classList.add("p-invalid");
+                                    }
+                                    if(myInput.value.length >= 8) {
+                                        length.classList.remove("p-invalid");
+                                        length.classList.add("p-valid");
+                                    } else {
+                                        length.classList.remove("p-valid");
+                                        length.classList.add("p-invalid");
+                                    }
+                                }
+                            }
+                            </script>
+                        </section>
+
+                    {{ElseIf FieldType=Date}}
+                        <section class="w-96 mb-3" style="margin-left:2%" data-bs-toggle="tooltip" data-bs-placement="auto" title="{{FieldHelpB}}">
+                            <div class="input w-100 form-floating">
+                                <INPUT NAME="{{FieldName}}" class="form-control" VALUE="{{FieldDefaultValue}}" placeholder="{{FieldRequired}} {{FieldCaption}}" id="{{FieldName}}" style="cursor: default;" type="{{FieldType}}" {{FieldRequiredBrowser}} value="">
+                                <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
+                            </div>
+                        </section>
+
+                    {{ElseIf FieldType=DropDown}}
+                        <section class="w-96 mb-3" style="margin-left:2%" data-bs-toggle="tooltip" data-bs-placement="auto" title="{{FieldHelpB}}">
+                            <div class="select w-100 form-floating">
+                                <select id="{{FieldName}}" name="{{FieldName}}" {{FieldRequiredBrowser}} class="form-select">
+                                    {{FieldDropDown}}
+                                </select>
+                                <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
+                            </div>
+                        </section>
+
+                    {{ElseIf FieldType=Hidden}} 
+                        <INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="{{FieldType}}" value="{{FieldDefaultValue}}"> 
+
+                    {{ElseIf FieldType=Decimal}} 
+                        <section class="w-96 mb-3" style="margin-left:2%" data-bs-toggle="tooltip" data-bs-placement="auto" title="{{FieldHelpB}}">
+                            <div class="input w-100 form-floating">
+                                <INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="{{FieldType}}"  onkeypress="return keyRestrict(event,this.value,'Decimal')" class="formfieldinput formfieldinput_custom form-control" onfocus="ChangeInputFocus(this, event, 'formfieldinputfocus')" onblur="ChangeInputFocus(this, event, 'formfieldinput formfieldinput_custom')" maxlength="{{FieldLength}}" placeholder="{{FieldRequired}} {{FieldCaption}}" value="" {{FieldRequiredBrowser}}>
+                                <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
+                            </div>
+                        </section>
+
+                    {{ElseIf FieldType=Number}} 
+                        <section class="w-96 mb-3" style="margin-left:2%" data-bs-toggle="tooltip" data-bs-placement="auto" title="{{FieldHelpB}}">
+                            <div class="input w-100 form-floating">
+                                <INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}" type="{{FieldType}}"  onkeypress="return keyRestrict(event,this.value,'Decimal')" class="formfieldinput formfieldinput_custom form-control" onfocus="ChangeInputFocus(this, event, 'formfieldinputfocus')" onblur="ChangeInputFocus(this, event, 'formfieldinput formfieldinput_custom')" maxlength="{{FieldLength}}" placeholder="{{FieldRequired}} {{FieldCaption}}" {{FieldRequiredBrowser}}>
+                                <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
+                            </div>
+                        </section>
+
+                    {{ElseIf FieldType=CheckBox}} 
+                        <section class="w-96 mb-3 form-check" style="margin-left:2%">
+                            <input id="{{FieldName}}" name="{{FieldName}}"  type="{{FieldType}}" name="checkbox" class="form-check-input" {{FieldRequiredBrowser}}>
+                            <label for="{{FieldName}}" class="form-label form-check-label user-select-none" data-bs-toggle="tooltip" data-bs-placement="auto" title="{{FieldHelpB}}">{{FieldRequired}} {{FieldCaption}}</label>
+                        </section>
+
+                    {{ElseIf FieldType=Captcha}}
+                        <section class="captcha-section w-96 mb-3" style="margin-left: 2%;">
+                            <div class="input w-100 form-floating">
+                                {{FieldCaptcha}}
+                            </div>
+                            <div class="captcha-text"><span>Type Security code from the above picture.</span></div>
+                        </section>
+
+                    {{Else}}
+                        <section class="w-96 mb-3" style="margin-left:2%" data-bs-toggle="tooltip" data-bs-placement="auto" title="{{FieldHelpB}}">
+                            <div class="input w-100 form-floating">
+                                <INPUT NAME="{{FieldName}}" VALUE="{{FieldDefaultValue}}" id="{{FieldName}}"  maxlength="{{FieldLength}}" placeholder="{{FieldRequired}} {{FieldCaption}}" type="{{FieldType}}"  class="formfieldinput formfieldinput_custom form-control" {{FieldRequiredBrowser}}>
+                                <label for="{{FieldName}}" class="form-label text-muted">{{FieldRequired}} {{FieldCaption}}</label>
+                            </div>
+                        </section>
+
+                    {{EndIf}} 
+
+                {{RepeatEnd}}
+            </fieldset>
+            <footer class="text-center mt-3">
+                <button class="button btn btn-primary shadow text-capitalize" id="SUBMIT1" type="submit" onclick="document.getElementById('CustomForm').classList.add('was-validated');"><span class="py-1 px-3 d-inline-block">{{FormButtonSubmit}}</span></button>
+                <i id="cus-form-button-loader" class='fa fa-circle-o-notch fa-spin fast-spin fs-1 text-primary'></i>
+            </footer>
+            <div class="system_text footer_text mt-5 mb-3 text-center">{{FormFooter}}</div>
+        </form>
+    </div>
+    <script language="javascript">GetGoogleAnalytics('FORM:{{FormName}}');</script>
+    <!-- Tooltip -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+    </script>
+    <!-- /Tooltip -->
+</div>
+</body>
+</html>
+{{FormValuesEnd}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{LayoutMenus1Begin}}
+{{File:menu_horizontal.js}}
+{{Where:MenuTypeInclude:'Horizontal'}}
+function GetMenuH(){document.write({{PutHtmlChar39}}
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm bg-black px-0 py-2 py-lg-0 border-bottom border-3 border-red">
+    <button class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon cus-menu-bar"></span>
+        <span class="navbar-toggler-icon cus-menu-close d-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+            </svg>
+        </span>
+    </button>
+    <span class="cus-mobile-icons">
+        <span class="cus-menu-search text-white fw-bold"></span>
+    </span>
+    <span class="cus-menu-social"></span>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav flex-wrap">
+            {{RepeatBegin1}}
+	            <li class="cus-menu-li nav-item dropdown py-1 px-lg-4 pe-2 hp-menu" data-menu="{{MenuId}}" data-submenu-list="-">
+	                <a id="navbarDropdown" class="nav-link cus-menu-id-{{MenuId}} fs-5 dropdown-toggle fw-bold text-uppercase text-white hpe-in-menu px-2 px-lg-0" data-view="Horizontal" data-menu="{{MenuId}}" data-link="{{MenuLink}}" data-order="{{MenuOrder}}" style="{{MenuStyle}}" href="{{MenuLink}}" role="button"  data-bs-toggle="dropdown" aria-expanded="false">{{Menu}}</a>
+	                <ul class="dropdown-menu cus-submenu-ul fade-up mb-2 mb-lg-0 mx-3 mx-lg-0 hp-submenu" data-menu="{{MenuId}}" aria-labelledby="navbarDropdown">
+                        {{RepeatBegin2}}
+                            <li class="cus-submenu-li hpe-in-submenu" data-menu="{{MenuId}}" data-submenu="{{SubMenuId}}" data-link="{{SubMenuLink}}" style="{{CSSDisplay}}" data-order="{{SubMenuOrder}}">
+                                <a class="dropdown-item cus-submenu-id-{{SubMenuId}} fs-5 fw-bold text-dark border-bottom border-gray nx-2 transition text-red-hover" href="{{SubMenuLink}}">{{SubMenu}}</a>
+                            </li>
+                        {{RepeatEnd2}}
+	                </ul>
+	            </li>
+	        {{RepeatEnd1}}
+        </ul>
+        <!-- search-->
+        <div class="cus-107-search">
+            <i class="fa fa-search text-white text-red-hover cus-cursor-pointer search-link pe-4 px-lg-4" aria-hidden="true"></i>
+            <div class="search_content">
+                <div class="search_box"><gcse:searchbox></gcse:searchbox></div>
+                <div class="search_results"><gcse:searchresults></gcse:searchresults></div>
+                <div class="search_remove">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                        <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" language="JavaScript">GetGoogleCustomSearch();<\/script>
+        <!-- /search--></script>
+	</div>
+</nav>
+<style>
+    .no-submenu .dropdown-toggle::after {display: none;}
+    #navbarDropdown:empty {display: none;}
+    .dropdown-item:focus, .dropdown-item:hover {background-color: transparent;}
+    .cus-mobile-icons {display: none;}
+    .cus-menu-social {display: none;}
+    .cus-active-submenu {color: #dd0707 !important;}
+    @media all and (min-width: 992px) {
+        .dropdown-menu{box-shadow: 0 1rem 3rem rgba(66, 53, 53, 0.575) !important;}
+        .navbar-nav li:hover>ul.dropdown-menu {display: block;margin-top: 0px;}
+        .navbar .dropdown-menu-end{ right:0; left: auto;  }
+        .navbar .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  }
+        .navbar .nav-item:hover .nav-link { color:#b6b6b6!important}
+        .navbar .dropdown-menu.fade-down{ top:80%; transform: rotateX(-75deg); transform-origin: 0% 0%; }
+        .navbar .dropdown-menu.fade-up{ top:180%;  }
+        .navbar .nav-item:hover .dropdown-menu{ transition: .3s; opacity:1; visibility:visible; top:100%; transform: rotateX(0deg); }
+        .dropdown-menu.fade-up:before {
+        content: "";  position: absolute;  top: -14px;  color: white;  left: 30px;  border-color: transparent transparent white transparent; border-style: solid;border-width: 7px;}
+        .nav-item.dropdown:hover #navbarDropdown::after {transform: rotate(180deg);transition: 300ms linear;transition-property:transform;}
+        .fixed-top {top: -40px;transform: translateY(40px) translateX(-50%);transition: opacity .3s ease-in-out;opacity: 0.9;left: 50%;}
+        .fixed-top:hover{opacity:1;}
+        .dropdown-menu {z-index: 999;}
+        .cus-active-menu {background-color:#dd0707 !important;}
+    }
+    @media all and (max-width: 991px) {
+        .cus-active-menu > .nav-link {border-left: 0.3rem solid #dd0707 !important;}
+        .nav-item.dropdown {border-bottom: 1px solid;}
+        .navbar-dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon.cus-menu-bar {display: none !important; background: none !important;}
+        .navbar-dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon.cus-menu-close {display: block !important; background: none !important}
+        .cus-social-links {display: none !important;}
+        .cus-menu-social {display: inline-block;}
+        .cus-menu-social a {color: white !important;}
+        .dropdown-toggle::after {position: absolute;right: 1rem;top: 1.25rem;}
+        .cus-mobile-icons i {color: #212529 !important;}
+        .cus-mobile-icons {display: flex;}
+        .cus-mobile-icons a {color: white !important;}
+    }
+    .gsc-adBlock {display: none !important;}
+    #gsc-i-id1{color:#000!important}
+    #gsc-i-id1::placeholder{color:#555!important;opacity:1;font-size:inherit!important}
+    .search_content{display:flex;display:-webkit-flex;-ms-display:flex;align-items:center;-webkit-align-items:center;-ms-align-items:center;justify-content:center;-webkit-justify-content:center;-ms-justify-content:center;background-color:rgba(255,255,255,.98);height:100%;position:fixed;top:100%;opacity:0;left:0;width:100%;z-index:2147483647;transition: 400ms ease-in-out;}
+    .search-flex{top: 0;opacity: 1;display:flex;display:-webkit-flex;-ms-display:flex;align-items:center;-webkit-align-items:center;-ms-align-items:center;justify-content:center;-webkit-justify-content:center;-ms-justify-content:center;transition: 300ms ease-in-out;}
+    .search_remove{cursor:pointer;user-select:none;position:absolute;top:10px;left:3%;}
+    .search_remove:hover{color:#dd0707}
+    .gsc-control-cse.gsc-control-cse-en{background-color:transparent;border-width:0;position:absolute}.search_box{border-bottom:2px solid #dd0707;width:70%;padding-bottom:6px}
+    .gsib_b,.gsst_a{display:none!important}
+    .gscb_a{display:none!important}
+    .gsc-input{background-image:none!important}
+    .gsc-input{background-color:transparent!important}
+    .gsc-input-box{background-color:transparent!important;border-bottom:0 solid #dd0707!important;border-width:0!important}
+    .gsc-input{border-width:0!important;color:#fff!important;font-size:20px!important}
+    .gsc-adBlock{display:none!important}
+    .search-icon-desk{cursor:pointer}
+    .search-icon-desk{float:right;height:54px;margin-right:10px}
+    .search-icon-desk i{border:1px solid #ddd;border-radius:4px;color:#000;display:block;line-height:35px;margin-top:9px;padding:0 12px}
+    .search-icon-desk i:hover{color:#79655d}
+    .gsc-results-wrapper-overlay.gsc-results-wrapper-visible {width: 100%;left: 0;top: 0;height: 100%;}
+    .gcsc-branding {display: none;}
+    .gsc-search-button.gsc-search-button-v2{padding:0 18px;line-height:35px;display:inline-block!important;background:#dd0707;border-radius:5px;border-color:#dd0707}
+    .gsc-search-button{width:auto!important;float:right!important}.gsc-search-button.gsc-search-button-v2:hover{background:#ddd!important}
+    .gsc-search-button-v2 svg{fill:#fff!important}
+    .gsc-search-button.gsc-search-button-v2:hover{background:#000!important;border-color:#000!important}
+    .search_remove:hover svg {fill: #dd0707;}
+</style>
+<script>
+    /* Active Menu */
+    for (var s = 0; s < document.getElementsByClassName("cus-submenu-li").length; s++) {
+        var ss = document.getElementsByClassName("cus-submenu-li")[s];
+        var gs = ss.getAttribute("data-submenu");
+        ss.parentNode.parentNode.setAttribute("data-submenu-list", ss.parentNode.parentNode.getAttribute("data-submenu-list") + gs + "-");
+    }
+    var sid = "-" + ReadSubmenu() + "-";
+    if(sid != undefined || sid != "") {
+        for(ml = 0; ml < document.getElementsByClassName("cus-menu-li").length; ml ++) {
+            if(document.getElementsByClassName("cus-menu-li")[ml].getAttribute("data-submenu-list").indexOf(sid) != -1) {
+                document.getElementsByClassName("cus-menu-li")[ml].classList.add("cus-active-menu")
+            }
+        }
+        if(document.getElementsByClassName("cus-submenu-id-" + ReadSubmenu())[0]) {
+            document.getElementsByClassName("cus-submenu-id-" + ReadSubmenu())[0].classList.add("cus-active-submenu")
+        }
+    }
+    /*HideSubMenu*/
+    var nav_dm = document.getElementsByClassName("dropdown-menu");
+    var nav_dml = nav_dm.length;
+    for (i = 0; i < nav_dml; i++) {
+        var nav_dms = nav_dm[i].children.length;
+        for (j = 0; j < nav_dms; j++) {
+            if (nav_dm[i].children[j].style.display == "none") {
+                nav_dm[i].children[j].classList.add("remove-submenu");
+            }
+        }
+        var nav_rm = document.getElementsByClassName("remove-submenu");
+        if(nav_rm) {
+            for(r = 0; r < nav_rm.length; r++) {
+                if(nav_rm[r]) {
+                    nav_rm[r].remove();
+                }
+            }
+        }
+        if (nav_dm[i].children.length == 0) {
+            nav_dm[i].parentNode.classList.add("no-submenu");
+            nav_dm[i].style.display = "none";
+        }
+    }
+    var rs = setInterval(function(){
+        var nav_rm2 = document.getElementsByClassName("remove-submenu");
+        if(nav_rm2.length != 0) {
+            if(nav_rm2) {
+                for(r = 0; r < nav_rm2.length; r++) {
+                    if(nav_rm2[r]) {
+                        nav_rm2[r].remove();
+                    }
+                }
+            }
+            for (s = 0; s < nav_dml; s++) {
+                if (nav_dm[s].children.length == 0) {
+                    nav_dm[s].parentNode.classList.add("no-submenu");
+                    nav_dm[s].style.display = "none";
+                }
+            }
+        }
+        else if(nav_rm2 == 0) {
+            clearInterval(rs);
+        }
+    },10);
+    /*MenuWithoutSubmenu*/
+    var ns = document.getElementsByClassName("no-submenu").length;
+    var nss = document.getElementsByClassName("no-submenu");
+    for (k = 0; k < ns; k++) {
+        var nshref = nss[k].children[0].getAttribute("href");
+        var nsso = "location.href = \'" + nshref + "\';";
+        nss[k].children[0].setAttribute("onclick", nsso);
+    }
+    /*MenuHTML*/
+    for (var mh = 0; mh < document.getElementsByClassName("dropdown-toggle").length; mh++) {
+        var mh_this = document.getElementsByClassName("dropdown-toggle")[mh];
+        if (mh_this.innerHTML == "" && mh_this.parentNode.children.length == 3) {
+            mh_this.nextSibling.setAttribute("class", mh_this.getAttribute("class"));
+            mh_this.nextSibling.setAttribute("id", mh_this.getAttribute("id"));
+            mh_this.nextSibling.setAttribute("style", mh_this.getAttribute("style"));
+            mh_this.remove();
+        }
+    }
+    /*SubMenuHTML*/
+    for (var sh = 0; sh < document.getElementsByClassName("dropdown-item").length; sh++) {
+        var sh_this = document.getElementsByClassName("dropdown-item")[sh];
+        if (sh_this.innerHTML == "" && sh_this.nextSibling) {
+            sh_this.nextSibling.setAttribute("class", sh_this.getAttribute("class"));
+            sh_this.nextSibling.setAttribute("style", sh_this.getAttribute("style"));
+            sh_this.remove();
+        }
+    }
+    /* Menu Sticky*/
+    document.addEventListener("DOMContentLoaded", function() {
+        if (window.location.href.indexOf("=target_form2.") == -1) {
+            if (window.screen.width > 992) {
+                var mo = document.getElementsByClassName("navbar")[0].offsetTop;
+                window.addEventListener("scroll", function() {
+                    if (window.scrollY > mo) {
+                        document.getElementsByClassName("navbar")[0].classList.add("fixed-top","container-bl");
+                        navbar_height = document.querySelector(".navbar").offsetHeight;
+                        document.getElementsByClassName("mainbody")[0].style.paddingTop = navbar_height + "px";
+                    } else {
+                        document.getElementsByClassName("navbar")[0].classList.remove("fixed-top","container-bl");
+                        document.getElementsByClassName("mainbody")[0].style.paddingTop = "0";
+                    }
+                });
+            }
+        }
+    });
+    /* Social & Search icons (mobile) */
+    if(window.screen.width <= 992) {
+        if(document.getElementsByClassName("cus-social-links").length > 0) {
+            var np = document.getElementsByClassName("cus-menu-social")[0];
+            var op = document.getElementsByClassName("cus-social-links")[0];
+            while (op.childNodes.length > 0) {
+                np.appendChild(op.childNodes[0]);
+            }
+        }
+        if(document.getElementsByClassName("cus-107-search").length > 0) {
+            var xp = document.getElementsByClassName("cus-menu-search")[0];
+            var yp = document.getElementsByClassName("cus-107-search")[0];
+            while (yp.childNodes.length > 0) {
+                xp.appendChild(yp.childNodes[0]);
+            }
+        }
+    }
+    /* Search  */
+    document.getElementsByClassName("search-link")[0].addEventListener("click", function() {
+    document.getElementById("gsc-i-id1").setAttribute("placeholder", "Search for...");
+    document.getElementsByClassName("search_content")[0].classList.add("search-flex");
+    document.getElementsByClassName("search_remove")[0].style.display = "block";
+    document.getElementsByClassName("gsc-results-close-btn")[0].addEventListener("click", function() {
+        document.getElementsByClassName("search_content")[0].classList.remove("search-flex");
+    });
+    });
+    document.getElementsByClassName("search_remove")[0].addEventListener("click", function() {
+        document.getElementsByClassName("search_content")[0].classList.remove("search-flex");
+        document.getElementsByClassName("search_remove")[0].style.display = "none";                        
+    });
+<\/script>
+{{PutHtmlChar39}});}
+{{LayoutMenus1End}}
+
+
+{{LayoutH4Begin}}
+{{LayoutH4Limit14}}
+{{SortBy:Issue, Updated}}
+{{RemoveHTMLBody}}
+{{RemoveMore:Yes}}
+function GetHighlights4(){document.write(' 
+<div class="cus-blocks-2-107 mb-2">
+    <div class="row hp-parent mb-4">
+        {{RepeatBegin}}
+            <div class="cus-blocks-2-107-box col-12">
+                <div class="d-block w-100 position-relative z-index-1">
+                    <a class="position-relative" href="{{HeadingLink}}">
+                        <div class="ratio-3-2 cus-zoom">
+                            <div class="img-content">
+                                <img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="img-fluid" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="cus-blocks-2-107-sub-box d-flex position-absolute top-0 start-0 z-index-2 w-100">
+                        <span class="text-white fs-5_1 bg-red px-2 lh-lg d-inline-block">{{Counter}}</span><span class="ms-1"><a href="{{SubMenuLink}}" class="text-decoration-none text-white text-warning-hover fs-5_1 d-inline-block">{{SubMenu}}</a></span>
+                    </div>
+                </div>
+                <h3 class="mt-1 border-bottom pb-1">
+                    <a class="cus-blocks-1-107-heading fs-5_1 text-decoration-none text-black text-red-hover d-block line-2" href="{{HeadingLink}}">{{Heading}}</a>
+                </h3>
+            </div>
+        {{RepeatEnd}}
+    </div>
+</div>
+<style>
+    .cus-blocks-2-107-sub-box {background-color: rgba(0, 0, 0, 0.5);}
+</style>
+');}
+{{LayoutH4End}}
+
+{{LayoutH8Begin}}
+{{LayoutH8Limit6}}
+function GetHighlights8(){document.write({{PutHtmlChar39}}
+<div id="slider107-2" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="false" style="display:none;">
+    <div class="carousel-inner cus-blocks-3-107-inner">
+        {{RepeatBegin}}
+            <div class="carousel-item cus-blocks-3-107-item position-relative">
+                <a href="{{HeadingLink}}">
+                    <div class="ratio-3-2">
+                        <div class="img-content">
+                            <img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="img-fluid">
+                        </div>
+                    </div>
+                </a>
+                <div class="cus-blocks-3-107-box d-block position-absolute px-2 z-index-1 bottom-0 w-100 mb-2">
+                    <div class="row me-0">
+                        <div class="col-2 text-center pe-1">
+                            <div class="d-block w-100 bg-black text-white mb-1 py-1 text-transform-uppercase">{{MonthI1}}</div>
+                            <div class="d-block w-100 bg-gray text-dark fs-1 py-1">{{DayI}}</div>
+                        </div>
+                        <div class="col-10" style="background-color:rgba(0, 0, 0, 0.8);">
+                            <h3 class="mb-0 mt-2"><a class="cus-blocks-3-107-heading text-decoration-none text-white text-warning-hover d-block line-1" href="{{HeadingLink}}">{{Heading}}</a></h3>
+                            <div class="d-block w-100 line-2 text-gray mb-2">{{Body}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{RepeatEnd}}
+    </div>
+    <div class="carousel-indicators cus-blocks-3-107-indicators"></div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#slider107-2" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#slider107-2" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<script>
+    /* Activate First Slider */
+    document.getElementsByClassName("cus-blocks-3-107-item")[0].classList.add("active");
+    /* Add Buttons */
+    var s1 = document.getElementsByClassName("cus-blocks-3-107-item");
+    if(s1.length > 0) {
+        document.getElementsByClassName("cus-blocks-3-107-indicators")[0].insertAdjacentHTML("beforeend","<button type=\'button\' data-bs-target=\'#slider107-2\' data-bs-slide-to=\'0\' class=\'active bg-red\' aria-current=\'true\' aria-label=\'Slide 1\'></button>");
+    }
+    for(si = 2; si <= s1.length; si++) {
+        var sj = si - 1;
+        document.getElementsByClassName("cus-blocks-3-107-indicators")[0].insertAdjacentHTML("beforeend","<button type=\'button\' data-bs-target=\'#slider107-2\' class=\'bg-red\' data-bs-slide-to=\'" + sj + "\' aria-label=\'Slide " + si + "\'></button>");
+    }
+<\/script>
+<style>
+    #slider107-2 .carousel-control-next, #slider107-2 .carousel-control-prev {width: 7%; height: 20%; top: 50%;transform: translateY(-50%);}
+    #slider107-2 .carousel-indicators [data-bs-target] {height:30px;}
+    #slider107-2 .carousel-indicators {top: 0;right: auto;bottom:auto;left: 0;margin-right: 0;margin-left: 10px;}
+    #slider107-2 .carousel-control-next{border-top-left-radius: 50px;border-bottom-left-radius: 50px;}
+    #slider107-2 .carousel-control-prev{border-top-right-radius: 50px;border-bottom-right-radius: 50px;}
+    #slider107-2 .carousel-control-next, #slider107-2 .carousel-control-prev {display:none;background-color: rgba(0,0,0,0.9);}
+    #slider107-2:hover .carousel-control-next, #slider107-2:hover .carousel-control-prev {display:block;}
+    @media all and (max-width: 992px) {
+        .cus-blocks-3-107-indicators {position: relative;}
+        .cus-blocks-3-107-indicators [data-bs-target] {background-color: black !important;}
+        .cus-blocks-3-107-box {bottom: 0 !important;}
+        .cus-blocks-3-107-heading{font-size:1rem !important}
+    }
+</style>
+{{PutHtmlChar39}});DisplayHighlight('slider107-2');}
+{{LayoutH8End}}
+
+
+{{LayoutH6Begin}}
+{{LayoutH6Limit20}}
+function GetHighlights6(){document.write({{PutHtmlChar39}}
+<div id="slider107-1" class="carousel slide mb-2 p-2 border-bottom border-red" data-bs-ride="carousel" data-bs-interval="false" style="display:none;background-color:#f5f5f5;">
+    <div class="carousel-inner cus-blocks-1-107-inner">
+        {{RepeatBegin}}
+            <div class="cus-blocks-1-107-box col-lg-3">
+                <div class="d-block w-100 mb-2 border-bottom border-dark">
+                    <span class="text-white fs-6 bg-dark d-inline-block lh-lg px-2">{{MonthI1}} {{DayI}}</span>
+                    <span class="ms-2"><a href="{{SubMenuLink}}" class="text-decoration-none text-dark text-red-hover fs-5_1 d-inline-block">{{SubMenu}}</a></span>
+                </div>
+                <div class="d-block w-100">
+                    <a class="cus-blocks-1-107-heading text-decoration-none text-black text-red-hover d-block line-2" href="{{HeadingLink}}">{{Heading}}</a>
+                </div>
+            </div>
+        {{RepeatEnd}}
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#slider107-1" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#slider107-1" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<script>
+    var bp = document.getElementsByClassName("cus-blocks-1-107-inner");
+    var bl = document.getElementsByClassName("cus-blocks-1-107-box");
+    var bv = bl.length;
+    var bc = Math.ceil(bv / 4);
+    var bb = document.getElementsByClassName("cus-blocks-1-107-item");
+    if (bv > 0) {
+        for (var a = 0; a < bc; a++) {
+            bp[0].insertAdjacentHTML("beforeend", "<div class=\'carousel-item cus-blocks-1-107-item position-relative row\'></div>");
+        }
+        var n = 0,k = 0,j = 0;
+        for (j = 1; j <= bc; j++) {
+            n = j * 4;
+            k = j - 1;
+            for (var i = 0; i < bv; i++) {
+                if (i < n) {
+                    if (bl[0].parentNode.getAttribute("class").indexOf("cus-blocks-1-107-item") == -1) {
+                        bb[k].appendChild(bl[0]);
+                    }
+                }
+            }
+        }
+        document.getElementsByClassName("cus-blocks-1-107-item")[0].classList.add("active");
+    }
+<\/script>
+<style>
+    #slider107-1 .carousel-control-next, #slider107-1 .carousel-control-prev {width: 3%; height: 50%; top: 50%;transform: translateY(-50%);box-sizing: border-box;display:none;background-color: rgba(0,0,0,0.9);}
+    #slider107-1 .carousel-control-next{border-top-left-radius: 50px;border-bottom-left-radius: 50px;}
+    #slider107-1 .carousel-control-prev{border-top-right-radius: 50px;border-bottom-right-radius: 50px;}
+    #slider107-1:hover .carousel-control-next, #slider107-1:hover .carousel-control-prev {display:flex;}
+    #slider107-1 .carousel-control-next-icon, #slider107-1 .carousel-control-prev-icon {width: 1.5rem;height: 1.5rem;}
+    #slider107-1 .carousel-item-next, #slider107-1 .carousel-item-prev, #slider107-1 .carousel-item.active {display:flex}
+    @media all and (max-width: 992px) {
+        .cus-blocks-1-107-heading{font-size:1rem !important}
+    }
+</style>
+{{PutHtmlChar39}});DisplayHighlight('slider107-1');}
+{{LayoutH6End}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{PutMetaTitle}} 
+    {{PutMetaKeyword}} 
+    {{PutMetaDescription}} 
+    {{PutNoIndex}}
+    <link rel="shortcut icon" href="{{PutDomain}}favicon.ico?v=9.000009">
+    <script type="text/javascript" language="javascript" src="{{PutDomainT}}lib/bl2.js"></script>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link type="text/css" rel="stylesheet" href="https://bulletlink.com/staff-aai-33033/layout.css?v=9.000009">
+    <!-- /bootstrap -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.7.min.js" integrity="sha256-/05Jde9AMAT4/o5ZAI23rUf1SxDYTHLrkOco0eyRV84=" crossorigin="anonymous"></script>
+    <!-- /jQuery -->
+
+    <!-- system -->
+    <script type="text/javascript" language="javascript" src="{{PutDomain}}settings.js?v=9.000009"></script>
+    <script type="text/javascript" language="javascript" src="{{PutDomain}}ads.js?v=9.000009"></script>
+    <script type="text/javascript" language="javascript" src="{{PutDomain}}menu_horizontal.js?v=9.000009"></script>
+    <script type="text/javascript" language="javascript" src="{{PutDomain}}sections.js?v=9.000009"></script>
+    <script type="text/javascript" language="javascript" src="{{PutDomain}}polls.js?v=9.000009"></script>
+    <script type="text/javascript" language="javascript" src="{{PutDomain}}articles.js?v=9.000009"></script>
+    <script type="text/javascript" language="javascript" src="{{PutDomainT}}lib/iframeResizer.min.js"></script>
+    <!-- /system -->
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet"> 
+    <!-- /font -->
+
+    <!-- fontAwesome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- /fontAwesome-->
+
+    <!-- general -->
+    <script type="text/javascript" language="javascript" src="{{PutDomain}}jscript1.js?v=9.000009"></script>
+    <link type="text/css" rel="stylesheet" href="{{PutDomain}}custom.css?v=9.000009">
+    <script type="text/javascript" language="javascript" src="{{PutDomain}}custom.js?v=9.000009"></script>
+    <!-- /general -->
+
+    <!--StartMH-->
+    <!--MetaSharing-->
+    <!--EndMH-->
+
+    <!-- live-Builder --> 
+    <link type="text/css" rel="stylesheet" href="{{PutDomain}}ufields.css?v=9.000009" />
+    <script type="text/javascript" src="{{PutDomain}}ufields.js?v=9.000009"></script>
+    <!-- /live-Builder --> 
+    {{PutHeadSection}}
+</head>
+<body id="blbodymain" class="blbody cus-select-red" style="font-family: 'Roboto Condensed', sans-serif;">
+    <div class="mainbody">
+        <!-- sticky ads-->
+        <span class="cus-sticky-ads">{{PutStickyAds}}</span>
+        <!-- /sticky ads-->
+        <div class="container-bl mt-2 px-lg-0">
+            <div class="d-block w-100 mb-1">{{PutAdGroup14}}</div>
+            <!-- header -->
+            <div class="row mx-lg-0 p-2 bg-dark align-items-center">
+                <div class="col-lg-5 hpe-logo">{{PutLogo}}</div>
+                <div class="col-lg-3 text-white"><script type="text/javascript">Section11();</script></div>
+                <div class="cus-top-links col-lg-4 mb-sm-0">
+                    <div class="float-end">
+                        <a class="text-decoration-none text-white fs-5_1 me-2 pe-2 border-end cus-toplink-1-107-link text-warning-hover" href="{{PutDomain}}about-our-paper-p189-108.htm">ABOUT</a>
+                        <a class="text-decoration-none text-white fs-5_1 me-2 pe-2 border-end cus-toplink-1-107-link text-warning-hover" href="{{PutDomain}}index0.htm?twindow=Form&smenu=&pform=ContactUs&mad=No&sname=target_form2.asp&site={{PutDomainX}}">CONTACT</a>
+                        <a class="text-decoration-none text-white fs-5_1 cus-toplink-1-107-link text-warning-hover" href="{{PutDomain}}index0.htm?twindow=ServicePackage&smenu=112&mad=No&sname=target_service_package.asp&site={{PutDomainX}}">SUBSCRIBE</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /header -->
+            <!-- menu -->
+            <div class="row mb-3 mx-lg-0">
+                <div class="col-12 px-0">
+                    <script type="text/javascript" language="JavaScript">
+                        GetMenuH();
+                    </script>
+                </div>
+            </div>
+            <!-- /menu -->
+            <!-- H5 -->
+            <div class="row mb-3">
+                <div class="col-12">
+                    {{PutHighlight6}}
+                </div>
+            </div>
+            <!-- /H5 -->
+            <!-- 3-columns -->
+            <div class="cus-column-107-row row mb-3 border-bottom">
+                <div class="cus-column-107-1 col-lg-2">
+                    {{PutHighlight4}}
+                </div>
+                <div class="cus-column-107-2 col-lg-7 border-start border-end">
+                    {{PutHighlight8}}
+                    <!-- previews -->
+                    <div class="cus-preview-107-row row mb-4 border-top">
+                        <div class="col-lg-6 pt-3">{{PutPreview111}}</div>
+                        <div class="col-lg-6 pt-3">{{PutPreview110}}</div>
+                        <div class="col-lg-6 pt-3">{{PutPreview105}}</div>
+                        <div class="col-lg-6 pt-3">{{PutPreview109}}</div>
+                    </div>
+                    <style>
+                        .cus-preview-107-row .col-lg-6{border-bottom:1px solid #dee2e6 !important}
+                        .cus-preview-107-row .col-lg-6:nth-child(2n+1) {border-right: 1px solid #dee2e6 !important;}
+                        .cus-preview-107-row .col-lg-6:hover {background: rgba(0,0,0,0.05);}
+                        @media (max-width: 992px) {.cus-preview-107-row .col-lg-6{border-right-width: 0 !important;} }
+                    </style>
+                    <!-- /previews -->
+                    {{PutAdGroup12}}
+                    <!--photogallery-->
+                    <div class="cus-preview-107-row row mt-3 mb-4">
+                        <div class="col-12">{{PutFile:section118.htm}}</div>
+                    </div>
+                    <!--/photogallery-->       
+                    <!--videogallery-->
+                    <div class="cus-video-107-row row mb-4">
+                        <div class="col-12">{{PutFile:section119.htm}}</div>
+                    </div>
+                    <!--/videogallery-->          
+                </div>
+                <style>@media (max-width: 992px) {.cus-column-107-2 {border-width: 0 !important;} }</style>
+                <div class="cus-column-107-3 col-lg-3">
+                    {{PutAdGroup11}}
+                    {{PutAdGroup13}}
+                </div>
+            </div>
+            <!-- /3-columns -->
+            <!-- footer -->
+            <footer class="cus-footer-1-107-footer row bg-dark border-top border-2 border-red px-2 py-4">
+                <div class="col-12 mb-2 fs-lg-4 text-white text-center mb-2">
+                    <script type="text/javascript">Section4();</script>
+                </div>
+                <div class="col-12 mb-2 text-white text-center mb-3">
+                    <i class="fa fa-copyright pe-1" aria-hidden="true"></i><script type="text/javascript">Section5();</script>
+                </div>
+                <div class="col-12 d-flex justify-content-center px-0 border-top pt-3">
+                    <a class="text-decoration-none text-white rounded ms-3 fs-3 d-inline-block lh-1 cus-social-1-107-icon" href="https://facebook.com/" target="_blank"><i class="fa fa-facebook-square text-warning-hover" aria-hidden="true"></i></a>
+                    <a class="text-decoration-none text-white rounded ms-3 fs-3 d-inline-block lh-1 cus-social-1-107-icon" href="https://twitter.com/" target="_blank"><i class="fa fa-twitter-square text-warning-hover" aria-hidden="true"></i></a>
+                    <a class="text-decoration-none text-white rounded ms-3 fs-3 d-inline-block lh-1 cus-social-1-107-icon" href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin-square text-warning-hover" aria-hidden="true"></i></a>
+                </div>
+            </footer>
+            <!-- /footer -->
+        </div>
+    </div>
+    <!-- go to top -->
+    <div class="cus-scroll-top position-fixed bg-red text-white fs-4 px-2 rounded-circle d-flex align-items-center justify-content-center">
+        <i class="fa fa-angle-up lh-base text-shadow-3"></i>
+    </div>
+    <script>
+        if (document.getElementsByClassName("cus-scroll-top")) {
+            window.addEventListener("scroll", function() {
+                if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+                    document.getElementsByClassName('cus-scroll-top')[0].style.bottom = '20px';
+                } else {
+                    document.getElementsByClassName('cus-scroll-top')[0].style.bottom = "-100px";
+                }
+            });
+            document.getElementsByClassName('cus-scroll-top')[0].addEventListener('click', function() {
+                window.scrollTo(0, 0);
+            });
+        }
+    </script>
+    <style>
+        .cus-scroll-top {cursor: pointer;right: 20px;bottom: auto;transition: 400ms ease-in-out;opacity: 0.8;width: 40px;height: 40px;}
+        .cus-scroll-top:hover {transition: 300ms ease-in-out;box-shadow: 0 0 0 15px rgba(227,56,56,0.3) !important;opacity: 1;}
+    </style>
+    <!-- /go to top -->
+    <div class="cus-g-analytics-107">{{PutGoogleAnalytics}}</div>
+    <!-- tooltip -->
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+    </script>
+    <!-- /tooltip -->
+</body>
+<!--Template-107-->
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{PutMetaTitle}} 
+    {{PutMetaKeyword}} 
+    {{PutMetaDescription}} 
+    {{PutNoIndex}}
+    <link rel="shortcut icon" href="{{PutDomain}}favicon.ico?v=9.000009">
+    <script type="text/javascript" language="javascript" src="{{PutDomainT}}lib/bl2.js"></script>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link type="text/css" rel="stylesheet" href="https://bulletlink.com/staff-aai-33033/layout.css?v=9.000009">
+    <!-- /bootstrap -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.7.min.js" integrity="sha256-/05Jde9AMAT4/o5ZAI23rUf1SxDYTHLrkOco0eyRV84=" crossorigin="anonymous"></script>
+    <!-- /jQuery -->
+
+    <!-- system -->
+    <script type="text/javascript" language="javascript" src="{{PutDomain}}settings.js?v=9.000009"></script>
+    <script type="text/javascript" language="javascript" src="{{PutDomain}}ads.js?v=9.000009"></script>
+    <script type="text/javascript" language="javascript" src="{{PutDomain}}menu_horizontal.js?v=9.000009"></script>
+    <script type="text/javascript" language="javascript" src="{{PutDomain}}sections.js?v=9.000009"></script>
+    <script type="text/javascript" language="javascript" src="{{PutDomain}}polls.js?v=9.000009"></script>
+    <script type="text/javascript" language="javascript" src="{{PutDomain}}articles.js?v=9.000009"></script>
+    <script type="text/javascript" language="javascript" src="{{PutDomainT}}lib/iframeResizer.min.js"></script>
+    <!-- /system -->
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet"> 
+    <!-- /font -->
+
+    <!-- fontAwesome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- /fontAwesome-->
+
+    <!-- general -->
+    <script type="text/javascript" language="javascript" src="{{PutDomain}}jscript1.js?v=9.000009"></script>
+    <link type="text/css" rel="stylesheet" href="{{PutDomain}}custom.css?v=9.000009">
+    <script type="text/javascript" language="javascript" src="{{PutDomain}}custom.js?v=9.000009"></script>
+    <!-- /general -->
+
+    <!--StartMH-->
+    <!--MetaSharing-->
+    <!--EndMH-->
+
+    <!-- live-Builder --> 
+    <link type="text/css" rel="stylesheet" href="{{PutDomain}}ufields.css?v=9.000009" />
+    <script type="text/javascript" src="{{PutDomain}}ufields.js?v=9.000009"></script>
+    <!-- /live-Builder --> 
+    {{PutHeadSection}}
+</head>
+<body id="blbodymain" class="blbody cus-select-red" style="font-family: 'Roboto Condensed', sans-serif;">
+    <div class="mainbody">
+        <!-- sticky ads-->
+        <span class="cus-sticky-ads">{{PutStickyAds}}</span>
+        <!-- /sticky ads-->
+        <div class="container-bl mt-2 px-lg-0">
+            <div class="d-block w-100 mb-1">{{PutAdGroup14}}</div>
+            <!-- header -->
+            <div class="row mx-lg-0 p-2 bg-dark align-items-center">
+                <div class="col-lg-5 hpe-logo">{{PutLogo}}</div>
+                <div class="col-lg-3 text-white"><script type="text/javascript">Section11();</script></div>
+                <div class="cus-top-links col-lg-4 mb-sm-0">
+                    <div class="float-end">
+                        <a class="text-decoration-none text-white fs-5_1 me-2 pe-2 border-end cus-toplink-1-107-link text-warning-hover" href="{{PutDomain}}about-our-paper-p189-108.htm">ABOUT</a>
+                        <a class="text-decoration-none text-white fs-5_1 me-2 pe-2 border-end cus-toplink-1-107-link text-warning-hover" href="{{PutDomain}}index0.htm?twindow=Form&smenu=&pform=ContactUs&mad=No&sname=target_form2.asp&site={{PutDomainX}}">CONTACT</a>
+                        <a class="text-decoration-none text-white fs-5_1 cus-toplink-1-107-link text-warning-hover" href="{{PutDomain}}index0.htm?twindow=ServicePackage&smenu=112&mad=No&sname=target_service_package.asp&site={{PutDomainX}}">SUBSCRIBE</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /header -->
+            <!-- menu -->
+            <div class="row mb-3 mx-lg-0">
+                <div class="col-12 px-0">
+                    <script type="text/javascript" language="JavaScript">
+                        GetMenuH();
+                    </script>
+                </div>
+            </div>
+            <!-- /menu -->
+            <!-- H5 -->
+            <div class="row mb-3">
+                <div class="col-12">
+                    {{PutHighlight6}}
+                </div>
+            </div>
+            <!-- /H5 -->
+            <!-- 2-columns -->
+            <div class="cus-column-107-row row mb-3 border-bottom">
+                <div class="cus-column-107-1 col-lg-9 border-end">
+                    {{PutMainContent}}
+                    {{PutAdGroup12}}
+                </div>
+                <style>@media (max-width: 992px) {.cus-column-107-1 {border-width: 0 !important;} }</style>
+                <div class="cus-column-107-2 col-lg-3">
+                    {{PutAdGroup11}}
+                    {{PutAdGroup13}}
+                </div>
+            </div>
+            <!-- /2-columns -->
+            <!-- footer -->
+            <footer class="cus-footer-1-107-footer row bg-dark border-top border-2 border-red px-2 py-4">
+                <div class="col-12 mb-2 fs-lg-4 text-white text-center mb-2">
+                    <script type="text/javascript">Section4();</script>
+                </div>
+                <div class="col-12 mb-2 text-white text-center mb-3">
+                    <i class="fa fa-copyright pe-1" aria-hidden="true"></i><script type="text/javascript">Section5();</script>
+                </div>
+                <div class="col-12 d-flex justify-content-center px-0 border-top pt-3">
+                    <a class="text-decoration-none text-white rounded ms-3 fs-3 d-inline-block lh-1 cus-social-1-107-icon" href="https://facebook.com/" target="_blank"><i class="fa fa-facebook-square text-warning-hover" aria-hidden="true"></i></a>
+                    <a class="text-decoration-none text-white rounded ms-3 fs-3 d-inline-block lh-1 cus-social-1-107-icon" href="https://twitter.com/" target="_blank"><i class="fa fa-twitter-square text-warning-hover" aria-hidden="true"></i></a>
+                    <a class="text-decoration-none text-white rounded ms-3 fs-3 d-inline-block lh-1 cus-social-1-107-icon" href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin-square text-warning-hover" aria-hidden="true"></i></a>
+                </div>
+            </footer>
+            <!-- /footer -->
+        </div>
+    </div>
+    <!-- go to top -->
+    <div class="cus-scroll-top position-fixed bg-red text-white fs-4 px-2 rounded-circle d-flex align-items-center justify-content-center">
+        <i class="fa fa-angle-up lh-base text-shadow-3"></i>
+    </div>
+    <script>
+        if (document.getElementsByClassName("cus-scroll-top")) {
+            window.addEventListener("scroll", function() {
+                if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+                    document.getElementsByClassName('cus-scroll-top')[0].style.bottom = '20px';
+                } else {
+                    document.getElementsByClassName('cus-scroll-top')[0].style.bottom = "-100px";
+                }
+            });
+            document.getElementsByClassName('cus-scroll-top')[0].addEventListener('click', function() {
+                window.scrollTo(0, 0);
+            });
+        }
+    </script>
+    <style>
+        .cus-scroll-top {cursor: pointer;right: 20px;bottom: auto;transition: 400ms ease-in-out;opacity: 0.8;width: 40px;height: 40px;}
+        .cus-scroll-top:hover {transition: 300ms ease-in-out;box-shadow: 0 0 0 15px rgba(227,56,56,0.3) !important;opacity: 1;}
+    </style>
+    <!-- /go to top -->
+    <div class="cus-g-analytics-107">{{PutGoogleAnalytics}}</div>
+    <!-- tooltip -->
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+    </script>
+    <!-- /tooltip -->
+</body>
+<!--Template-107-->
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{LayoutPreview<<SubMenuId>>Begin}}
+{{LayoutPreview<<SubMenuId>>Limit4}}
+{{SortBy:Issue, Updated}}
+{{RemoveHTMLBody}} 
+{{RemoveMore:Yes}} 
+function GetPreview<<SubMenuId>>(){document.write('
+    <div id="cus-preview-<<SubMenuId>>" class="carousel slide mb-2 position-relative" data-bs-ride="carousel" data-bs-interval="false">
+        <div class="d-block w-100 border-bottom border-2 border-red mb-2">
+            <a class="text-decoration-none text-uppercase text-white bg-dark px-2 d-inline-block mb-1 lh-lg" href="{{SubMenuLink}}">{{SubMenu}}</a>
+        </div>
+        <div class="carousel-inner cus-preview-<<SubMenuId>>-inner">
+            {{RepeatBegin}}
+                <div class="carousel-item cus-preview-<<SubMenuId>>-item position-relative">
+                    <a href="{{HeadingLink}}">
+                        <div class="ratio-3-2">
+                            <div class="img-content">
+                                <img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="img-fluid">
+                            </div>
+                        </div>
+                    </a>
+                    <div class="cus-preview-<<SubMenuId>>-box d-blockz-index-1 bottom-0 w-100 mb-2">
+                        <h3 class="my-1"><a class="cus-preview-<<SubMenuId>>-heading text-decoration-none fw-bold text-primary text-red-hover d-block line-2 fs-5" href="{{HeadingLink}}">{{Heading}}</a></h3>
+                        <div class="d-block w-100 mb-1 text-muted fs-5_1"><i class="fa fa-calendar me-1" aria-hidden="true"></i>{{IssueDate}}</div>
+                        <div class="d-block w-100 line-4 text-gray mb-2">{{Body}}</div>
+                        <div class="d-block w-100"><a class="text-decoration-none text-dark text-red-hover" href="{{HeadingLink}}">{{more}} <i class="fa fa-arrow-circle-right"></i></a></div>
+                    </div>
+                </div>
+            {{RepeatEnd}}
+        </div>
+        <button class="carousel-control-prev me-1" type="button" data-bs-target="#cus-preview-<<SubMenuId>>" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon float-start" aria-hidden="true"></span>
+            <span class="carousel-number-prev-<<SubMenuId>> text-dark float-start ms-1"></span>
+            <span class="px-1 text-gray float-start">/</span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#cus-preview-<<SubMenuId>>" data-bs-slide="next">
+            <span class="carousel-number-next-<<SubMenuId>> text-dark float-start me-1"></span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>            
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <script>
+        /* Activate First Slider */
+        document.getElementsByClassName("cus-preview-<<SubMenuId>>-item")[0].classList.add("active");
+        /* Slider Numbers */ 
+        var sn_<<SubMenuId>> = document.getElementsByClassName("cus-preview-<<SubMenuId>>-item");
+        if (sn_<<SubMenuId>>.length > 0) {
+            document.getElementsByClassName("carousel-number-next-<<SubMenuId>>")[0].innerHTML = sn_<<SubMenuId>>.length;
+        setInterval(function() {
+            for (i_<<SubMenuId>> = 0; i_<<SubMenuId>> < sn_<<SubMenuId>>.length; i_<<SubMenuId>>++) {
+                if (sn_<<SubMenuId>>[i_<<SubMenuId>>].classList.contains("active")) {
+                    document.getElementsByClassName("carousel-number-prev-<<SubMenuId>>")[0].innerHTML = i_<<SubMenuId>> + 1;
+                }
+            }
+        }, 200);
+        }
+    <\/script>
+    <style>
+        #cus-preview-<<SubMenuId>> .carousel-control-next,#cus-preview-<<SubMenuId>> .carousel-control-prev{width:auto;height:30px;top:0;opacity:1;padding-top:3px;padding-bottom:3px;box-sizing:border-box}
+        #cus-preview-<<SubMenuId>> .carousel-control-next, #cus-preview-<<SubMenuId>> .carousel-control-prev {display:block;}
+        #cus-preview-<<SubMenuId>> .carousel-control-prev-icon {background-image: url("data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\' fill=\'%23000\'%3e%3cpath d=\'M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z\'/%3e%3c/svg%3e");}
+        #cus-preview-<<SubMenuId>> .carousel-control-next-icon {background-image: url("data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\' fill=\'%23000\'%3e%3cpath d=\'M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z\'/%3e%3c/svg%3e");}
+        #cus-preview-<<SubMenuId>> .carousel-control-next {right: 0;}
+        #cus-preview-<<SubMenuId>> .carousel-control-prev {right: 30px !important;left: auto;}
+        #cus-preview-<<SubMenuId>> .carousel-control-next-icon, #cus-preview-<<SubMenuId>> .carousel-control-prev-icon {width: 1.5rem;height: 1.5rem;}
+        #cus-preview-<<SubMenuId>> .carousel-control-prev:hover .carousel-control-prev-icon, #cus-preview-<<SubMenuId>> .carousel-control-next:hover .carousel-control-next-icon {background-color: rgba(0,0,0,0.3);}
+    </style>
+');}
+{{LayoutPreview<<SubMenuId>>End}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{LayoutSection118Begin}}
+{{LayoutSection118Limit<<TotalArticlesSubMenu>>}}
+{{Where:SubMenuIdInclude:118}}
+{{File:section118.htm}}
+{{SortBy:Issue,Updated}}
+<html>
+    <head>
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css'>
+    </head>
+    <body>
+        <div class="cus-photogallery-107">
+            <div class="d-block w-100 border-bottom border-2 border-red mb-2">
+                <span class="text-decoration-none text-uppercase text-white bg-dark px-2 d-inline-block mb-1 lh-lg">{{SubMenu}}</span>
+            </div>
+            <div class="row mx-0 hp-parent">
+                {{RepeatBegin}}
+                    <div class="col-6 col-md-2 px-1 mb-2">
+                        <a class="cus-photogallery-107-popup d-block position-relative" data-fancybox="gallery" data-src="{{HeadingImage}}" data-caption="{{HeadingImageAlt}}" >
+                            <div class="ratio-3-2">
+                                <div class="img-content cus-dark-img cus-cursor-zoom">
+                                    <img class="cus-photogallery-107-img img-fluid lazy loaded" src="{{HeadingImage}}" data-src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" data-was-processed="true">
+                                    <span class="cus-photogallery-107-icon position-absolute translate-middle top-50 start-50 z-index-1"><i class="fa fa-picture-o text-white text-shadow-1" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {{RepeatEnd}}
+            </div>
+        </div>
+        <style>
+            .cus-photogallery-107-icon {opacity: 0;  transition: 200ms linear;}
+            .cus-photogallery-107-popup:hover .cus-photogallery-107-icon {opacity: 1; transition: 300ms linear;}
+        </style>
+        <script src='https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js'></script>
+        <script>
+        /* SubMenu Title */
+        if(ReadSubmenu() == {{SubMenuId}}) {
+            document.title = "{{SubMenu}}";
+        }
+        </script>
+    </body>
+</html>
+{{LayoutSection118End}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{LayoutSection119Begin}}
+{{LayoutSection119Limit<<TotalArticlesSubMenu>>}}
+{{Where:SubMenuIdInclude:119}}
+{{File:section119.htm}}
+{{ReplaceJavascriptChars:No}}
+{{SortBy:Issue,Updated}}
+<div class="cus-videogallery-107">
+    <div class="d-block w-100 border-bottom border-2 border-red mb-2">
+        <span class="text-decoration-none text-uppercase text-white bg-dark px-2 d-inline-block mb-1 lh-lg">{{SubMenu}}</span>
+    </div>
+    <div class="row mx-0 hp-parent">
+        {{RepeatBegin}}
+        <div class="col-sm-6 col-md-4 px-1 mb-2">
+            <a class="cus-videogallery-107-link position-relative d-block text-decoration-none border rounded overflow-hidden" href="javascript:void(0);" onclick="OpenYouTube('{{Body}}');">
+                <div class="ratio-16-9">
+                    <div class="img-content cus-dark-img">
+                        <img class="cus-videogallery-107-img img-fluid lazy loaded" src="https://img.youtube.com/vi/{{Body}}/maxresdefault.jpg" data-src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" data-was-processed="true">
+                    </div>
+                </div>
+                <span class="cus-videogallery-107-play position-absolute translate-middle top-50 start-50"><i class="fa fa-play fs-1 text-white text-shadow-1" aria-hidden="true"></i></span>
+                <p class="cus-videogallery-107-heading mb-0 bg-dark text-white p-2 fs-6 lh-lg fw-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" title="{{Heading}}"><span class="line-1">{{Heading}}</span></p>
+            </a>
+        </div>
+        {{RepeatEnd}}
+    </div>
+</div>
+<style>
+    .cus-videogallery-107-link:hover .cus-videogallery-107-play i {transform: scale(1.2);transition: 200ms linear;}
+    .cus-videogallery-107-play i {transition: 100ms linear;}
+</style>
+<script>
+    /* SubMenu Title */
+    if(ReadSubmenu() == {{SubMenuId}}) {
+        document.title = "{{SubMenu}}";
+    }
+</script>
+{{LayoutSection119End}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{LayoutSection116Begin}}
+{{LayoutSection116Limit<<TotalArticlesSubMenu>>}}
+{{Where:SubMenuIdInclude:116}}
+{{File:section116.htm}}
+{{RemoveHTMLBody}} 
+{{ReplaceJavascriptChars:No}}
+{{SortBy:Issue Asc}}
+<div class="cus-event-107-container container-fluid px-0">
+    <div class="d-block w-100 border-bottom border-2 border-red mb-2">
+        <span class="text-decoration-none text-uppercase text-white bg-dark px-2 d-inline-block mb-1 lh-lg">{{SubMenu}}</span>
+    </div>
+    <div class="cus-event-107-wrap row mx-0 py-3 border rounded shadow-sm">
+        {{RepeatBegin}}
+            <div class="hpe-in-event col-lg-6 my-2" data-article="{{ArticleId}}" data-url="{{HeadingLink}}" data-menu="{{Menu}}" data-submenu="{{SubMenu}}" data-date="{{MonthI}}_{{DayI}}_{{YearI}}">
+                <span class="cus-event-107-box row mx-0 border rounded bg-body shadow-sm py-2">
+                    <div class="col-3">
+                        <p class="cus-event-107-month bg-secondary fs-5 px-2 text-center d-block fw-bold text-uppercase">{{MonthI1}}</p>
+                        <p class="cus-event-107-day bg-secondary fs-1 px-2 fw-bold text-center d-block mb-0">{{DayI}}</p>
+                    </div>
+                    <div class="col-9 ps-0">
+                        <a class="cus-event-107-heading text-decoration-none text-black fw-bold line-2 mb-1 transition text-red-hover" href="{{HeadingLink}}">{{Heading}}</a>
+                        <p class="cus-event-107-body line-3 mb-0 text-gray fs-6">{{Body}}</p>
+                    </div>
+                </span>
+            </div>
+        {{RepeatEnd}}
+    </div>
+</div>
+<style>
+.cus-event-107-wrap {background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%23c9d1cb' fill-opacity='0.16'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E");background-attachment: fixed;}
+.cus-event-107-month {background-color:#3a3a3a !important; color:#f1f1f1 !important; margin-bottom: 0 !important;}
+.cus-event-107-day {background-color:#eaeaea !important; color:#505050 !important}
+</style>
+<script>
+/* SubMenu Title */
+if(ReadSubmenu() == {{SubMenuId}} && ReadSubmenu() != ReadSParameters()) {
+    document.title = "{{SubMenu}}";
+}
+</script>
+{{LayoutSection116End}}
