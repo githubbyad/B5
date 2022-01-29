@@ -1,0 +1,78 @@
+/*------Overflow Scrollbar------
+  /* Hide scrollbar for Chrome, Safari and Opera */
+
+.hide-Scrollbar::-webkit-scrollbar,
+#popular-posts-rooms::-webkit-scrollbar,
+#introduction-rooms .nav::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
+.hide-Scrollbar,
+#popular-posts-rooms,
+#introduction-rooms .nav {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+
+/*------Overflow Scrollbar------*/
+
+
+/*------Browser Side Scrollbar------*/
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #dd0707;
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0;
+}
+
+
+/*! Firefox */
+
+html {
+    scrollbar-color: #dd0707 #f1f1f1;
+}
+
+
+/*! Other Browser */
+
+html {
+    --scrollbarBG: #f1f1f1;
+    --thumbBG: #dd0707;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+
+/*------Browser Side Scrollbar------*/
