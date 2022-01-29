@@ -42,7 +42,7 @@
         <script src='https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js'></script>
         <script>
         /* SubMenu Title */
-        if(ReadSubmenu() == {{SubMenuId}}) {
+        if(ReadSubmenu() == {{SubMenuId}} && ReadSubmenu() != ReadSParameters()) {
             document.title = "{{SubMenu}}";
         }
         </script>
