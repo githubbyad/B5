@@ -40,6 +40,9 @@
 .cus-event-133-day {background-color:#eaeaea !important; color:#505050 !important}
 </style>
 <script>
-document.title = document.getElementsByClassName('cus-default-submenu')[0].innerText;
+/* SubMenu Title */
+if(ReadSubmenu() == {{SubMenuId}} && ReadSubmenu() != ReadSParameters()) {
+    document.title = "{{SubMenu}}";
+}
 </script>
 {{LayoutSection116End}}
