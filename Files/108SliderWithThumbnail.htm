@@ -1,0 +1,58 @@
+{{LayoutH8Begin}}
+{{LayoutH8Limit6}}
+function GetHighlights8(){document.write({{PutHtmlChar39}}
+<div id="slider108" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="false" style="display:none;">
+    <div class="carousel-inner cus-blocks-5-108-inner">
+        {{RepeatBegin}}
+            <div class="carousel-item cus-blocks-5-108-item position-relative" data-img="{{HeadingImage}}">
+                <a href="{{HeadingLink}}">
+                    <div class="ratio-3-2">
+                        <div class="img-content cus-blocks-5-108-item-img">
+                            <img src="{{HeadingImage}}" alt="{{HeadingImageAlt}}" class="img-fluid">
+                        </div>
+                    </div>
+                </a>
+                <h3 class="cus-blocks-5-108-box d-block position-absolute w-100 px-3 z-index-1 top-3 text-center">
+                    <a class="cus-blocks-5-108-heading text-decoration-none text-shadow-1 text-white text-warning-hover text-uppercase d-block line-2 fw-bold fs-3" href="{{HeadingLink}}">{{Heading}}</a>
+                </h3>
+            </div>
+        {{RepeatEnd}}
+    </div>
+    <div class="carousel-indicators cus-blocks-5-108-indicators d-none d-lg-flex"></div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#slider108" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#slider108" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<script>
+    /* Activate First Slider */
+    document.getElementsByClassName("cus-blocks-5-108-item")[0].classList.add("active");
+    /* Add Buttons */
+    var s1 = document.getElementsByClassName("cus-blocks-5-108-item");
+    if(s1.length > 0) {
+        document.getElementsByClassName("cus-blocks-5-108-indicators")[0].insertAdjacentHTML("beforeend","<button type=\'button\' data-bs-target=\'#slider108\' data-bs-slide-to=\'0\' class=\'active\' aria-current=\'true\' aria-label=\'Slide 1\' style=\'background-image:url(" + document.getElementsByClassName(\'cus-blocks-5-108-item\')[0].getAttribute(\'data-img\') + ")\'></button>");
+    }
+    for(si = 2; si <= s1.length; si++) {
+        var sj = si - 1;
+        var sk = s1[sj].getAttribute("data-img");
+        document.getElementsByClassName("cus-blocks-5-108-indicators")[0].insertAdjacentHTML("beforeend","<button type=\'button\' data-bs-target=\'#slider108\' style=\'background-image:url(" + sk + ")\' data-bs-slide-to=\'" + sj + "\' aria-label=\'Slide " + si + "\'></button>");
+    }
+<\/script>
+<style>
+    #slider108 .carousel-control-next, #slider108 .carousel-control-prev {width: 5%; height: 20%; top: 50%;transform: translateY(-50%);}
+    #slider108 .carousel-control-next:hover, #slider108 .carousel-control-prev:hover {background-color: rgba(0,0,0,0.5);}
+    #slider108 .carousel-indicators button {width: 80px;height: 53px;background-size: 100%;border: 2px solid white;box-sizing: border-box;background-position: center;background-repeat: no-repeat;background-color: #ddd;}
+    #slider108 .cus-blocks-5-108-item-img::after {background: rgba(0, 0, 0, 0) linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%) repeat scroll 0 0;top: 0;content: " ";display: inline;height: 40%;position: absolute;width: 100%;}
+    @media all and (max-width: 992px) {
+        .cus-blocks-5-108-indicators {position: relative;}
+        .cus-blocks-5-108-indicators [data-bs-target] {background-color: black !important;}
+        .cus-blocks-5-108-box {bottom: 0 !important;}
+        .cus-blocks-5-108-heading{font-size:1rem !important}
+    }
+</style>
+{{PutHtmlChar39}});DisplayHighlight('slider108');}
+{{LayoutH8End}}
