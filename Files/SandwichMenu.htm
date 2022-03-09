@@ -1,0 +1,222 @@
+::::::::::::::::::::::::::::::::::::::::Free Layout:::::::::::::::::::::::::::::::::::::::::
+<!-- sandwich menu-->
+<script type="text/javascript" language="javascript" src="{{PutDomain}}menu_sandwich.js?v=9.000009"></script>                    
+<script type="text/javascript" language="javascript">GetMenuSandwich();</script>
+<!-- /sandwich menu-->
+
+
+
+::::::::::::::::::::::::::::::::::::::::Menu Code::::::::::::::::::::::::::::::::::::::::
+{{LayoutMenus2Begin}}
+{{File:menu_sandwich.js}}
+{{Where:MenuTypeInclude:'Horizontal'}}
+function GetMenuSandwich(){document.write({{PutHtmlChar39}}
+<span class="d-none d-lg-inline">
+    <svg class="cus-120-menu-bar cus-cursor-pointer me-2" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#fff" class="bi bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0  0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+    </svg>
+    <svg class="cus-120-menu-close cus-cursor-pointer d-none me-2" style="transform: scale(0.8);" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#0099ff" class="bi bi-x-lg" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+        <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+    </svg>
+</span>
+<div class="row">
+    <div class="cus-120-menu col-3 bg-primary d-none position-fixed z-index-999 px-0">
+        <nav class="navbar2 navbar-expand-lg navbar-dark shadow-sm bg-primary p-3">
+            <button class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon cus-menu-bar"></span>
+                <span class="navbar-toggler-icon cus-menu-close d-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                        <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                    </svg>
+                </span>
+            </button>
+            <span class="cus-menu-social"></span>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav flex-wrap">
+                    {{RepeatBegin1}}
+                        <li class="cus-menu-li-2 nav-item dropdown py-1 py-lg-2 px-lg-4 pe-2 hp-menu d-block w-100" data-menu="{{MenuId}}" data-submenu-list="-">
+                            <a id="navbarDropdown" class="nav-link nav-link-2 cus-menu-id-{{MenuId}} fs-5 dropdown-toggle fw-bold text-uppercase text-white hpe-in-menu px-2 px-lg-0" data-view="Horizontal" data-menu="{{MenuId}}" data-link="{{MenuLink}}" data-order="{{MenuOrder}}" style="{{MenuStyle}}" href="{{MenuLink}}" role="button"  data-bs-toggle="dropdown" aria-expanded="false">{{Menu}}</a>
+                            <ul class="cus-submenu-ul-2 dropdown-menu cus-submenu-ul fade-up mb-2 mb-lg-0 mx-3 mx-lg-0 hp-submenu position-static d-none" style="transform:none !important" data-menu="{{MenuId}}" aria-labelledby="navbarDropdown">
+                                {{RepeatBegin2}}
+                                    <li class="cus-submenu-li-2 hpe-in-submenu" data-menu="{{MenuId}}" data-submenu="{{SubMenuId}}" data-link="{{SubMenuLink}}" data-order="{{SubMenuOrder}}" style="{{CSSDisplay}}">
+                                        <a class="dropdown-item cus-submenu-id-{{SubMenuId}} fs-5 text-dark border-bottom border-gray nx-2 transition text-red-hover" href="{{SubMenuLink}}">{{SubMenu}}</a>
+                                    </li>
+                                {{RepeatEnd2}}
+                            </ul>
+                        </li>
+                    {{RepeatEnd1}}
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<style>
+    .cus-120-menu {left: -50%;opacity: 0;transition: 300ms ease-in-out;}
+    .cus-120-menu-active {left: 0%;opacity: 1;transition: 300ms ease-in-out;box-shadow: 0 4000px 0 4000px rgba(0,0,0,0.9);}
+    .no-submenu-2 .dropdown-toggle::after {display: none;}
+    #navbarDropdown:empty {display: none;}
+    .dropdown-item:focus, .dropdown-item:hover {background-color: transparent;}
+    .cus-menu-social {display: none;}
+    .cus-active-submenu {color: #dd0707 !important;}
+    .nav-link-2 {cursor: pointer !important;}
+    .nav-link-2::after {top: 1.5rem;right: 0;position: absolute;}
+    .cus-active-menu-2 .nav-link-2 {color: black !important;}
+    .cus-submenu-ul-2.show {display: block !important;position: relative !important;transform: none !important;}
+    .no-submenu-2 .cus-submenu-ul-2 {display: none !important;}
+    .navbar2 {overflow-y: auto;}
+    .dropdown-menu{box-shadow: 0 1rem 3rem rgba(66, 53, 53, 0.575) !important;}
+    .navbar-nav li:hover>ul.dropdown-menu {display: block;margin-top: 0px;}
+    .navbar .dropdown-menu-end{ right:0; left: auto;  }
+    .navbar .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  }
+    .navbar .nav-item:hover .nav-link{ color:#b6b6b6!important}
+    .navbar .dropdown-menu.fade-down{ top:80%; transform: rotateX(-75deg); transform-origin: 0% 0%; }
+    .navbar .dropdown-menu.fade-up{ top:180%;  }
+    .navbar .nav-item:hover .dropdown-menu{ transition: .3s; opacity:1; visibility:visible; top:100%; transform: rotateX(0deg); }
+    .dropdown-menu.fade-up:before {
+    content: "";  position: absolute;  top: -14px;  color: white;  left: 30px;  border-color: transparent transparent white transparent; border-style: solid;border-width: 7px;}
+    .nav-item.dropdown:hover #navbarDropdown::after {transform: rotate(180deg);transition: 300ms linear;transition-property:transform;}
+    .fixed-top {top: -40px;  transform: translateY(40px);  transition: transform .3s;opacity: 0.9;}
+    .fixed-top:hover{opacity:1;}
+    .dropdown-menu {z-index: 999;}        
+</style>
+<script>
+    /* Sandwich Menu Setting */
+    var mn = document.getElementsByClassName("cus-120-menu")[0];
+    if(window.screen.width > 992) {
+        function smPosition(){
+            var htop = document.getElementsByClassName("cus-120-header")[0].offsetHeight;
+            var smh = window.innerHeight- htop;
+            document.getElementsByClassName("cus-120-menu")[0].setAttribute("style","top:" + htop + "px");
+            document.getElementsByClassName("navbar2")[0].setAttribute("style","height:" + smh + "px");
+        }                                        
+        var br = document.getElementsByClassName("cus-120-menu-bar")[0];
+        var cl = document.getElementsByClassName("cus-120-menu-close")[0];                            
+        br.addEventListener("click", function() {
+        smPosition();
+        br.classList.add("d-none");
+        br.classList.remove("d-inline");
+        cl.classList.remove("d-none");
+        cl.classList.add("d-inline");
+        mn.classList.add("d-block");
+        mn.classList.remove("d-none");
+        setTimeout(function(){
+            mn.classList.add("cus-120-menu-active");
+        },100);
+        });
+        cl.addEventListener("click", function() {
+        cl.classList.add("d-none");
+        cl.classList.remove("d-inline");
+        br.classList.remove("d-none");
+        br.classList.add("d-inline");
+        mn.classList.remove("cus-120-menu-active");
+        setTimeout(function(){            
+            mn.classList.add("d-none");
+            mn.classList.remove("d-block");
+        },100);
+        });
+    }
+    else {
+        mn.classList.remove("d-none");
+    }
+    document.addEventListener("readystatechange", event => { 
+        if (event.target.readyState === "interactive") {
+            if(window.screen.width > 992){
+                smPosition();
+            }
+        }
+    });
+    /* Active Menu */
+    for (var s = 0; s < document.getElementsByClassName("cus-submenu-li-2").length; s++) {
+        var ss = document.getElementsByClassName("cus-submenu-li-2")[s];
+        var gs = ss.getAttribute("data-submenu");
+        ss.parentNode.parentNode.setAttribute("data-submenu-list", ss.parentNode.parentNode.getAttribute("data-submenu-list") + gs + "-");
+    }
+    var sid = "-" + ReadSubmenu() + "-";
+    if(sid != undefined || sid != "") {
+        for(ml = 0; ml < document.getElementsByClassName("cus-menu-li-2").length; ml ++) {            
+            if(document.getElementsByClassName("cus-menu-li-2")[ml].getAttribute("data-submenu-list").indexOf(sid) != -1) {
+                document.getElementsByClassName("cus-menu-li-2")[ml].classList.add("cus-active-menu-2")
+            }
+        }
+        if(document.getElementsByClassName("cus-submenu-id-" + ReadSubmenu())[0]) {
+            document.getElementsByClassName("cus-submenu-id-" + ReadSubmenu())[0].classList.add("cus-active-submenu")
+        }
+    }
+    /*HideSubMenu*/
+    var nav_dm = document.getElementsByClassName("dropdown-menu");
+    var nav_dml = nav_dm.length;
+    for (i = 0; i < nav_dml; i++) {
+        var nav_dms = nav_dm[i].children.length;
+        for (j = 0; j < nav_dms; j++) {
+            if (nav_dm[i].children[j].style.display == "none") {
+                nav_dm[i].children[j].classList.add("remove-submenu-2");
+            }
+        }
+        var nav_rm = document.getElementsByClassName("remove-submenu-2");
+        if(nav_rm) {
+            for(r = 0; r < nav_rm.length; r++) {
+                if(nav_rm[r]) {
+                    nav_rm[r].remove();
+                }
+            }
+        }
+        if (nav_dm[i].children.length == 0) {
+            nav_dm[i].parentNode.classList.add("no-submenu-2");
+            nav_dm[i].style.display = "none";
+        }
+    }
+    var rs = setInterval(function(){
+        var nav_rm2 = document.getElementsByClassName("remove-submenu-2");
+        if(nav_rm2.length != 0) {
+            if(nav_rm2) {
+                for(r = 0; r < nav_rm2.length; r++) {
+                    if(nav_rm2[r]) {
+                        nav_rm2[r].remove();
+                    }
+                }
+            }
+            for (s = 0; s < nav_dml; s++) {
+                if (nav_dm[s].children.length == 0) {
+                    nav_dm[s].parentNode.classList.add("no-submenu-2");
+                    nav_dm[s].style.display = "none";
+                }
+            }
+        }
+        else if(nav_rm2 == 0) {
+            clearInterval(rs);
+        }
+    },10);
+    /*MenuWithoutSubmenu*/
+    window.addEventListener("DOMContentLoaded", function() {
+	    var ns = document.getElementsByClassName("no-submenu-2").length;
+	    var nss = document.getElementsByClassName("no-submenu-2");
+	    for (k = 0; k < ns; k++) {
+            var nshref = nss[k].children[0].getAttribute("href");
+            var nsso = "location.href = \'" + nshref + "\';";
+            nss[k].children[0].setAttribute("onclick", nsso);
+	    }
+    });
+    /*MenuHTML*/
+    for (var mh = 0; mh < document.getElementsByClassName("dropdown-toggle").length; mh++) {
+        var mh_this = document.getElementsByClassName("dropdown-toggle")[mh];
+        if (mh_this.innerHTML == "" && mh_this.parentNode.children.length == 3) {
+            mh_this.nextSibling.setAttribute("class", mh_this.getAttribute("class"));
+            mh_this.nextSibling.setAttribute("id", mh_this.getAttribute("id"));
+            mh_this.nextSibling.setAttribute("style", mh_this.getAttribute("style"));
+            mh_this.remove();
+        }
+    }
+    /*SubMenuHTML*/
+    for (var sh = 0; sh < document.getElementsByClassName("dropdown-item").length; sh++) {
+        var sh_this = document.getElementsByClassName("dropdown-item")[sh];
+        if (sh_this.innerHTML == "" && sh_this.nextSibling) {
+            sh_this.nextSibling.setAttribute("class", sh_this.getAttribute("class"));
+            sh_this.nextSibling.setAttribute("style", sh_this.getAttribute("style"));
+            sh_this.remove();
+        }
+    }
+<\/script>
+{{PutHtmlChar39}});}
+{{LayoutMenus2End}}
