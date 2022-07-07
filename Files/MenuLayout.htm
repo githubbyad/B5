@@ -131,12 +131,11 @@ function GetMenuH(){document.write({{PutHtmlChar39}}
     },10);
     /*MenuWithoutSubmenu*/
     window.addEventListener("DOMContentLoaded", function() {
-	    var ns = document.getElementsByClassName("no-submenu").length;
-	    var nss = document.getElementsByClassName("no-submenu");
-	    for (k = 0; k < ns; k++) {
-            var nshref = nss[k].children[0].getAttribute("href");
-            var nsso = "location.href = \'" + nshref + "\';";
-            nss[k].children[0].setAttribute("onclick", nsso);
+	    var ns = document.getElementsByClassName("no-submenu");
+	    for (k = 0; k < ns.length; k++) {
+            var nshref = ns[k].children[0].getAttribute("href");
+            var nso = "location.href = \'" + nshref + "\';";
+            ns[k].children[0].setAttribute("onclick", nso);
 	    }
     });
     /*MenuHTML*/
