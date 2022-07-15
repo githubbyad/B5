@@ -2,8 +2,8 @@
 {{File:menu_horizontal.js}}
 {{Where:MenuTypeInclude:'Horizontal'}}
 function GetMenuH(){document.write({{PutHtmlChar39}}
-<nav class="navbar navbar-expand-lg navbar-dark shadow-sm bg-black px-3 py-2 py-lg-0">
-    <button class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="container-bl navbar navbar-expand-lg navbar-dark shadow-sm bg-black px-2 py-2 py-lg-0">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon cus-menu-bar"></span>
         <span class="navbar-toggler-icon cus-menu-close d-none">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
@@ -13,14 +13,14 @@ function GetMenuH(){document.write({{PutHtmlChar39}}
         </span>
     </button>
     <span class="cus-menu-social"></span>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse mt-md-2 md-lg-0" id="navbarSupportedContent">
         <ul class="navbar-nav flex-wrap">
             {{RepeatBegin1}}
 	            <li class="cus-menu-li nav-item dropdown py-1 py-lg-2 px-lg-4 pe-2 hp-menu" data-menu="{{MenuId}}" data-submenu-list="-">
 	                <a id="navbarDropdown" class="nav-link cus-menu-id-{{MenuId}} fs-5 dropdown-toggle fw-bold text-uppercase text-white hpe-in-menu px-2 px-lg-0" data-view="Horizontal" data-menu="{{MenuId}}" data-link="{{MenuLink}}" data-order="{{MenuOrder}}" style="{{MenuStyle}}" href="{{MenuLink}}" role="button"  data-bs-toggle="dropdown" aria-expanded="false">{{Menu}}</a>
-	                <ul class="dropdown-menu cus-submenu-ul fade-up mb-2 mb-lg-0 mx-3 mx-lg-0 hp-submenu" data-menu="{{MenuId}}" aria-labelledby="navbarDropdown">
+	                <ul class="dropdown-menu cus-submenu-ul fade-up mb-2 mb-lg-0 mx-3 mx-lg-0 hp-submenu" data-menu="{{MenuId}}" aria-labelledby="navbarDropdown" data-bs-popper="none">
                         {{RepeatBegin2}}
-                            <li class="cus-submenu-li hpe-in-submenu" data-menu="{{MenuId}}" data-submenu="{{SubMenuId}}" data-link="{{SubMenuLink}}" data-order="{{SubMenuOrder}}" style="{{CSSDisplay}}">
+                            <li class="cus-submenu-li hpe-in-submenu" style="{{CSSDisplay}}" data-menu="{{MenuId}}" data-submenu="{{SubMenuId}}" data-link="{{SubMenuLink}}" data-order="{{SubMenuOrder}}">
                                 <a class="dropdown-item cus-submenu-id-{{SubMenuId}} fs-5 fw-bold text-dark border-bottom border-gray nx-2 transition text-red-hover" href="{{SubMenuLink}}">{{SubMenu}}</a>
                             </li>
                         {{RepeatEnd2}}
@@ -128,16 +128,16 @@ function GetMenuH(){document.write({{PutHtmlChar39}}
         else if(nav_rm2 == 0) {
             clearInterval(rs);
         }
+        /*MenuWithoutSubmenu*/
+        var ns = document.getElementsByClassName(`no-submenu`);
+        for (k = 0; k < ns.length; k++) {    
+            var nclick = ns[k].children[0].getAttribute(`onclick`);                
+            if( nclick == `` || nclick == null) {
+                var nshref = ns[k].children[0].getAttribute(`href`);
+                ns[k].children[0].setAttribute(`onclick`, `location.href = \'${nshref}\';`);
+            }
+        }
     },10);
-    /*MenuWithoutSubmenu*/
-    window.addEventListener("DOMContentLoaded", function() {
-	    var ns = document.getElementsByClassName("no-submenu");
-	    for (k = 0; k < ns.length; k++) {
-            var nshref = ns[k].children[0].getAttribute("href");
-            var nso = "location.href = \'" + nshref + "\';";
-            ns[k].children[0].setAttribute("onclick", nso);
-	    }
-    });
     /*MenuHTML*/
     for (var mh = 0; mh < document.getElementsByClassName("dropdown-toggle").length; mh++) {
         var mh_this = document.getElementsByClassName("dropdown-toggle")[mh];
@@ -160,7 +160,7 @@ function GetMenuH(){document.write({{PutHtmlChar39}}
     /* Menu Sticky*/
     document.addEventListener("DOMContentLoaded", function() {
         if (window.location.href.indexOf("=target_form2.") == -1) {
-            if (window.screen.width > 992) {
+            if (document.body.clientWidth > 992) {
                 var mo = document.getElementsByClassName("navbar")[0].offsetTop;
                 window.addEventListener("scroll", function() {
                     if (window.scrollY > mo) {
@@ -176,7 +176,7 @@ function GetMenuH(){document.write({{PutHtmlChar39}}
         }
     });
     /* Social icons (mobile) */
-    if(window.screen.width <= 992 && document.getElementsByClassName("cus-social-links").length > 0) {
+    if(document.body.clientWidth <= 992 && document.getElementsByClassName("cus-social-links").length > 0) {
         var np = document.getElementsByClassName("cus-menu-social")[0];
         var op = document.getElementsByClassName("cus-social-links")[0];
         while (op.childNodes.length > 0) {
