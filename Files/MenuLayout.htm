@@ -86,58 +86,25 @@ function GetMenuH(){document.write({{PutHtmlChar39}}
         }
     }
     /*HideSubMenu*/
-    var nav_dm = document.getElementsByClassName("dropdown-menu");
-    var nav_dml = nav_dm.length;
-    for (i = 0; i < nav_dml; i++) {
-        var nav_dms = nav_dm[i].children.length;
-        for (j = 0; j < nav_dms; j++) {
-            if (nav_dm[i].children[j].style.display == "none") {
-                nav_dm[i].children[j].classList.add("remove-submenu");
-            }
+    document.querySelectorAll(".dropdown-menu li").forEach(x => {
+        if(x.style.display == "none") {
+            x.classList.add("remove-submenu");
         }
-        var nav_rm = document.getElementsByClassName("remove-submenu");
-        if(nav_rm) {
-            for(r = 0; r < nav_rm.length; r++) {
-                if(nav_rm[r]) {
-                    nav_rm[r].remove();
-                }
-            }
+    });
+    document.querySelectorAll(".remove-submenu").forEach(y => y.remove());    
+    /*MenuWithoutSubmenu*/
+    document.querySelectorAll(".dropdown-menu").forEach(z => {
+        if(z.children.length == 0) {
+            z.parentNode.classList.add("no-submenu");
+            z.style.display = "none";
         }
-        if (nav_dm[i].children.length == 0) {
-            nav_dm[i].parentNode.classList.add("no-submenu");
-            nav_dm[i].style.display = "none";
+    });
+    document.querySelectorAll(".no-submenu").forEach(a => {
+        var n = a.children[0].getAttribute(`onclick`);
+        if( n == `` || n == null) {
+            a.children[0].setAttribute(`onclick`, `location.href = \'${a.children[0].getAttribute("href")}\';`);
         }
-    }
-    var rs = setInterval(function(){
-        var nav_rm2 = document.getElementsByClassName("remove-submenu");
-        if(nav_rm2.length != 0) {
-            if(nav_rm2) {
-                for(r = 0; r < nav_rm2.length; r++) {
-                    if(nav_rm2[r]) {
-                        nav_rm2[r].remove();
-                    }
-                }
-            }
-            for (s = 0; s < nav_dml; s++) {
-                if (nav_dm[s].children.length == 0) {
-                    nav_dm[s].parentNode.classList.add("no-submenu");
-                    nav_dm[s].style.display = "none";
-                }
-            }
-        }
-        else if(nav_rm2 == 0) {
-            clearInterval(rs);
-        }
-        /*MenuWithoutSubmenu*/
-        var ns = document.getElementsByClassName(`no-submenu`);
-        for (k = 0; k < ns.length; k++) {    
-            var nclick = ns[k].children[0].getAttribute(`onclick`);                
-            if( nclick == `` || nclick == null) {
-                var nshref = ns[k].children[0].getAttribute(`href`);
-                ns[k].children[0].setAttribute(`onclick`, `location.href = \'${nshref}\';`);
-            }
-        }
-    },10);
+    });
     /*MenuHTML*/
     for (var mh = 0; mh < document.getElementsByClassName("dropdown-toggle").length; mh++) {
         var mh_this = document.getElementsByClassName("dropdown-toggle")[mh];
