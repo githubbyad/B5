@@ -1,5 +1,5 @@
 {{LayoutArticleGroup700Begin}}
-{{File:filename.xml}}
+{{File:submenu.xml}}
 {{LayoutArticleGroup700Limit25}}
 {{ReplaceJavascriptChars:No}}
 {{RemoveHTMLBody}}
@@ -11,7 +11,7 @@
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:media="http://search.yahoo.com/mrss/">
     <channel>
         <title>{{SubMenu}}</title>
-        <atom:link rel="self" href="{{PutDomain}}filename.xml" type="application/rss+xml" />
+        <atom:link rel="self" href="{{PutDomain}}submenu.xml" type="application/rss+xml" />
         <link>{{SubMenuLink}}</link>
         <description>{{SubMenu}}</description>
         <language>en-US</language>
@@ -19,9 +19,9 @@
         <sy:updateFrequency>1</sy:updateFrequency>
         {{RepeatBegin}}
             <item>
-                <title>{{Heading}}</title>
+                <title><![CDATA[{{Heading}}]]></title>
                 <link>{{HeadingLink}}</link>
-                <description>{{Body}}</description>
+                <description><![CDATA[{{Body}}]]></description>
                 <pubDate>{{DayNameI1}}, {{DayI}} {{MonthI1}} {{YearI}} 00:00:00 GMT</pubDate>
                 <dc:creator><![CDATA[{{PutDomainX}}]]></dc:creator>
                 <category><![CDATA[{{SubMenu}}]]></category>
