@@ -1,9 +1,10 @@
 {{LayoutArticleGroup700Begin}}
-{{File:submenu.xml}}
 {{LayoutArticleGroup700Limit25}}
+{{File:submenu.xml}}
+{{Where:SubMenuIdInclude:1XX}}
+{{LayoutArticleBodyWordLimit100}}
 {{ReplaceJavascriptChars:No}}
 {{RemoveHTMLBody}}
-{{Where:SubMenuIdInclude:1XX}}
 {{RemoveMore:Yes}}
 {{SortBy:Issue,Updated}}
 {{Find&ReplaceString:&,and}}
